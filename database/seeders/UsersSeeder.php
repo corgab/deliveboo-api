@@ -4,11 +4,11 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
-use Illuminate\Support\Str;
+use Illuminate\Support\Facades\Hash;
 
-use App\Models\Restaurant;
+use App\Models\User;
 
-class RestaurantSeeder extends Seeder
+class UsersSeeder extends Seeder
 {
 
     // Funzione recupero dati da CSV
@@ -36,22 +36,21 @@ class RestaurantSeeder extends Seeder
     public function run(): void
     {
         // Data file restaurants.csv
-        $data = $this->getCSVData(__DIR__.'/csv/restaurants.csv');
+        $data = $this->getCSVData(__DIR__.'/csv/users.csv');
 
         foreach ( $data as $index=>$row) {
             if ($index !== 0) {
 
-                $new_restaurant = new Restaurant();
+                $new_user = new User();
 
-                $new_restaurant->name = $row[0];
-                $new_restaurant->slug = Str::slug($new_restaurant->name, '-');
-                $new_restaurant->address = $row[1];
-                $new_restaurant->vat = $row[2];
-                // Thumb
+                $new_user->name = $row[0];
+                $new_user->email = $row[1];
+                $new_user->password = Hash::make($row[2]);
 
                 // Salvataggio dati 
-                $new_restaurant->save();
+                $new_user->save();
             }
         }
+
     }
 }
