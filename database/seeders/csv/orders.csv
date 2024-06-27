@@ -1,0 +1,11 @@
+restaurant_id,total_price,email,address,name
+1,25.0,customer1@example.com,321 Apple St,Alice Johnson
+1,10.0,customer2@example.com,654 Orange St,Bob Smith
+2,24.0,customer3@example.com,987 Banana St,Charlie Brown
+2,5.5,customer4@example.com,123 Grape St,Diana Prince
+3,30.0,customer5@example.com,456 Lemon St,Evan Davis
+3,17.0,customer6@example.com,789 Lime St,Fiona White
+4,8.5,customer7@example.com,101 Mango St,George Black
+4,6.0,customer8@example.com,202 Peach St,Hannah Green
+5,9.0,customer9@example.com,303 Pineapple St,Ian Blue
+5,30.0,customer10@example.com,404 Strawberry St,Jack Red

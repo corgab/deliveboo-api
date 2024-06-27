@@ -1,0 +1,11 @@
+restaurant_id,name,description_ingredients,price,visible
+1,Spaghetti Carbonara,"Pasta, eggs, pancetta, pecorino cheese, pepper",12.5,True
+1,Margherita Pizza,"Tomato, mozzarella, basil",10.0,True
+2,Tacos al Pastor,"Pork, pineapple, onions, cilantro, lime",8.0,False
+2,Guacamole,"Avocado, lime, onions, tomatoes, cilantro",5.5,False
+3,Salmon Sushi,"Salmon, rice, seaweed",15.0,True
+3,Tuna Sashimi,"Tuna, soy sauce, wasabi",17.0,True
+4,Cheeseburger,"Beef patty, cheese, lettuce, tomato, bun",8.5,False
+4,French Fries,"Potatoes, salt",3.0,True
+5,Quinoa Salad,"Quinoa, mixed greens, cherry tomatoes, cucumbers",9.0,True
+5,Vegan Burger,"Vegan patty, lettuce, tomato, vegan bun",10.0,True
