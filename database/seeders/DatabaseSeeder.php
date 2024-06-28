@@ -23,8 +23,8 @@ class DatabaseSeeder extends Seeder
             TypeSeeder::class,
             RestaurantSeeder::class,
             UsersSeeder::class,
-            OrderSeeder::class,
             DishSeeder::class,
+            OrderSeeder::class,
          ]);
     }
 }
