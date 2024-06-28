@@ -41,4 +41,19 @@
         <a href="{{route('admin.dishes.index')}}" class="btn btn-warning text-primary fw-bold">Back</a>
     </div>
 </form>
+
+
+<div class="my-4 centered w-25">
+    @if ( $errors->any() )
+    <div class="alert alert-danger op-90">
+        <ul>
+            @foreach($errors->all() as $error)
+            <li>
+                {{ $error }}
+            </li>
+            @endforeach
+        </ul>
+    </div>
+    @endif
+</div>
 @endsection

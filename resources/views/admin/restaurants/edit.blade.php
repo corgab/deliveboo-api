@@ -8,17 +8,17 @@
             @method('PUT')
             <div class="mb-3">
                 <label for="name" class="form-label">Nome</label>
-                <input type="text" class="form-control" id="name" name="name" value="{{old('name', "$restaurant->name")}}">
+                <input type="text" class="form-control" id="name" name="name" value="{{old('name', $restaurant->name)}}">
             </div>
 
             <div class="mb-3">
                 <label for="address" class="form-label">Address</label>
-                <input type="text" class="form-control" id="address" name="address" value="{{old('address', "$restaurant->address")}}">
+                <input type="text" class="form-control" id="address" name="address" value="{{old('address', $restaurant->address)}}">
             </div>
 
             <div class="mb-3">
                 <label for="vat" class="form-label">P.IVA</label>
-                <input type="text" class="form-control" id="vat" name="vat" value="{{old('vat', "$restaurant->vat")}}">
+                <input type="text" class="form-control" id="vat" name="vat" value="{{old('vat', $restaurant->vat)}}">
             </div>
 
             <!-- !! DA IMPLEMENTARE !! -->

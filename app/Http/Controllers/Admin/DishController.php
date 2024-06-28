@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Dish;
 use Illuminate\Http\Request;
 use App\Http\Requests\StoreDishRequest;
+use App\Http\Requests\UpdateDishRequest;
 
 class DishController extends Controller
 {
@@ -55,15 +56,21 @@ class DishController extends Controller
      */
     public function edit(Dish $dish)
     {
-        //
+        return view('admin.dishes.show', compact('dish'));
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Dish $dish)
+    public function update(UpdateDishRequest $request, Dish $dish)
     {
-        //
+        // Validazione
+        $form_data = $request->validated();
+
+        // Modifica piatto
+        $dish->update($form_data);
+        
+        return to_route('admin.dishes.show', $dish);
     }
 
     /**
