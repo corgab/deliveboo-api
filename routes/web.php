@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\DishController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -29,7 +30,12 @@ Route::middleware(['auth', 'verified'])
         Route::get('/', function () {
             return view('admin.dashboard');
         })->name('dashboard');
+
+        //registro le rotte dei restaurants
         Route::resource('restaurants', AdminRestaurantController::class);
+
+        //registro le rotte dei dishes
+        Route::resource('dishes', DishController::class);
 });
 
 Route::middleware('auth')->group(function () {
