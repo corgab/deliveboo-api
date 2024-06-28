@@ -2,10 +2,11 @@
 
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\TypeController;
 use App\Http\Controllers\Admin\RestaurantController as AdminRestaurantController;
 
-
+Route::get('/types', [TypeController::class, 'index']);
+Route::get('/types/{id}', [TypeController::class, 'show']);
 /*
 |--------------------------------------------------------------------------
 | Web Routes
