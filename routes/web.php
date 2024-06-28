@@ -28,9 +28,10 @@ Route::middleware(['auth', 'verified'])
         Route::get('/', function () {
             return view('admin.dashboard');
         })->name('dashboard');
-        Route::resource('restaurants', AdminRestaurantController::class);
+        Route::resource('restaurants', AdminRestaurantController::class)->except(['show']);
+        Route::get('restaurants/{restaurant:slug}', [AdminRestaurantController::class, 'show'])->name('restaurants.show');
         Route::resource('types', TypeController::class);
-});
+    });
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');

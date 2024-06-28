@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 
 use App\Http\Requests\StoreRestaurantRequest;
+use App\Http\Requests\UpdateRestaurantRequest;
 use App\Models\Restaurant;
 
 class RestaurantController extends Controller
@@ -59,32 +60,55 @@ class RestaurantController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+    public function show(Restaurant $restaurant)
     {
-        //
+
+        return view('admin.restaurants.show', compact('restaurant'));
     }
 
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(string $id)
+    public function edit(Restaurant $restaurant)
     {
-        //
+ 
+        return view('admin.restaurants.show', compact('restaurant'));
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(UpdateRestaurantRequest $request, Restaurant $restaurant)
     {
-        //
+        // Validazione
+        $form_data = $request->validated();
+
+        // Gestione Slug unico
+        $base_slug = Str::slug($form_data['name']);
+        $slug = $base_slug;
+        $n = 0;
+        do {
+            $find = Restaurant::where('slug', $slug)->first();
+            if ($find !== null) {
+                $n++;
+                $slug = $base_slug . '-' . $n;
+            }
+        } while ($find !== null);
+        $form_data['slug'] = $slug;
+
+        // Modifica nuovo ristorante
+        $restaurant->update($form_data);
+        
+        return to_route('admin.restaurants.show', $restaurant);
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function destroy(Restaurant $restaurant)
     {
-        //
+        $character->delete();
+
+        return to_route('admin.restaurants.index');
     }
 }
