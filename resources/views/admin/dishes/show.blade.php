@@ -17,5 +17,10 @@
         <h3>{{ $dish->created_at}}</h3>
         <h3>{{ $dish->updated_at}}</h3>
 
+        <form action="{{route('admin.dishes.destroy', $dish)}}" method="POST">
+            @csrf
+            @method('DELETE')
+            <button type="submit" class="btn btn-danger">Elimina</button>
+        </form>
     </section>
 @endsection
