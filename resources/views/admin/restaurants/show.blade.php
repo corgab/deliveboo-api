@@ -4,6 +4,7 @@
 <section>
     <h1>SHOW</h1>
     <h3>{{ $restaurant->name }}</h3>
+    <h3>{{ $restaurant->slug }}</h3>
     <h3>{{ $restaurant->address }}</h3>
     <h3>{{ $restaurant->vat }}</h3>
     <h3>{{ $restaurant->thumb }}</h3>
