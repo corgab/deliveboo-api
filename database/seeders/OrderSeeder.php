@@ -3,8 +3,10 @@
 namespace Database\Seeders;
 
 use App\Models\Order;
+use App\Models\Restaurant;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use Faker\Generator as Faker;
 
 class OrderSeeder extends Seeder
 {
@@ -28,21 +30,24 @@ class OrderSeeder extends Seeder
         return $data;
     }
 
-    public function run(): void
+    public function run(Faker $faker): void
     {
          // Data file orders.csv
          $data = $this->getCSVData(__DIR__.'/csv/orders.csv');
+         $restaurants_ids = Restaurant::all()->pluck('id')->all();
+
 
          foreach ($data as $index=>$row) {
             if ($index !== 0) {
                 $new_order = new Order();
 
+                $new_order->restaurant_id = $faker->randomElement($restaurants_ids);
                 $new_order->name = $row[0];
                 $new_order->email = $row[1];
                 $new_order->number = $row[2];
                 $new_order->address = $row[3];
                 $new_order->total_price = $row[4];
-                
+
                 // Salvataggio dati 
                 $new_order->save();
             }
