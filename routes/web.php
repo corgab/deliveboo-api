@@ -2,11 +2,9 @@
 
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\TypeController;
+use App\Http\Controllers\Admin\TypeController;
 use App\Http\Controllers\Admin\RestaurantController as AdminRestaurantController;
 
-Route::get('/types', [TypeController::class, 'index']);
-Route::get('/types/{id}', [TypeController::class, 'show']);
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -31,6 +29,7 @@ Route::middleware(['auth', 'verified'])
             return view('admin.dashboard');
         })->name('dashboard');
         Route::resource('restaurants', AdminRestaurantController::class);
+        Route::resource('types', TypeController::class);
 });
 
 Route::middleware('auth')->group(function () {
