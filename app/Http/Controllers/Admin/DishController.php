@@ -13,7 +13,9 @@ class DishController extends Controller
      */
     public function index()
     {
-        //
+        // $dishes = Dish::all();
+
+        // return view()
     }
 
     /**
