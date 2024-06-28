@@ -5,6 +5,7 @@ use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\TypeController;
 use App\Http\Controllers\Admin\RestaurantController as AdminRestaurantController;
+use App\Http\Controllers\Admin\OrderController;
 
 /*
 |--------------------------------------------------------------------------
@@ -36,6 +37,8 @@ Route::middleware(['auth', 'verified'])
         Route::resource('restaurants', AdminRestaurantController::class)->except(['show']);
         Route::get('restaurants/{restaurant:slug}', [AdminRestaurantController::class, 'show'])->name('restaurants.show');
         Route::resource('types', TypeController::class);
+        Route::resource('orders', OrderController::class);
+
 });
 
 Route::middleware('auth')->group(function () {
