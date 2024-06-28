@@ -10,7 +10,7 @@
         <a href="{{route('admin.dishes.show', $dish)}}" class="btn btn-primary">show</a>
 
 
-
+    </div>
     @endforeach
 
 </section>
