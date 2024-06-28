@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\DishController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\TypeController;
@@ -28,10 +29,14 @@ Route::middleware(['auth', 'verified'])
         Route::get('/', function () {
             return view('admin.dashboard');
         })->name('dashboard');
+
+        //registro le rotte dei dishes
+        Route::resource('dishes', DishController::class);
+        
         Route::resource('restaurants', AdminRestaurantController::class)->except(['show']);
         Route::get('restaurants/{restaurant:slug}', [AdminRestaurantController::class, 'show'])->name('restaurants.show');
         Route::resource('types', TypeController::class);
-    });
+});
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
