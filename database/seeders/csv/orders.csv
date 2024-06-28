@@ -1,11 +1,11 @@
-restaurant_id,total_price,email,address,name
-1,25.0,customer1@example.com,321 Apple St,Alice Johnson
-1,10.0,customer2@example.com,654 Orange St,Bob Smith
-2,24.0,customer3@example.com,987 Banana St,Charlie Brown
-2,5.5,customer4@example.com,123 Grape St,Diana Prince
-3,30.0,customer5@example.com,456 Lemon St,Evan Davis
-3,17.0,customer6@example.com,789 Lime St,Fiona White
-4,8.5,customer7@example.com,101 Mango St,George Black
-4,6.0,customer8@example.com,202 Peach St,Hannah Green
-5,9.0,customer9@example.com,303 Pineapple St,Ian Blue
-5,30.0,customer10@example.com,404 Strawberry St,Jack Red
+name,email,number,address,total_price
+Mario Rossi,mariorossi@example.com,3271436897,321 Apple St, 54.99
+Sofia Bolla,sofiabolla@example.com,3271456897,654 Orange St, 77.45
+Marco Filli,marcofilli@example.com,3271236897,987 Banana St, 105.67
+Domenico Santo,domenicosanto@example.com,3271456897,123 Grape St, 23.88
+Maria Lorenza,marialorenza@example.com,3221456897,456 Lemon St, 33.30
+Giacomo Sasso,giacomosasso@example.com,3271456865,789 Lime St, 70.56
+Gioele Valli,gioelevalli@example.com,3281443897,101 Mango St, 55.49
+Davide Morelli,davidemorelli@example.com,3271456843,202 Peach St, 49.20
+Fabio Verdi,fabioverdi@example.com,3271456697,303 Pineapple St, 22.11
+Luca Laurenti,lucalaurenti@example.com,3295656897,404 Strawberry St, 67.00

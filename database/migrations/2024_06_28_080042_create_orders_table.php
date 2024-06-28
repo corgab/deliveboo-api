@@ -17,7 +17,7 @@ return new class extends Migration
             $table->string('email')->unique();
             $table->string('number',10);
             $table->string('address');
-            $table->string('total_price', 6);
+            $table->string('total_price');
             $table->timestamps();
         });
     }
