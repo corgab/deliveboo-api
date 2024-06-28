@@ -9,6 +9,12 @@ class Dish extends Model
 {
     use HasFactory;
 
+    // Many-to-many
+    public function orders()
+    {
+        return $this->belongsToMany(Order::class);
+    }
+
     protected $fillable = [
         'name',
         'description_ingredients',

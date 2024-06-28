@@ -18,6 +18,12 @@ class Restaurant extends Model
         'slug',
         'address',
         'vat',
-        'thumb'
+        'thumb',
     ];
+    
+    // Many-to-many
+    public function types()
+    {
+        return $this->belongsToMany(Type::class);
+    }
 }

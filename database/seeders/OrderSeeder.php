@@ -2,10 +2,12 @@
 
 namespace Database\Seeders;
 
-use App\Models\Order;
 use App\Models\Restaurant;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+
+use App\Models\Order;
+use App\Models\Dish;
 use Faker\Generator as Faker;
 
 class OrderSeeder extends Seeder
@@ -32,6 +34,11 @@ class OrderSeeder extends Seeder
 
     public function run(Faker $faker): void
     {
+        // Data file orders.csv
+        $data = $this->getCSVData(__DIR__.'/csv/orders.csv');
+
+        // Recupero Piatti
+        $dishes = Dish::all();
          // Data file orders.csv
          $data = $this->getCSVData(__DIR__.'/csv/orders.csv');
          $restaurants_ids = Restaurant::all()->pluck('id')->all();
@@ -50,6 +57,12 @@ class OrderSeeder extends Seeder
 
                 // Salvataggio dati 
                 $new_order->save();
+
+                // Id randomico di Type in un array
+                $dishIds = $dishes->random(rand(1, 10))->pluck('id')->toArray();
+
+                // Attach Pivot
+                $new_order->dishes()->attach($dishIds);
             }
         }
     }

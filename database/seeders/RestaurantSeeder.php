@@ -7,6 +7,7 @@ use Illuminate\Database\Seeder;
 use Illuminate\Support\Str;
 
 use App\Models\Restaurant;
+use App\Models\Type;
 
 class RestaurantSeeder extends Seeder
 {
@@ -38,6 +39,9 @@ class RestaurantSeeder extends Seeder
         // Data file restaurants.csv
         $data = $this->getCSVData(__DIR__.'/csv/restaurants.csv');
 
+        // Recupero Types
+        $types = Type::all();
+
         foreach ( $data as $index=>$row) {
             if ($index !== 0) {
 
@@ -49,8 +53,14 @@ class RestaurantSeeder extends Seeder
                 $new_restaurant->vat = $row[2];
                 // Thumb
 
-                // Salvataggio dati 
+                // Salvataggio dati
                 $new_restaurant->save();
+
+                // Id randomico di Type in un array
+                $typeIds = $types->random(rand(1, 9))->pluck('id')->toArray();
+
+                // Attach Pivot
+                $new_restaurant->types()->attach($typeIds);
             }
         }
     }
