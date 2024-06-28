@@ -30,7 +30,7 @@ Route::middleware(['auth', 'verified'])
             return view('admin.dashboard');
         })->name('dashboard');
         Route::resource('restaurants', AdminRestaurantController::class)->except(['show']);
-        Route::get('restaurants/{restaurant:slug}', [AdminRestaurantController::class, 'show'])->name('admin.restaurants.show');
+        Route::get('restaurants/{restaurant:slug}', [AdminRestaurantController::class, 'show'])->name('restaurants.show');
     });
 
 Route::middleware('auth')->group(function () {

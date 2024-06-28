@@ -10,6 +10,11 @@
     <h3>{{ $restaurant->thumb }}</h3>
     <h3>{{ $restaurant->created_at }}</h3>
     <h3>{{ $restaurant->updated_at }}</h3>
+    <form action="{{ route('admin.restaurants.destroy', $restaurant) }}" method="POST">
+        @method('DELETE')
+        @csrf
+        <button class="btn btn-danger">elimina</button>
+    </form>
 
 </section>
 

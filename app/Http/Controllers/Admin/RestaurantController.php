@@ -107,6 +107,8 @@ class RestaurantController extends Controller
      */
     public function destroy(Restaurant $restaurant)
     {
-        //
+        $character->delete();
+
+        return to_route('admin.restaurants.index');
     }
 }
