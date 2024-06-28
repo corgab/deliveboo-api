@@ -16,6 +16,9 @@
         <textarea type="text" name="price" class="form-control" id="price" placeholder="Insert the price" rows="8" value="{{old('price')}}">
         </textarea>
     </div>
+    <div class="input-group mb-3">
+        <input type="file" class="form-control" id="thumb" name="thumb" value="{{ old('thumb') }}">
+    </div>
     <div class="form-check">
         <label class="form-check-label" for="visible">
             Visible:
