@@ -4,7 +4,10 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+
 use App\Models\Type;
+use App\Models\Restaurant;
+
 class TypeSeeder extends Seeder
 {
     public function getCSVData(string $path) {
@@ -40,6 +43,8 @@ class TypeSeeder extends Seeder
 
                 // Salvataggio dati 
                 $new_type->save();
+
+
             }
         }
     }
