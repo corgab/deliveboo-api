@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Models\Dish;
 use Illuminate\Http\Request;
+use App\Http\Requests\StoreDishRequest;
 
 class DishController extends Controller
 {
@@ -23,15 +24,20 @@ class DishController extends Controller
      */
     public function create()
     {
-        //
+        //ritorno alla view create
+        return view('admin.dishes.create');
     }
 
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function store(StoreDishRequest $request)
     {
-        //
+        $form_data = $request->validated();
+
+        $new_dish = Dish::create($form_data);
+        
+        return to_route('admin.dishes.show', $new_dish);
     }
 
     /**
