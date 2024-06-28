@@ -62,7 +62,6 @@ class RestaurantController extends Controller
     public function show(Restaurant $restaurant)
     {
 
-        // dd($restaurant);
         return view('admin.restaurants.show', compact('restaurant'));
     }
 
@@ -71,7 +70,10 @@ class RestaurantController extends Controller
      */
     public function edit(Restaurant $restaurant)
     {
-        //
+
+        // dd($restaurant);
+        return view('admin.restaurants.edit',compact('restaurant'));
+
     }
 
     /**
