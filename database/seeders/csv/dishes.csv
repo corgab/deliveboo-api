@@ -1,11 +1,11 @@
 name,description_ingredients,price,visible
-Spaghetti Carbonara,"Pasta, eggs, pancetta, pecorino cheese, pepper",12.5,True
-Margherita Pizza,"Tomato, mozzarella, basil",10.0,True
-Tacos al Pastor,"Pork, pineapple, onions, cilantro, lime",8.0,False
-Guacamole,"Avocado, lime, onions, tomatoes, cilantro",5.5,False
-Salmon Sushi,"Salmon, rice, seaweed",15.0,True
-Tuna Sashimi,"Tuna, soy sauce, wasabi",17.0,True
-Cheeseburger,"Beef patty, cheese, lettuce, tomato, bun",8.5,True
-French Fries,"Potatoes, salt",3.0,True
-Quinoa Salad,"Quinoa, mixed greens, cherry tomatoes, cucumbers",9.0,True
-Vegan Burger,"Vegan patty, lettuce, tomato, vegan bun",10.0,True
+Spaghetti Carbonara, Pasta - eggs pancetta - pecorino cheese - pepper, 12.5, 1
+Margherita Pizza, Tomato - mozzarella - basil, 10.0, 1
+Tacos al Pastor, Pork - pineapple - onions - cilantro - lime, 8.0, 0
+Guacamole, Avocado - lime - onions - tomatoes - cilantro, 5.5, 0
+Salmon Sushi, Salmon - rice - seaweed, 15.0, 1
+Tuna Sashimi, Tuna - soy sauce - wasabi, 17.0, 1
+Cheeseburger, Beef patty - cheese - lettuce - tomato - bun, 8.5, 1
+French Fries, Potatoes - salt, 6.0, 1
+Quinoa Salad, Quinoa - mixed greens - cherry tomatoes - cucumbers, 9.0, 1
+Vegan Burger, Vegan patty - lettuce - tomato - vegan bun, 10.0, 1

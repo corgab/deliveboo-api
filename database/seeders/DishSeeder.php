@@ -39,7 +39,7 @@ class DishSeeder extends Seeder
         // Data file dishes.csv
         $data = $this->getCSVData(__DIR__.'/csv/dishes.csv');
 
-        foreach ( $data as $index=>$row) {
+        foreach ($data as $index=>$row) {
             if ($index !== 0) {
 
                 $new_dish = new Dish();
