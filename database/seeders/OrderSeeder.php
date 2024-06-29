@@ -32,23 +32,24 @@ class OrderSeeder extends Seeder
         return $data;
     }
 
-    public function run(Faker $faker): void
+    public function run(): void
     {
         // Data file orders.csv
         $data = $this->getCSVData(__DIR__.'/csv/orders.csv');
 
         // Recupero Piatti
         $dishes = Dish::all();
-         // Data file orders.csv
-         $data = $this->getCSVData(__DIR__.'/csv/orders.csv');
-         $restaurants_ids = Restaurant::all()->pluck('id')->all();
-
-
-         foreach ($data as $index=>$row) {
+        $restaurants = Restaurant::all();
+        
+        
+        foreach ($data as $index=>$row) {
             if ($index !== 0) {
+                
+                $restaurant_id = $restaurants->random()->id;
+                
                 $new_order = new Order();
 
-                $new_order->restaurant_id = $faker->randomElement($restaurants_ids);
+                $new_order->restaurant_id = $restaurant_id;
                 $new_order->name = $row[0];
                 $new_order->email = $row[1];
                 $new_order->number = $row[2];
@@ -59,10 +60,10 @@ class OrderSeeder extends Seeder
                 $new_order->save();
 
                 // Id randomico di Type in un array
-                $dishIds = $dishes->random(rand(1, 10))->pluck('id')->toArray();
+                $dish_ids = $dishes->random(rand(1, 10))->pluck('id')->all();
 
                 // Attach Pivot
-                $new_order->dishes()->attach($dishIds);
+                $new_order->dishes()->attach($dish_ids);
             }
         }
     }
