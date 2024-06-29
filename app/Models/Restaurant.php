@@ -32,4 +32,10 @@ class Restaurant extends Model
     {
         return $this->hasOne(User::class);
     }
+
+    // One-to-many
+    public function dishes()
+    {
+        return $this->hasMany(Dish::class);
+    }
 }

@@ -6,6 +6,7 @@ use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
 use App\Models\Dish;
+use App\Models\Restaurant;
 
 class DishSeeder extends Seeder
 {
@@ -40,11 +41,17 @@ class DishSeeder extends Seeder
         // Data file dishes.csv
         $data = $this->getCSVData(__DIR__.'/csv/dishes.csv');
 
+        // Recupero data
+        $restaurants = Restaurant::all();
+
         foreach ($data as $index=>$row) {
             if ($index !== 0) {
 
+                $restaurant_id = $restaurants->random()->id;
+
                 $new_dish = new Dish();
 
+                $new_dish->restaurant_id = $restaurant_id;
                 $new_dish->name = $row[0];
                 $new_dish->description_ingredients = $row[1];
                 $new_dish->price = $row[2];

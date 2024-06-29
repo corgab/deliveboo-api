@@ -9,12 +9,6 @@ class Dish extends Model
 {
     use HasFactory;
 
-    // Many-to-many
-    public function orders()
-    {
-        return $this->belongsToMany(Order::class);
-    }
-
     protected $fillable = [
         'name',
         'description_ingredients',
@@ -22,4 +16,16 @@ class Dish extends Model
         'visible',
         'thumb'
     ];
+
+    // Many-to-many
+    public function orders()
+    {
+        return $this->belongsToMany(Order::class);
+    }
+
+    // One-to-many
+    public function restaurant()
+    {
+        return $this->belongsTo(Restaurant::class);
+    }
 }
