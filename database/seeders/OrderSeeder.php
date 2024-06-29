@@ -32,7 +32,7 @@ class OrderSeeder extends Seeder
         return $data;
     }
 
-    public function run(Faker $faker): void
+    public function run(): void
     {
         // Data file orders.csv
         $data = $this->getCSVData(__DIR__.'/csv/orders.csv');
@@ -48,7 +48,7 @@ class OrderSeeder extends Seeder
             if ($index !== 0) {
                 $new_order = new Order();
 
-                $restaurant_ids = $restaurants->random(rand(1, 5))->pluck('id')->all();
+                $restaurant_ids = $restaurants->random(rand(1, 5))->pluck('id')->toArray();
                 $new_order->restaurant_id = $restaurant_ids;
                 $new_order->name = $row[0];
                 $new_order->email = $row[1];
@@ -60,7 +60,7 @@ class OrderSeeder extends Seeder
                 $new_order->save();
 
                 // Id randomico di Type in un array
-                $dish_ids = $dishes->random(rand(1, 10))->pluck('id')->all();
+                $dish_ids = $dishes->random(rand(1, 10))->pluck('id')->toArray();
 
                 // Attach Pivot
                 $new_order->dishes()->attach($dish_ids);
