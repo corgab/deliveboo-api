@@ -48,7 +48,7 @@ class OrderSeeder extends Seeder
             if ($index !== 0) {
                 $new_order = new Order();
 
-                $restaurant_ids = $restaurants->random(rand(1, 9))->pluck('id')->all();
+                $restaurant_ids = $restaurants->random(rand(1, 5))->pluck('id')->all();
                 $new_order->restaurant_id = $restaurant_ids;
                 $new_order->name = $row[0];
                 $new_order->email = $row[1];
