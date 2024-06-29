@@ -26,4 +26,10 @@ class Restaurant extends Model
     {
         return $this->belongsToMany(Type::class);
     }
+
+    // One-to-one
+    public function user()
+    {
+        return $this->hasOne(User::class);
+    }
 }

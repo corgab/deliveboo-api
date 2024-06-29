@@ -8,6 +8,7 @@ use Illuminate\Support\Str;
 
 use App\Models\Restaurant;
 use App\Models\Type;
+use App\Models\User;
 
 class RestaurantSeeder extends Seeder
 {
@@ -39,14 +40,18 @@ class RestaurantSeeder extends Seeder
         // Data file restaurants.csv
         $data = $this->getCSVData(__DIR__.'/csv/restaurants.csv');
 
-        // Recupero Types
+        // Recupero data
         $types = Type::all();
 
         foreach ( $data as $index=>$row) {
             if ($index !== 0) {
 
+                // Id_user seguendo index
+                $user_id = $index;
+
                 $new_restaurant = new Restaurant();
 
+                $new_restaurant->user_id = $user_id;
                 $new_restaurant->name = $row[0];
                 $new_restaurant->slug = Str::slug($new_restaurant->name, '-');
                 $new_restaurant->address = $row[1];

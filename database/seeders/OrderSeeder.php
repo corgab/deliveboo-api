@@ -37,7 +37,7 @@ class OrderSeeder extends Seeder
         // Data file orders.csv
         $data = $this->getCSVData(__DIR__.'/csv/orders.csv');
 
-        // Recupero Piatti
+        // Recupero dati
         $dishes = Dish::all();
         $restaurants = Restaurant::all();
         
