@@ -31,8 +31,8 @@
                     ricevuti</strong> e le <strong>statistiche</strong> sugli ordini.
             </p>
 
-            <div class="d-flex justify-content-center gap-5 mt-5 pb-5">
-                <a href="{{ route('admin.dishes.index') }}" class="btn btn-danger">Menù e Lista Piatti</a>
+            <div class="d-flex justify-content-center gap-4 mt-5 pb-5">
+                <a href="{{ route('admin.dishes.index') }}" class="btn btn-danger">Menù</a>
                 <a href="{{ route('admin.orders.index') }}" class="btn btn-danger">Ordini</a> 
                 <a href="{{ route('admin.orders.index') }}" class="btn btn-danger">Statistiche</a>  
             </div>
