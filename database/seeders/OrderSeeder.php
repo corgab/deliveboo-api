@@ -39,17 +39,17 @@ class OrderSeeder extends Seeder
 
         // Recupero Piatti
         $dishes = Dish::all();
-         // Data file orders.csv
-         $data = $this->getCSVData(__DIR__.'/csv/orders.csv');
-         $restaurants = Restaurant::all();
-
-
-         foreach ($data as $index=>$row) {
+        $restaurants = Restaurant::all();
+        
+        
+        foreach ($data as $index=>$row) {
             if ($index !== 0) {
+                
+                $restaurant_id = $restaurants->random()->id;
+                
                 $new_order = new Order();
 
-                $restaurant_ids = $restaurants->random(rand(1, 5))->pluck('id')->toArray();
-                $new_order->restaurant_id = $restaurant_ids;
+                $new_order->restaurant_id = $restaurant_id;
                 $new_order->name = $row[0];
                 $new_order->email = $row[1];
                 $new_order->number = $row[2];
@@ -60,7 +60,7 @@ class OrderSeeder extends Seeder
                 $new_order->save();
 
                 // Id randomico di Type in un array
-                $dish_ids = $dishes->random(rand(1, 10))->pluck('id')->toArray();
+                $dish_ids = $dishes->random(rand(1, 10))->pluck('id')->all();
 
                 // Attach Pivot
                 $new_order->dishes()->attach($dish_ids);
