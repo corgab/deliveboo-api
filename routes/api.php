@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Api\DishController;
 use App\Http\Controllers\Api\RestaurantController;
+use App\Http\Controllers\Api\TypeController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -27,6 +28,10 @@ Route::get('/restaurants/{restaurant:slug}', [RestaurantController::class, 'show
 // ROTTE DISHES
 Route::get('/dishes', [DishController::class, 'index']);
 Route::get('/dishes/{dish:id}', [DishController::class, 'show']);
+
+// ROTTE TYPES
+Route::get('/types', [TypeController::class, 'index']);
+Route::get('/types/{type:id}', [TypeController::class, 'show']);
 
 
 
