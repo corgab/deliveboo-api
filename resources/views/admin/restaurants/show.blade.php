@@ -13,7 +13,7 @@
     <form action="{{ route('admin.restaurants.destroy', $restaurant) }}" method="POST">
         @method('DELETE')
         @csrf
-        <button class="btn btn-danger">elimina</button>
+        <button class="btn btn-danger">Elimina</button>
     </form>
 
 </section>

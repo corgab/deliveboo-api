@@ -12,7 +12,7 @@
             </div>
 
             <div class="mb-3">
-                <label for="address" class="form-label">Address</label>
+                <label for="address" class="form-label">Indirizzo</label>
                 <input type="text" class="form-control" id="address" name="address" value="{{old('address', $restaurant->address)}}">
             </div>
 

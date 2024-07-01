@@ -22,7 +22,7 @@ class StoreDishRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'name' => 'require|max:100',
+            'name' => 'required|max:100',
             'description_ingredients' => 'required',
             'price' => 'required',
             'visible' => 'required|boolean',
