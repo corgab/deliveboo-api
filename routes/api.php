@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Api\DishController;
 use App\Http\Controllers\Api\RestaurantController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -19,5 +20,14 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
+// ROTTE RESTAURANTS
 Route::get('/restaurants', [RestaurantController::class, 'index']);
+Route::get('/restaurants/{restaurant:slug}', [RestaurantController::class, 'show']);
+
+// ROTTE DISHES
+Route::get('/dishes', [DishController::class, 'index']);
+Route::get('/dishes/{dish:id}', [DishController::class, 'show']);
+
+
+
 
