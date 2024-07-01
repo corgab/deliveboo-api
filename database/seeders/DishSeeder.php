@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Str;
 
 use App\Models\Dish;
 use App\Models\Restaurant;
@@ -53,6 +54,7 @@ class DishSeeder extends Seeder
 
                 $new_dish->restaurant_id = $restaurant_id;
                 $new_dish->name = $row[0];
+                $new_dish->slug = Str::slug($new_dish->name, '-');
                 $new_dish->description_ingredients = $row[1];
                 $new_dish->price = $row[2];
                 $new_dish->visible = $row[3];

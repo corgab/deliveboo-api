@@ -1,4 +1,4 @@
-@extends('layout.app')
+@extends('layouts.app')
 
 @section('content')
 <form action="{{route('admin.dishes.store')}}" method="POST">

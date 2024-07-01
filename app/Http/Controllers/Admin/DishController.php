@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\Dish;
+use App\Models\Type;
 use Illuminate\Http\Request;
 use App\Http\Requests\StoreDishRequest;
 use App\Http\Requests\UpdateDishRequest;
@@ -25,8 +26,10 @@ class DishController extends Controller
      */
     public function create()
     {
+        $types = Type::all();
+
         //ritorno alla view create
-        return view('admin.dishes.create');
+        return view('admin.dishes.create', compact('types'));
     }
 
     /**
@@ -34,8 +37,23 @@ class DishController extends Controller
      */
     public function store(StoreDishRequest $request)
     {
+        // Validazione
         $form_data = $request->validated();
 
+        // Gestione Slug unico
+        $base_slug = Str::slug($form_data['name']);
+        $slug = $base_slug;
+        $n = 0;
+        do {
+            $find = Dish::where('slug', $slug)->first();
+            if ($find !== null) {
+                $n++;
+                $slug = $base_slug . '-' . $n;
+            }
+        } while ($find !== null);
+        $form_data['slug'] = $slug;
+
+        // Creazione piatto
         $new_dish = Dish::create($form_data);
         
         return to_route('admin.dishes.show', $new_dish);
@@ -47,7 +65,6 @@ class DishController extends Controller
     public function show(Dish $dish)
     {
 
-        // dd($dish);
         return view('admin.dishes.show', compact('dish'));
     }
 
@@ -56,7 +73,7 @@ class DishController extends Controller
      */
     public function edit(Dish $dish)
     {
-        return view('admin.dishes.show', compact('dish'));
+        return view('admin.dishes.edit', compact('dish'));
     }
 
     /**
@@ -66,6 +83,19 @@ class DishController extends Controller
     {
         // Validazione
         $form_data = $request->validated();
+
+        // Gestione Slug unico
+        $base_slug = Str::slug($form_data['name']);
+        $slug = $base_slug;
+        $n = 0;
+        do {
+            $find = Dish::where('slug', $slug)->first();
+            if ($find !== null) {
+                $n++;
+                $slug = $base_slug . '-' . $n;
+            }
+        } while ($find !== null);
+        $form_data['slug'] = $slug;
 
         // Modifica piatto
         $dish->update($form_data);

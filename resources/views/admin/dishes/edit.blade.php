@@ -29,7 +29,7 @@
    
     <div class="d-flex justify-content-evenly pt-3">
         <button type="submit" class="btn btn-primary fw-bold">Edit</button>
-        <a href="{{route('admin.dishes.show')}}" class="btn btn-warning text-primary fw-bold">Back</a>
+        <a href="{{route('admin.dishes.show', $dish)}}" class="btn btn-warning text-primary fw-bold">Back</a>
     </div>
 </form>
 

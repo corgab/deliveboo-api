@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Str;
 
 use App\Models\Type;
 
@@ -39,6 +40,7 @@ class TypeSeeder extends Seeder
                 $new_type = new Type();
 
                 $new_type->name = $row[0];
+                $new_type->slug = Str::slug($new_type->name, '-');
 
                 // Salvataggio dati 
                 $new_type->save();
