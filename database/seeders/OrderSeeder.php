@@ -32,7 +32,7 @@ class OrderSeeder extends Seeder
         return $data;
     }
 
-    public function run(): void
+    public function run(Faker $faker): void
     {
         // Data file orders.csv
         $data = $this->getCSVData(__DIR__.'/csv/orders.csv');
@@ -59,11 +59,29 @@ class OrderSeeder extends Seeder
                 // Salvataggio dati 
                 $new_order->save();
 
-                // Id randomico di Type in un array
-                $dish_ids = $dishes->random(rand(1, 10))->pluck('id')->all();
+                // Ids dei piatti in un array
+                $dish_ids = Dish::all()->pluck('id')->all();
+                // Id randomico di dish in un array
+                // $dish_ids = $dishes->random(rand(1, 10))->pluck('id')->all();
+
+                // crare una quantità random per i piatti  da inserire negli ordini
+                // prendo un piatto random
+                $random_dish_id = $faker->randomElements($dish_ids, $faker->numberBetween(1,10));
+                // $random_dish_id = random($dish_ids, rand(1,10));
+                // per ogni piatto inseriamo una quantità da 0 a 5
+                $random_qty = [];
+
+                // Popolo l'array scorrento gli dish generati
+                foreach($random_dish_ids as $dish_id) {
+                    $random_qty[$dish_id] = ['qty' => rand(1, 4)];
+                }  
+
+                
 
                 // Attach Pivot
                 $new_order->dishes()->attach($dish_ids);
+                // attach qty to dishes
+                $new_order->dishes()->attach($random_qty);
             }
         }
     }
