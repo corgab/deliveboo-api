@@ -37,6 +37,9 @@ class DishController extends Controller
      */
     public function store(StoreDishRequest $request)
     {
+
+        // !! Bad $request !! 
+
         // Validazione
         $form_data = $request->validated();
 

@@ -72,7 +72,7 @@ class RestaurantController extends Controller
     public function edit(Restaurant $restaurant)
     {
  
-        return view('admin.restaurants.show', compact('restaurant'));
+        return view('admin.restaurants.edit', compact('restaurant'));
     }
 
     /**
@@ -95,6 +95,8 @@ class RestaurantController extends Controller
             }
         } while ($find !== null);
         $form_data['slug'] = $slug;
+
+        // Da aggiungere User_id
 
         // Modifica nuovo ristorante
         $restaurant->update($form_data);

@@ -75,7 +75,10 @@
             </div>
         </nav>
 
-        <main>
+        <section>
+            @yield('content-home')
+        </section>
+        <main class="container">
             @yield('content')
         </main>
     </div>

@@ -1,14 +1,10 @@
-<!DOCTYPE html>
-<html>
+@extends('layouts.app')
+@section('content')
 
-<head>
-    <title>Type</title>
-</head>
-
-<body>
+<section>
     @foreach ($types as $type)
-        <h1>{{ $type->name }}</h1>
+        <h1>{{ $type->name }}</h1>        
     @endforeach
-</body>
+</section>
 
-</html>
+@endsection

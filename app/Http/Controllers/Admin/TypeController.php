@@ -14,9 +14,8 @@ class TypeController extends Controller
         return view('admin.types.index', compact('types'));
     }
 
-    public function show($id)
+    public function show(Type $type)
     {
-        $types = Type::findOrFail($id);
-        return view('admin.types.show', compact('types'));
+        return view('admin.types.show', compact('type'));
     }
 }
