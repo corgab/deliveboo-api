@@ -3,6 +3,10 @@
 @section('content')
 <form action="{{route('admin.dishes.store')}}" method="POST">
     @csrf
+
+    <!-- Restaurant_id value-->
+    <input type="hidden" name="restaurant_id" value="{{ $restaurant->id }}">
+    
     <div class="mb-4">
         <label for="name_project" class="form-label fw-bold">Name</label>
         <input type="text" name="name" class="form-control" id="name" placeholder="Write your Name Restaurant" value="{{old('name')}}">
@@ -23,19 +27,11 @@
         <label class="form-check-label" for="visible">
             Visible:
         </label>
-        <input class="form-check-input" name="visible" type="checkbox" value="{{old('visible')}}" id="visible">
     </div>
-    <!-- <div class="mb-4 d-flex gap-4">
-        <span class="fw-bold"> Select Type: </span>
-        @foreach($types as $type)
-        <div class="form-check">
-            <input class="form-check-input" type="checkbox" name="types[]" value="{{$type->id}}" id="{{$type->id}}" @checked(in_array($type->id, old('types', [])))>
-            <label class="form-check-label" for="{{$type->id}}">
-                {{$type->name}}
-            </label>
-        </div>
-        @endforeach
-    </div> -->
+    <select name="visible" id="visible">
+        <option value="0">no</option>
+        <option value="1">si</option>
+    </select>
     <div class="d-flex justify-content-evenly pt-3">
         <button type="submit" class="btn btn-primary fw-bold">Create</button>
         <a href="{{route('admin.dishes.index')}}" class="btn btn-warning text-primary fw-bold">Back</a>

@@ -14,7 +14,9 @@ class Dish extends Model
         'description_ingredients',
         'price',
         'visible',
-        'thumb'
+        'thumb',
+        'slug',
+        'restaurant_id'
     ];
 
     // Many-to-many

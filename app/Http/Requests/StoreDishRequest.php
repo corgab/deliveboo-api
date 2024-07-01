@@ -26,7 +26,8 @@ class StoreDishRequest extends FormRequest
             'description_ingredients' => 'required',
             'price' => 'required',
             'visible' => 'boolean',
-            'thumb' => 'nullable'
+            'thumb' => 'nullable',
+            'restaurant_id' => 'required|exists:restaurants,id'
         ];
     }
 }
