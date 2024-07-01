@@ -60,8 +60,11 @@ class DishSeeder extends Seeder
                 $new_dish->visible = $row[3];
                 // Thumb
 
+                
                 // Salvataggio dati 
                 $new_dish->save();
+
+
             }
         }
     }
