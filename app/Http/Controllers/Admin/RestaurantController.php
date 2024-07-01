@@ -9,6 +9,7 @@ use Illuminate\Support\Str;
 use App\Http\Requests\StoreRestaurantRequest;
 use App\Http\Requests\UpdateRestaurantRequest;
 use App\Models\Restaurant;
+use Illuminate\Support\Facades\Auth;
 
 class RestaurantController extends Controller
 {
@@ -27,6 +28,18 @@ class RestaurantController extends Controller
      */
     public function create()
     {
+        // Recupero l'utente 
+        $user = Auth::user();
+        $restaurant = Restaurant::where('user_id', $user->id)->first();
+
+        // Controllare se ha già un ristorante registrato
+        // Se l'utente ha già un ristorante
+        if($restaurant){
+            $restaurants = Restaurant::all();
+            $error = 'Hai già un Ristorante Registrato';
+            return view('admin.restaurants.index', compact('error', 'restaurants'));
+        }
+        // Altrimenti Mostra il Create
         return view('admin.restaurants.create');
     }
 

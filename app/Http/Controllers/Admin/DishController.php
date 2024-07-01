@@ -30,6 +30,8 @@ class DishController extends Controller
     public function create()
     {
         $types = Type::all();
+
+        // Recupero l'utente 
         $user = Auth::user();
         // Ristorante dove user_id è stesso del login
         $restaurant = Restaurant::where('user_id', $user->id)->first();

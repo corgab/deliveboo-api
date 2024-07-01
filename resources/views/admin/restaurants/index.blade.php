@@ -15,8 +15,11 @@
             <button class="btn btn-danger">elimina</button>
         </form>
     </div>
-
     @endforeach
+
+    @if(isset($error))
+    <h1>{{$error}}</h1>
+    @endif
 
 </section>
 
