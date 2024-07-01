@@ -7,11 +7,14 @@
 
     <form action="{{route('admin.restaurants.store')}}" method="POST">
         @csrf
+        <!-- Restaurant_id value-->
+        <input type="hidden" name="user_id" value="{{ $user->id }}">
 
         <div class="mb-3">
             <label for="name" class="form-label">Nome Ristorante</label>
             <input type="text" class="form-control" id="name" name="name" value="{{ old('name') }}">
         </div>
+
         <div class="mb-3">
             <label for="address" class="form-label">Indirizzo</label>
             <input type="text" class="form-control" id="address" name="address" placeholder="es. Via roma 1" value="{{ old('address') }}">

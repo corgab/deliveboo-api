@@ -40,7 +40,7 @@ class RestaurantController extends Controller
             return view('admin.restaurants.index', compact('error', 'restaurants'));
         }
         // Altrimenti Mostra il Create
-        return view('admin.restaurants.create');
+        return view('admin.restaurants.create', compact('user','restaurant'));
     }
 
     /**
@@ -50,6 +50,10 @@ class RestaurantController extends Controller
     {   
         // Validazione
         $form_data = $request->validated();
+        $form_data['user_id'] = $request->input('user_id');
+        $user = Auth::user();
+        $restaurant = Restaurant::where('user_id', $user->id)->first();
+
 
         // Gestione Slug unico
         $base_slug = Str::slug($form_data['name']);
@@ -67,7 +71,7 @@ class RestaurantController extends Controller
         // Creazione nuovo ristorante
         $new_restaurant = Restaurant::create($form_data);
         
-        return to_route('admin.restaurants.index', $new_restaurant);
+        return to_route('admin.restaurants.show', $new_restaurant);
     }
 
     /**

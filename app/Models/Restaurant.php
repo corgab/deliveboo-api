@@ -19,6 +19,7 @@ class Restaurant extends Model
         'address',
         'vat',
         'thumb',
+        'user_id'
     ];
     
     // Many-to-many

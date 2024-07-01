@@ -36,6 +36,7 @@ class DishController extends Controller
         // Ristorante dove user_id è stesso del login
         $restaurant = Restaurant::where('user_id', $user->id)->first();
         //ritorno alla view create
+        // dd($restaurant);
         return view('admin.dishes.create', compact('types', 'restaurant'));
     }
     /**
