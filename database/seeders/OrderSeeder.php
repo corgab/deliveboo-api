@@ -66,22 +66,26 @@ class OrderSeeder extends Seeder
 
                 // crare una quantità random per i piatti  da inserire negli ordini
                 // prendo un piatto random
-                $random_dish_id = $faker->randomElements($dish_ids, $faker->numberBetween(1,10));
+
+                $random_dish_ids = $faker->randomElements($dish_ids, rand(1, 5));
                 // $random_dish_id = random($dish_ids, rand(1,10));
+
                 // per ogni piatto inseriamo una quantità da 0 a 5
-                $random_qty = [];
+                $qty = [];
 
-                // Popolo l'array scorrento gli dish generati
+                // Popolo l'array scorrendo gli dish generati
+
                 foreach($random_dish_ids as $dish_id) {
-                    $random_qty[$dish_id] = ['qty' => rand(1, 4)];
-                }  
-
-                
+                    $qty[$dish_id] = ['qty' => rand(1, 4)];
+                }
+            
+                // $dish_ids[$index] = ['qty' => rand(1, 9)];
+                                
 
                 // Attach Pivot
                 $new_order->dishes()->attach($dish_ids);
                 // attach qty to dishes
-                $new_order->dishes()->attach($random_qty);
+                $new_order->dishes()->attach($qty);
             }
         }
     }
