@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Api\DishController;
+use App\Http\Controllers\Api\OrderController;
 use App\Http\Controllers\Api\RestaurantController;
 use App\Http\Controllers\Api\TypeController;
 use Illuminate\Http\Request;
@@ -32,6 +33,11 @@ Route::get('/dishes/{dish:id}', [DishController::class, 'show']);
 // ROTTE TYPES
 Route::get('/types', [TypeController::class, 'index']);
 Route::get('/types/{type:id}', [TypeController::class, 'show']);
+
+// ROTTE ORDERS
+Route::get('/orders', [OrderController::class, 'index']);
+Route::get('/orders/{order:id}', [OrderController::class, 'show']);
+
 
 
 
