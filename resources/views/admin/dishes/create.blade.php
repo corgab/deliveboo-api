@@ -19,10 +19,8 @@
                 placeholder="Inserisci gli incredienti usati" value="{{old('description_ingredients')}}">
         </div>
         <div class="mb-4">
-            <label for="price" class="form-label fw-bold">Prezzo</label>
-            <textarea type="text" name="price" class="form-control" id="price" placeholder="Costo del piatto" rows="8"
-                value="{{old('price')}}">
-        </textarea>
+            <label for="price" class="form-label fw-bold">Prezzo €</label>
+            <input type="text" name="price" class="form-control" id="price" placeholder="0.00" value="{{old('price')}}">
         </div>
         <div class="input-group mb-3">
             <input type="file" class="form-control" id="thumb" name="thumb" value="{{ old('thumb') }}">
@@ -32,7 +30,7 @@
             <div class="d-flex gap-3">
                 <div class="form-check">
                     <label class="form-check-label" for="visible">
-                        Visible:
+                        Visibile
                     </label>
                 </div>
                 <select name="visible" id="visible">

@@ -55,6 +55,9 @@
                 </ul>
             </div>
         @endif
+        
+    </div>
+    <div class="text-center my-4">
         <h5>I campi contrassegnati con * sono obbligatori.</h5>
     </div>
 

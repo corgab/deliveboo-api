@@ -5,27 +5,31 @@
     @csrf
     @method('PUT')
     <div class="mb-4">
-        <label for="name_project" class="form-label fw-bold">Name</label>
-        <input type="text" name="name" class="form-control" id="name" placeholder="Write your Name Restaurant" value="{{old('name', $dish->name)}}">
+        <label for="name_project" class="form-label fw-bold">Nome</label>
+        <input type="text" name="name" class="form-control" id="name" value="{{old('name', $dish->name)}}">
     </div>
 
     <div class="mb-4">
-        <label for="description_ingredients" class="form-label fw-bold">Description/Ingredients</label>
-        <input type="text" name="description_ingredients" class="form-control" id="description_ingredients" placeholder="Describe your dish" value="{{old('description_ingredients', $dish->description_ingredients)}}">
+        <label for="description_ingredients" class="form-label fw-bold">Descrizione / Ingredienti</label>
+        <input type="text" name="description_ingredients" class="form-control" id="description_ingredients" value="{{old('description_ingredients', $dish->description_ingredients)}}">
     </div>
     <div class="mb-4">
-        <label for="price" class="form-label fw-bold">Price</label>
-        <textarea type="text" name="price" class="form-control" id="price" placeholder="Insert the price" rows="8" value="{{old('price', $dish->price)}}">
-        </textarea>
+        <label for="price" class="form-label fw-bold">Prezzo €</label>
+        <input type="text" name="price" class="form-control" id="price" value="{{old('price', $dish->price)}}">
     </div>
     <div class="input-group mb-3">
         <input type="file" class="form-control" id="thumb" name="thumb" value="{{ old('thumb',  $dish->thumb)}}">
     </div>
-    <div class="form-check">
-        <label class="form-check-label" for="visible">
-            Visible:
-        </label>
-        <input class="form-check-input" name="visible" type="checkbox" value="{{old('visible',  $dish->visible)}}" id="visible">
+    <div class="d-flex gap-3">
+        <div class="form-check">
+            <label class="form-check-label" for="visible">
+                Visibile
+            </label>
+        </div>
+        <select name="visible" id="visible">
+            <option value="0">No</option>
+            <option value="1">Si</option>
+        </select>
     </div>
    
     <div class="d-flex justify-content-evenly pt-3">

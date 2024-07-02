@@ -133,11 +133,8 @@ class RestaurantController extends Controller
         $restaurant = Restaurant::where('user_id', $user->id)->first();
 
         // prendiamo le tipologie
-        // $restaurant->load(['types']);
 
         $types = Type::orderBy('name', 'asc')->get();
-
-
 
         return view('admin.restaurants.edit', compact('restaurant', 'user', 'types'));
     }
@@ -191,8 +188,8 @@ class RestaurantController extends Controller
      */
     public function destroy(Restaurant $restaurant)
     {
-        $restaurant->delete();
+        // $restaurant->delete();
 
-        return to_route('admin.restaurants.index');
+        // return to_route('admin.restaurants.index');
     }
 }

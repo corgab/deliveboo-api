@@ -1,10 +1,9 @@
 @extends('layouts.app')
 @section('content')
 <section>
-    <h1 class="text-center" style="font-size: 1.5rem;">Dettaglio prodotto <br> <span
-            class="text-danger">Deliveboo</span></h1>
+    <h1 class="text-center" style="font-size: 1.5rem;">Dettaglio Piatto <br> 
+    <span class="text-danger">Deliveboo</span></h1>
     <ul class="lh-lg">
-        <li><strong>Identificativo prodotto</strong>: {{ $dish->id }}</li>
         <li><strong>Nome</strong>: {{ $dish->name }}</li>
         <li><strong>Descrizione ingredienti</strong>: {{ $dish->description_ingredients }}</li>
         <li><strong>Prezzo</strong>: {{ $dish->price }} €</li>
@@ -12,7 +11,7 @@
 
 
     <!-- Check Boolean -->
-    @if ($dish->visible === 1)
+    @if ($dish->visible == true)
         <h3>Visibile</h3>
     @else
         <h3>Non visibile</h3>
