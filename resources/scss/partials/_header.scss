@@ -1,0 +1,24 @@
+@use './utilities';
+
+.main-header{
+    position: relative;
+}
+
+.logo-img{
+    width: 300px;
+}
+
+.nav{
+    a{
+        &:hover{
+            color: var(--color-darkgreen);
+        }
+    }
+}
+
+.navbar-nav{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding-right: 20px;
+}
