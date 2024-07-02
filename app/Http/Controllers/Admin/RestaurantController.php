@@ -20,9 +20,13 @@ class RestaurantController extends Controller
     public function dashboard(){
         $user = Auth::user();
         $restaurant = Restaurant::where('user_id', $user->id)->first();
-        $orders = Order::where('restaurant_id', $restaurant->id)->get();
-        $dishes = Dish::where('restaurant_id', $restaurant->id)->get();
-        return view('admin.dashboard', compact('restaurant', 'orders', 'dishes'));
+        if($restaurant){
+            $orders = Order::where('restaurant_id', $restaurant->id)->get();
+            $dishes = Dish::where('restaurant_id', $restaurant->id)->get();
+            return view('admin.dashboard', compact('restaurant', 'orders', 'dishes'));
+        }else{
+            return view('admin.dashboard');
+        }
     }
         
     /**
@@ -67,7 +71,7 @@ class RestaurantController extends Controller
             $error = 'Hai già un Ristorante Registrato';
 
             // Restituisci la vista dell'index
-            return view('admin.restaurants.index', compact('error', 'restaurant'));
+            return view('admin.restaurants.create', compact('user','error', 'restaurant'));
         }
 
         // prendiamo le tipologie
