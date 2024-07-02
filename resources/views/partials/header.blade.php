@@ -1,4 +1,4 @@
-<header class="main-header shadow-lg px-1">
+<header class="main-header px-1 py-2">
     <div class="logo text-center">
         <a class="nav-link" href="{{url('/') }}">
             <img  class="logo-img" src="{{ Vite::asset('resources/img/logo.png')}}" alt="Logo">
@@ -7,8 +7,8 @@
 
     <nav class="nav d-flex px-2 justify-content-center align-items-center">
         <div class="d-flex gap-5">
+            <a class="dropdown-item" href="{{ url('admin') }}">{{__('Dashboard')}}</a>
             <a class="dropdown-item" href="{{ url('admin/restaurants/create') }}">{{__('Registra il tuo Ristorante')}}</a>
-            <a class="dropdown-item" href="{{ url('admin/restaurants') }}">{{__('Il tuo Ristorante')}}</a>
             <a class="dropdown-item" href="{{ url('admin/dishes') }}">{{__('Il tuo menu')}}</a>
             <a class="dropdown-item" href="{{ url('admin/dishes/create') }}">{{__('Aggiungi un piatto')}}</a>
         </div>

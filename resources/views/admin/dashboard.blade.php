@@ -1,32 +1,60 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
-    <h2 class="fs-5 text-secondary my-4 text-center">
-        {{ __('Dashboard') }}
-    </h2>
+<div class="container py-5">
+    <section class="restaurant mb-5">
+        <h1 class="restaurant-titles">IL TUO RISTORANTE</h1>
+        <div class="card restaurant-card p-5">
+        @if($restaurant)
+            <h3>{{$restaurant->name}}</h3>
+            <h4>{{$restaurant->address}}</h4>
+            <p>P.IVA: {{$restaurant->vat}}</p>
+        </div>
 
-    <section>
-        @if (isset($error))
-            <div class="alert alert-danger text-center" style="font-size: 1rem;">
-                {{ $error }}
-            </div>
         @else
-            <div class="mt-5 py-4">
-                <h1 class="text-center text-white fs-1 pt-5">Ciao e benvenuto in <span class="text-danger">Deliveboo</span>.
-                </h1>
-                <p class="my-4 fs-4 text-center text-white px-5">Questa è la tua Dashboard. Da qui potrai sempre visionare il
-                    <strong>menù</strong> e <strong>lista completa</strong> dei tuoi piatti, gli <strong>ordini
-                        ricevuti</strong> e le <strong>statistiche</strong> sugli ordini.
-                </p>
-
-                <div class="d-flex justify-content-center gap-4 mt-5 pb-5">
-                    <a href="{{ route('admin.dishes.index') }}" class="btn btn-danger">Menù</a>
-                    <a href="{{ route('admin.orders.index') }}" class="btn btn-danger">Ordini</a> 
-                    <a href="{{ route('admin.orders.index') }}" class="btn btn-danger">Statistiche</a>  
-                </div>
-            </div>
+        <div>Non hai ancora nessun Ristorante registrato!</div>
         @endif
+    </section>
+
+    <section class="dishes mb-5">
+        <h1 class="restaurant-titles">
+            <a href="{{ route('admin.dishes.index') }}">I TUOI PIATTI</a>
+        </h1>
+        <div class="card restaurant-card p-5">
+            @if($dishes)
+            @foreach($dishes as $dish)
+            <ul>
+                <li>{{$dish->name}}</li>
+            </ul>
+            @endforeach
+            @else
+            <div>Non hai ancora nessun piatto registrato!</div>
+            @endif
+        </div>
+    </section>
+
+    <section class="orders mb-5">
+        <h1 class="restaurant-titles">
+            <a href="{{ route('admin.orders.index') }}">IL TUO ORDINI</a>
+        </h1>
+        <div class="card restaurant-card p-5">
+            @if($orders)
+            @foreach($orders as $order)
+            <ul>
+                <li class="d-flex justify-content-between">
+                    <p>{{$order->name}}</p>
+                    <p>{{$order->total_price}}</p>
+                </li>
+            </ul>
+            @endforeach
+            @else
+            <div>Non hai ancora nessun ordine!</div>
+            @endif
+        </div>
+    </section>
+
+    <section class="order-statistics mb-5">
+        <h1 class="restaurant-titles">STATISTICHE ORDINI</h1>
     </section>
 </div>
 @endsection

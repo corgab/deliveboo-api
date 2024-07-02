@@ -5,3 +5,12 @@
     --color-green: #78AAA8;
     --color-darkgreen: #40684E;
 }
+
+a{
+    color: currentColor;
+    text-decoration: none;
+}
+
+ul,ol,menu{
+    list-style: none;
+}

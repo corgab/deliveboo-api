@@ -27,9 +27,11 @@ Route::middleware(['auth', 'verified'])
     ->prefix('admin')
     ->group(function(){
         
-        Route::get('/', function () {
-            return view('admin.dashboard');
-        })->name('dashboard');
+        // Route::get('/', function () {
+        //     return view('admin.dashboard');
+        // })->name('dashboard');
+        Route::get('/', [RestaurantController::class, 'dashboard']);
+
 
         // Dishes
         Route::resource('dishes', DishController::class)->only(['index','store','create']);

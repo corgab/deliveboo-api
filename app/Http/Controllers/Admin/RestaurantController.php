@@ -8,12 +8,23 @@ use Illuminate\Support\Str;
 
 use App\Http\Requests\StoreRestaurantRequest;
 use App\Http\Requests\UpdateRestaurantRequest;
+use App\Models\Dish;
+use App\Models\Order;
 use App\Models\Restaurant;
 use App\Models\Type;
 use Illuminate\Support\Facades\Auth;
 
 class RestaurantController extends Controller
 {
+
+    public function dashboard(){
+        $user = Auth::user();
+        $restaurant = Restaurant::where('user_id', $user->id)->first();
+        $orders = Order::where('restaurant_id', $restaurant->id)->get();
+        $dishes = Dish::where('restaurant_id', $restaurant->id)->get();
+        return view('admin.dashboard', compact('restaurant', 'orders', 'dishes'));
+    }
+        
     /**
      * Display a listing of the resource.
      */
