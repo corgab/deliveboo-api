@@ -7,10 +7,13 @@
 
     <nav class="nav d-flex px-2 justify-content-center align-items-center">
         <div class="d-flex gap-5">
+            @auth
+            <a class="dropdown-item" href="{{ url('/') }}">{{__('Home')}}</a>
             <a class="dropdown-item" href="{{ url('admin') }}">{{__('Dashboard')}}</a>
-            <a class="dropdown-item" href="{{ url('admin/restaurants/create') }}">{{__('Registra il tuo Ristorante')}}</a>
             <a class="dropdown-item" href="{{ url('admin/dishes') }}">{{__('Il tuo menu')}}</a>
             <a class="dropdown-item" href="{{ url('admin/dishes/create') }}">{{__('Aggiungi un piatto')}}</a>
+            <a class="dropdown-item" href="{{ url('admin/orders') }}">{{__('I tuoi ordini')}}</a>
+            @endif
         </div>
 
          <!-- Right Side Of Navbar -->

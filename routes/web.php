@@ -52,8 +52,7 @@ Route::middleware(['auth', 'verified'])
         Route::get('types/{type:slug}', [TypeController::class, 'show'])->name('types.show');
 
         // Orders
-        Route::resource('orders', OrderController::class);
-
+        Route::resource('orders', OrderController::class)->only(['index']);
 });
 
 Route::middleware('auth')->group(function () {
