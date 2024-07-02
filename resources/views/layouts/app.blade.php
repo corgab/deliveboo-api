@@ -25,7 +25,8 @@
         <main class="main">
             @yield('content')
         </main>
-        @include('partials.footer')
+        <!-- !! DA FIXARE !! -->
+        {{-- @include('partials.footer') --}}
     </div>
 </body>
 
