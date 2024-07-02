@@ -24,7 +24,12 @@ class RestaurantController extends Controller
         // Trova il ristorante associato all'utente
         $restaurant = Restaurant::where('user_id', $user->id)->first();
         
-        // dd($restaurants);
+        if ($restaurant) {
+            return view('admin.restaurants.index', compact('restaurant'));
+        } else {
+            $error = 'Nessun ristorante trovato per il tuo account.';
+            return view('admin.restaurants.index', compact('error'));
+        }
 
         return view('admin.restaurants.index', compact('restaurant'));
     }

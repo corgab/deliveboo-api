@@ -8,7 +8,7 @@
     {{-- @foreach ($restaurants as $restaurant) --}}
 
     
-        @if ($restaurant === null)
+        @if (is_null($restaurant) === null)
             <h1>Crea il tuo primo ristorante</h1>
         @else
             <div class="d-flex">

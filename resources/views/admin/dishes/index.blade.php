@@ -4,6 +4,11 @@
 
 <section>
     <h1 class="text-center" style="font-size: 1.5rem;">Lista piatti <br> <span class="text-danger">Deliveboo</span></h1>
+    @if(isset($error))
+    <div class="alert alert-danger text-center" style="font-size: 1rem;">
+        <h4>{{ $error }}</h4>
+    </div>
+    @endif
     @foreach ($dishes as $dish)
         <div class="d-flex gap-3">
             <ul>
