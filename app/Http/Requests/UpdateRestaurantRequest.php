@@ -26,7 +26,9 @@ class UpdateRestaurantRequest extends FormRequest
             'slug'=>'string|unique:restaurants,slug',
             'address'=>'required|max:255',
             'vat'=>'required|string|min:11|max:11',
-            'thumb'=>'nullable'
+            'thumb'=>'nullable',
+            'user_id'=> 'required|exists:users,id',
+            'type_id'=>'required|exists:types,id'
         ];
     }
 }

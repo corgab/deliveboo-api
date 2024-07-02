@@ -11,9 +11,24 @@
                 <input type="text" class="form-control" id="name" name="name" value="{{old('name', $restaurant->name)}}">
             </div>
 
+            <input type="hidden" name="user_id" value="{{ $user->id }}">
+
             <div class="mb-3">
                 <label for="address" class="form-label">Indirizzo</label>
                 <input type="text" class="form-control" id="address" name="address" value="{{old('address', $restaurant->address)}}">
+            </div>
+
+            <div class="mb-3">
+                <label for="types" class="form-label">Tipologie:</label>
+                <div class="form-check d-flex flex-wrap">
+                    @foreach ($types as $type)
+                        <div class="col-2">
+
+                            <input @checked(in_array($type->id, old('type_id', $restaurant->types->pluck('id')->all()))) name="type_id[]" type="checkbox" value="{{$type->id}}" id="type-{{$type->id}}">
+                            <label for="type-{{ $type->id }}">{{ $type->name }}</label>
+                        </div>
+                    @endforeach
+                </div>
             </div>
 
             <div class="mb-3">

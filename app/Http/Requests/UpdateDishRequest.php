@@ -24,9 +24,10 @@ class UpdateDishRequest extends FormRequest
         return [
             'name' => 'require|max:100',
             'description_ingredients' => 'required',
-            'price' => 'required',
+            'price' => 'required|numeric|between:0.01,999.99',
             'visible' => 'required|boolean',
-            'thumb' => 'nullable'
+            'thumb' => 'nullable',
+            'restaurant_id' => 'required|exists:restaurants,id'
         ];
     }
 }

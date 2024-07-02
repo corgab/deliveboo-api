@@ -24,7 +24,7 @@ class StoreDishRequest extends FormRequest
         return [
             'name' => 'required|max:100',
             'description_ingredients' => 'required',
-            'price' => 'required',
+            'price' => 'required|numeric|between:0.01,999.99',
             'visible' => 'boolean',
             'thumb' => 'nullable',
             'restaurant_id' => 'required|exists:restaurants,id'

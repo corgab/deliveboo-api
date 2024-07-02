@@ -9,6 +9,7 @@ use Illuminate\Support\Str;
 use App\Http\Requests\StoreRestaurantRequest;
 use App\Http\Requests\UpdateRestaurantRequest;
 use App\Models\Restaurant;
+use App\Models\Type;
 use Illuminate\Support\Facades\Auth;
 
 class RestaurantController extends Controller
@@ -57,8 +58,11 @@ class RestaurantController extends Controller
             // Restituisci la vista dell'index
             return view('admin.restaurants.index', compact('error', 'restaurant'));
         }
+
+        // prendiamo le tipologie
+        $types = Type::orderBy('name', 'asc')->get();
         // Altrimenti, mostra la vista create
-        return view('admin.restaurants.create', compact('user','restaurant'));
+        return view('admin.restaurants.create', compact('user','restaurant', 'types'));
     }
 
     /**
@@ -120,8 +124,22 @@ class RestaurantController extends Controller
      */
     public function edit(Restaurant $restaurant)
     {
- 
-        return view('admin.restaurants.edit', compact('restaurant'));
+
+
+        // Recupero l'utente 
+        $user = Auth::user();
+
+        // Trova il ristorante associato all'utente
+        $restaurant = Restaurant::where('user_id', $user->id)->first();
+
+        // prendiamo le tipologie
+        // $restaurant->load(['types']);
+
+        $types = Type::orderBy('name', 'asc')->get();
+
+
+
+        return view('admin.restaurants.edit', compact('restaurant', 'user', 'types'));
     }
 
     /**
@@ -131,6 +149,16 @@ class RestaurantController extends Controller
     {
         // Validazione
         $form_data = $request->validated();
+
+        // Assegna l'ID dell'utente al campo 'user_id'
+        $form_data['user_id'] = $request->input('user_id');
+
+        // Recupera l'utente
+        $user = Auth::user();
+        
+        // Trova il ristorante associato all'utente
+        $restaurant = Restaurant::where('user_id', $user->id)->first();
+
 
         // Gestione Slug unico
         $base_slug = Str::slug($form_data['name']);
@@ -145,7 +173,12 @@ class RestaurantController extends Controller
         } while ($find !== null);
         $form_data['slug'] = $slug;
 
-        // Da aggiungere User_id
+        if($request->has('type_id')){
+            $restaurant->types()->sync($request->type_id);
+        }
+        else{
+            $restaurant->types()->detach();
+        }
 
         // Modifica nuovo ristorante
         $restaurant->update($form_data);

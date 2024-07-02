@@ -8,6 +8,7 @@
         <label for="name_project" class="form-label fw-bold">Name</label>
         <input type="text" name="name" class="form-control" id="name" placeholder="Write your Name Restaurant" value="{{old('name', $dish->name)}}">
     </div>
+
     <div class="mb-4">
         <label for="description_ingredients" class="form-label fw-bold">Description/Ingredients</label>
         <input type="text" name="description_ingredients" class="form-control" id="description_ingredients" placeholder="Describe your dish" value="{{old('description_ingredients', $dish->description_ingredients)}}">
