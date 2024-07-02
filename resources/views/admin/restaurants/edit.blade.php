@@ -1,7 +1,7 @@
 @extends('layouts.app')
 @section('content')
     <section>
-        <h1>EDIT</h1>
+        <h1>Modifica dati</h1>
 
         <form action="{{ route('admin.restaurants.update', $restaurant) }}" method="POST">
             @csrf

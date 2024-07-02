@@ -12,10 +12,10 @@
                 {{ $error }}
             </div>
         @else
-            <div class="bg-warning rounded mt-5 py-4">
-                <h1 class="text-center fs-1 pt-5">Ciao e benvenuto in <span class="text-danger">Deliveboo</span>.
+            <div class="mt-5 py-4">
+                <h1 class="text-center text-white fs-1 pt-5">Ciao e benvenuto in <span class="text-danger">Deliveboo</span>.
                 </h1>
-                <p class="my-4 fs-4 text-center px-5">Questa è la tua Dashboard. Da qui potrai sempre visionare il
+                <p class="my-4 fs-4 text-center text-white px-5">Questa è la tua Dashboard. Da qui potrai sempre visionare il
                     <strong>menù</strong> e <strong>lista completa</strong> dei tuoi piatti, gli <strong>ordini
                         ricevuti</strong> e le <strong>statistiche</strong> sugli ordini.
                 </p>

@@ -18,9 +18,6 @@
         <h3>Non visibile</h3>
     @endif
 
-    <h3>{{ $dish->created_at}}</h3>
-    <h3>{{ $dish->updated_at}}</h3>
-
     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -28,15 +25,15 @@
                     <h1 class="modal-title fs-5" id="exampleModalLabel">Eliminazione Piatto</h1>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <div class="modal-body">
+                <div class="modal-body bg-danger text-center text-white">
                     Sicuro di voler eliminare il piatto ("{{ $dish->name }}")?
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Chiudi</button>
+                <button type="button" class="btn btn-outline-primary" data-bs-dismiss="modal">Annulla</button>
                     <form action="{{route('admin.dishes.destroy', $dish)}}" method="POST">
                         @csrf
                         @method('DELETE')
-                        <button type="submit" class="btn btn-danger">Elimina</button>
+                        <button type="submit" class="btn btn-outline-danger">Elimina</button>
                     </form>
                 </div>
             </div>
