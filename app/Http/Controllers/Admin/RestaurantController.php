@@ -18,9 +18,15 @@ class RestaurantController extends Controller
      */
     public function index()
     {
-        $restaurants = Restaurant::all();
+        // Recupero l'utente 
+        $user = Auth::user();
 
-        return view('admin.restaurants.index', compact('restaurants'));
+        // Trova il ristorante associato all'utente
+        $restaurant = Restaurant::where('user_id', $user->id)->first();
+        
+        // dd($restaurants);
+
+        return view('admin.restaurants.index', compact('restaurant'));
     }
 
     /**
@@ -38,13 +44,13 @@ class RestaurantController extends Controller
 
         if($restaurant){
             // Se l'utente ha già un ristorante
-            $restaurants = Restaurant::all();
+            $restaurant = Restaurant::where('user_id', $user->id)->first();
 
             // Imposta un messaggio di errore
             $error = 'Hai già un Ristorante Registrato';
 
             // Restituisci la vista dell'index
-            return view('admin.restaurants.index', compact('error', 'restaurants'));
+            return view('admin.restaurants.index', compact('error', 'restaurant'));
         }
         // Altrimenti, mostra la vista create
         return view('admin.restaurants.create', compact('user','restaurant'));
@@ -92,6 +98,14 @@ class RestaurantController extends Controller
      */
     public function show(Restaurant $restaurant)
     {
+
+        // Recupero l'utente 
+        $user = Auth::user();
+
+        // Trova il ristorante associato all'utente
+        $restaurants = Restaurant::where('user_id', $user->id)->first();
+        
+        // dd($restaurants);
 
         return view('admin.restaurants.show', compact('restaurant'));
     }
