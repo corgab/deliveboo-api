@@ -30,16 +30,23 @@ class RestaurantController extends Controller
     {
         // Recupero l'utente 
         $user = Auth::user();
+
+        // Trova il ristorante associato all'utente
         $restaurant = Restaurant::where('user_id', $user->id)->first();
 
         // Controllare se ha già un ristorante registrato
-        // Se l'utente ha già un ristorante
+
         if($restaurant){
+            // Se l'utente ha già un ristorante
             $restaurants = Restaurant::all();
+
+            // Imposta un messaggio di errore
             $error = 'Hai già un Ristorante Registrato';
+
+            // Restituisci la vista dell'index
             return view('admin.restaurants.index', compact('error', 'restaurants'));
         }
-        // Altrimenti Mostra il Create
+        // Altrimenti, mostra la vista create
         return view('admin.restaurants.create', compact('user','restaurant'));
     }
 
@@ -50,8 +57,14 @@ class RestaurantController extends Controller
     {   
         // Validazione
         $form_data = $request->validated();
+
+        // Assegna l'ID dell'utente al campo 'user_id'
         $form_data['user_id'] = $request->input('user_id');
+
+        // Recupera l'utente
         $user = Auth::user();
+
+        // Trova il ristorante associato all'utente
         $restaurant = Restaurant::where('user_id', $user->id)->first();
 
 

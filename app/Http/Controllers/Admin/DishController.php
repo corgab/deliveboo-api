@@ -33,10 +33,11 @@ class DishController extends Controller
 
         // Recupero l'utente 
         $user = Auth::user();
+
         // Ristorante dove user_id è stesso del login
         $restaurant = Restaurant::where('user_id', $user->id)->first();
+
         //ritorno alla view create
-        // dd($restaurant);
         return view('admin.dishes.create', compact('types', 'restaurant'));
     }
     /**
@@ -46,8 +47,14 @@ class DishController extends Controller
     {
         // Validazione
         $form_data = $request->validated();
+
+        // Assegna l'ID del ristorante al campo 'restaurant_id'
         $form_data['restaurant_id'] = $request->input('restaurant_id');
+
+        // Ottieni l'utente autenticato
         $user = Auth::user();
+
+        // Trova il ristorante associato all'utente autenticato
         $restaurant = Restaurant::where('user_id', $user->id)->first();
         
         // Gestione Slug unico
@@ -62,6 +69,7 @@ class DishController extends Controller
             }
         } while ($find !== null);
         $form_data['slug'] = $slug;
+
         // Creazione piatto
         $new_dish = Dish::create($form_data);
         

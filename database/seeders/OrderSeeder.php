@@ -45,6 +45,7 @@ class OrderSeeder extends Seeder
         foreach ($data as $index=>$row) {
             if ($index !== 0) {
                 
+                // Seleziona un ID ristorante casuale dai ristoranti
                 $restaurant_id = $restaurants->random()->id;
                 
                 $new_order = new Order();
@@ -59,33 +60,22 @@ class OrderSeeder extends Seeder
                 // Salvataggio dati 
                 $new_order->save();
 
-                // Ids dei piatti in un array
+                // Recupera gli ID di tutti i piatti in un array
                 $dish_ids = Dish::all()->pluck('id')->all();
-                // Id randomico di dish in un array
-                // $dish_ids = $dishes->random(rand(1, 10))->pluck('id')->all();
 
-                // crare una quantità random per i piatti  da inserire negli ordini
-                // prendo un piatto random
+                // Genera un array di ID di piatti casuali
+                $random_dish_ids = $faker->randomElements($dish_ids, rand(1, 4));
 
-                $random_dish_ids = $faker->randomElements($dish_ids, rand(1, 5));
-                // $random_dish_id = random($dish_ids, rand(1,10));
+                // Inizializza un array per le quantità dei piatti
+                $dish_quantities = [];
 
-                // per ogni piatto inseriamo una quantità da 0 a 5
-                $qty = [];
-
-                // Popolo l'array scorrendo gli dish generati
-
+                // Popola l'array delle quantità scorrendo gli ID dei piatti generati
                 foreach($random_dish_ids as $dish_id) {
-                    $qty[$dish_id] = ['qty' => rand(1, 4)];
+                    $dish_quantities[$dish_id] = ['qty' => rand(1, 4)];
                 }
-            
-                // $dish_ids[$index] = ['qty' => rand(1, 9)];
                                 
-
-                // Attach Pivot
-                $new_order->dishes()->attach($dish_ids);
-                // attach qty to dishes
-                $new_order->dishes()->attach($qty);
+                // Associa i piatti
+                $new_order->dishes()->attach($dish_quantities);
             }
         }
     }
