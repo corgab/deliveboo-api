@@ -19,9 +19,26 @@ class DishController extends Controller
      */
     public function index()
     {
-        $dishes = Dish::all();
+        // Recupero l'utente 
+        $user = Auth::user();
 
-        return view('admin.dishes.index', compact('dishes'));
+        // Ristorante dell'utente
+        $restaurant = $user->restaurant;
+
+        // dd($user);
+
+        if ($restaurant) {
+            // Prendi tutti i piatti associali
+            $dishes = $restaurant->dishes;
+
+            return view('admin.dishes.index', compact('restaurant', 'dishes'));
+        } else {
+            // Ristorante non trovato
+            $error = 'Nessun ristorante trovato';
+            
+            return view('admin.dashboard', compact('error'));
+
+        }
     }
 
     /**
@@ -116,8 +133,19 @@ class DishController extends Controller
      */
     public function show(Dish $dish)
     {
+        $user = Auth::user();
+        $restaurant = $user->restaurant;
+        $dishes = $restaurant->dishes;
+    
+        if ($dish && $dish->restaurant->user_id == $user->id) {
+            // Visualizza il piatto
+            return view('admin.dishes.show', compact('dish'));
+        }
+    
+        // Reindirizza alla dashboard con un messaggio di errore
+        $error = 'piatto non trovato';
+        return view('admin.dishes.index', compact('error','dishes'));
 
-        return view('admin.dishes.show', compact('dish'));
     }
 
     /**
