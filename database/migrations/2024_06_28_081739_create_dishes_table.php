@@ -19,6 +19,7 @@ return new class extends Migration
             $table->decimal('price', total: 5, places: 2);
             $table->boolean('visible');
             $table->string('thumb')->nullable();
+            $table->softDeletes($column = 'deleted_at');
             $table->timestamps();
         });
     }
