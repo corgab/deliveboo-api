@@ -53,6 +53,8 @@ Route::middleware(['auth', 'verified'])
 
         // Orders
         Route::resource('orders', OrderController::class)->only(['index']);
+        Route::get('orders/orders-statistics', [OrderController::class, 'statistics'])->name('orders.statistics');
+
 });
 
 Route::middleware('auth')->group(function () {

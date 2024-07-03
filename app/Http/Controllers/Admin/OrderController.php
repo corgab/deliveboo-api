@@ -21,4 +21,8 @@ class OrderController extends Controller
         }
         return view('admin.orders.index');
     }
+
+    public function statistics(){
+        return view('admin.orders.orders-statistics');
+    }
 }

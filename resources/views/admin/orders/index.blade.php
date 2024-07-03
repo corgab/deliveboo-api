@@ -10,7 +10,10 @@
         <div class="col-12">
             {{$order->name}}
         </div>
-        @endforeach
+    @endforeach
+    <div>
+        <a href="{{ route('admin.orders.statistics')}}" class="btn btn-warning">STATISTICHE ORDINI</a>
+    </div>
     @endif
     </div>
 @else
