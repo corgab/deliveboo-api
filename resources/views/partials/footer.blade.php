@@ -4,7 +4,6 @@
 
     <ul class="nav col-md-9 justify-content-end">
       <li class="nav-item"><a href="/" class="nav-link px-2 text-body-secondary">Home</a></li>
-      <li class="nav-item"><a href="/admin/restaurants/create" class="nav-link px-2 text-body-secondary">Registra il tuo ristorante</a></li>
       <li class="nav-item"><a href="/admin" class="nav-link px-2 text-body-secondary">Il tuo ristorante</a></li>
       <li class="nav-item"><a href="/admin/dishes" class="nav-link px-2 text-body-secondary">Il tuo menu</a></li>
       <li class="nav-item"><a href="/admin/dishes/create" class="nav-link px-2 text-body-secondary">Aggiungi un piatto</a></li>
