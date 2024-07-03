@@ -5,12 +5,20 @@ namespace App\Http\Controllers\Admin;
 use App\Models\Order;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class OrderController extends Controller
 {
     public function index()
     {
-        $orders = Order::all();
-        return view('admin.orders.index', compact('orders'));
+
+        $user = Auth::user();
+        $restaurant = $user->restaurant;
+
+        if ($restaurant) {
+            $orders = $restaurant->orders;
+            return view('admin.orders.index', compact('restaurant', 'orders'));
+        }
+        return view('admin.orders.index');
     }
 }
