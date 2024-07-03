@@ -27,9 +27,8 @@
                 @yield('content')
             </div>
         </main>
-        <!-- !! DA FIXARE !! -->
-        @include('partials.footer')
     </div>
+    @include('partials.footer')
 
     @yield('scripts')
 </body>

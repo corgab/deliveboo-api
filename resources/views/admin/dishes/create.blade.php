@@ -13,14 +13,14 @@
 
         <div class="mb-4">
             <label for="name" class="form-label fw-bold mt-5">Nome piatto</label>
-            <input type="text" name="name" class="form-control {{ $errors->has('name') ? 'is-invalid' : (old('name') ? 'is-valid' : '') }}" id="name" placeholder="Scrivi il nome del piatto" value="{{old('name')}}">
+            <input type="text" name="name" required class="form-control {{ $errors->has('name') ? 'is-invalid' : (old('name') ? 'is-valid' : '') }}" id="name" placeholder="Scrivi il nome del piatto" value="{{old('name')}}">
             @error('name')
                 <div class="invalid-feedback">{{ $message }}</div>
             @enderror
         </div>
         <div class="mb-4">
             <label for="description_ingredients" class="form-label fw-bold">Descrizione ingredienti</label>
-            <input type="text" name="description_ingredients" class="form-control {{ $errors->has('description_ingredients') ? 'is-invalid' : (old('description_ingredients') ? 'is-valid' : '') }}" id="description_ingredients"
+            <input type="text" required name="description_ingredients" class="form-control {{ $errors->has('description_ingredients') ? 'is-invalid' : (old('description_ingredients') ? 'is-valid' : '') }}" id="description_ingredients"
                 placeholder="Inserisci gli incredienti usati" value="{{old('description_ingredients')}}">
             @error('description_ingredients')
                 <div class="invalid-feedback">{{ $message }}</div>
@@ -29,7 +29,7 @@
         </div>
         <div class="mb-4">
             <label for="price" class="form-label fw-bold">Prezzo €</label>
-            <input type="text" name="price" class="form-control {{ $errors->has('price') ? 'is-invalid' : (old('price') ? 'is-valid' : '') }}" id="description_ingredients" id="price" placeholder="0.00" value="{{old('price')}}">
+            <input type="text" required name="price" class="form-control {{ $errors->has('price') ? 'is-invalid' : (old('price') ? 'is-valid' : '') }}" id="description_ingredients" id="price" placeholder="0.00" value="{{old('price')}}">
             @error('price')
                 <div class="invalid-feedback">{{ $message }}</div>
             @enderror 
@@ -57,21 +57,8 @@
     </div>
 </form>
 
-
-<div class="my-4 centered w-25">
-    @if ($errors->any())
-        <div class="alert alert-danger op-90">
-            <ul>
-                @foreach($errors->all() as $error)
-                    <li>
-                        {{ $error }}
-                    </li>
-                @endforeach
-            </ul>
-        </div>
-    @endif
-</div>
 @else
+
 <div class="row">
     <h1>
         PER POTER AGGIUNGERE I TUOI PIATTI, REGISTRA IL TUO RISTORANTE!   <br>
