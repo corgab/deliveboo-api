@@ -1,7 +1,7 @@
 <header class="main-header px-1 py-2">
     <div class="logo text-center">
         <a class="nav-link" href="{{url('/') }}">
-            <img  class="logo-img" src="{{ Vite::asset('resources/img/logo.png')}}" alt="Logo">
+            <img  class="logo-img" style="width: 110px" src="{{ Vite::asset('resources/img/logo.png')}}" alt="Logo">
         </a>
     </div>
 
