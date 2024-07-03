@@ -1,7 +1,7 @@
 @extends('layouts.app')
 @section('content')
 <div class="container">
-@if(isset($dishes))
+@if(isset($orders))
     <div class="row">
     @if($orders->isEmpty())
     <div>Non hai ancora nessun ordine!</div>
