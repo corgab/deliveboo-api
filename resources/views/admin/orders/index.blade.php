@@ -17,7 +17,7 @@
 <div class="row">
     <h1>
         PER POTER GESTIRE I TUOI ORDINI, REGISTRA IL TUO RISTORANTE! <br>
-        <a class="dropdown-item btn" href="{{ url('admin/restaurant/create') }}">{{__('Registra il tuo Piatto')}}</a>
+        <a class="dropdown-item btn" href="{{ url('admin/restaurant/create') }}">{{__('Registra il tuo Ristorante')}}</a>
     </h1>
 </div>
 @endif
