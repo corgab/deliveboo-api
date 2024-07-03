@@ -11,6 +11,13 @@
             <li><strong>Indirizzo</strong>: {{ $restaurant->address }}</li>
             <li><strong>P. IVA</strong>: {{ $restaurant->vat }}</li>
             <li><strong>Foto</strong>: {{ $restaurant->thumb }}</li>
+            <li>
+                <ul>
+                    @foreach($restaurant->types as $type)
+                    <li class="badge">{{$type->name}}</li>
+                </ul>
+                @endforeach
+            </li>
         </ul>
 
         <a class="dropdown-item btn" href="{{ url('admin') }}">{{__('Vai nella Dashboard')}}</a>

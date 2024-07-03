@@ -113,6 +113,10 @@ class RestaurantController extends Controller
 
         // Creazione nuovo ristorante
         $new_restaurant = Restaurant::create($form_data);
+
+        if ($request->has('types')) {
+            $new_restaurant->types()->sync($request->types);
+        }
         
         return to_route('admin.restaurants.show', $new_restaurant);
     }

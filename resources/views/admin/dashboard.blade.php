@@ -10,6 +10,11 @@
                 <h3>{{$restaurant->name}}</h3>
                 <h4>{{$restaurant->address}}</h4>
                 <p>P.IVA: {{$restaurant->vat}}</p>
+                <ul>    
+                    @foreach($restaurant->types as $type)
+                    <li class="badge">{{$type->name}}</li>
+                    @endforeach
+                </ul>
             </div>
         </section>
 
