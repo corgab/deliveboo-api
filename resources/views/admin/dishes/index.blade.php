@@ -55,6 +55,9 @@
             </div>
         </div>
         @endforeach
+        <a href="{{ route('admin.dishes.create', $dish) }}" class="btn btn-outline-primary btn-sm">
+            Aggiungi Piatto
+        </a>
     @endif
 </section>
 @else
