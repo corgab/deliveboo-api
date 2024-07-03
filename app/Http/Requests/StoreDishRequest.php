@@ -30,4 +30,21 @@ class StoreDishRequest extends FormRequest
             'restaurant_id' => 'required|exists:restaurants,id'
         ];
     }
+
+    public function messages()
+    {
+        return [
+            'name.required' => 'Il campo nome è obbligatorio.',
+            'name.max' => 'Il campo nome non può superare i 100 caratteri.',
+            'description_ingredients.required' => 'Il campo descrizione ingredienti è obbligatorio.',
+            'price.required' => 'Il campo prezzo è obbligatorio.',
+            'price.numeric' => 'Il campo prezzo deve essere un valore numerico.',
+            'price.between' => 'Il campo prezzo deve essere compreso tra 0.01 e 999.99.',
+            'visible.boolean' => 'Il campo visibile deve essere vero o falso.',
+            'thumb.nullable' => 'Il campo immagine di anteprima è facoltativo.',
+            'restaurant_id.required' => 'Il campo ID del ristorante è obbligatorio.',
+            'restaurant_id.exists' => 'Il ristorante selezionato non esiste.',
+        ];
+    }
+
 }
