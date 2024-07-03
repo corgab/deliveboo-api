@@ -2,21 +2,21 @@
 
 @section('content')
 
-<section>
-    <h1 class="text-center" style="font-size: 1.5rem;">Lista piatti <br> <span class="text-danger">Deliveboo</span></h1>
+<section class="mt-3">
+    <h1 class="text-center pt-4 lh-base" style="fs-5">Lista piatti <br> <span class="text-danger">Deliveboo</span></h1>
     @if(isset($error))
     <div class="alert alert-danger text-center" style="font-size: 1rem;">
         <h4>{{ $error }}</h4>
     </div>
     @endif
     @foreach ($dishes as $dish)
-        <div class="d-flex gap-3">
+        <div class="container d-flex gap-3">
             <ul>
-                <li class="mb-3">{{ $dish->name }}</li>
-                <div class="d-flex gap-4"> 
-                    <a href="{{ route('admin.dishes.show', $dish) }}" class="btn btn-outline-primary btn-sm"><i
+                <li class="mb-3 fs-5"><strong>{{ $dish->name }}</strong></li>
+                <div class="d-flex gap-4 pb-4"> 
+                    <a href="{{ route('admin.dishes.show', $dish) }}" class="btn btn-success btn-sm"><i
                             class="bi bi-binoculars me-1"></i>Visualizza</a>
-                    <button type="button" class="btn btn-outline-danger btn-sm" data-bs-toggle="modal"
+                    <button type="button" class="btn btn-danger btn-sm" data-bs-toggle="modal"
                         data-bs-target="#exampleModal{{ $dish->id }}"><i class="bi bi-trash"></i>
                         Elimina
                     </button>

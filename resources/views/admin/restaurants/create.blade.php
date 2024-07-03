@@ -11,11 +11,11 @@
             <input type="hidden" name="user_id" value="{{ $user->id }}">
 
         <div class="mb-3">
-            <label for="name" class="form-label">* Nome Ristorante</label>
+            <label for="name" class="form-label">* <strong>Nome Ristorante</strong></label>
             <input type="text" class="form-control" id="name" name="name" value="{{ old('name') }}">
         </div>
         <div class="mb-3">
-            <label for="types" class="form-label">* Tipologie:</label>
+            <label for="types" class="form-label">* <strong>Tipologie</strong>:</label>
             <div class="form-check d-flex flex-wrap">
                 @foreach ($types as $type)
                     <div class="col-2">
@@ -27,11 +27,11 @@
             </div>
         </div>
         <div class="mb-3">
-            <label for="address" class="form-label">* Indirizzo</label>
+            <label for="address" class="form-label">* <strong>Indirizzo</strong></label>
             <input type="text" class="form-control" id="address" name="address" placeholder="es. Via roma 1" value="{{ old('address') }}">
         </div>
         <div class="mb-3">
-            <label for="vat" class="form-label">* P.IVA</label>
+            <label for="vat" class="form-label">* <strong>P.IVA</strong></label>
             <input type="text" class="form-control" id="vat" name="vat" value="{{ old('vat') }}">
         </div>
         <div class="input-group mb-3">
@@ -58,7 +58,7 @@
         
     </div>
     <div class="text-center my-4">
-        <h5>I campi contrassegnati con * sono obbligatori.</h5>
+        <h5 class="pb-5">I campi contrassegnati con * sono obbligatori.</h5>
     </div>
 
 </section>
