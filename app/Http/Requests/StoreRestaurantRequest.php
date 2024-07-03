@@ -30,4 +30,24 @@ class StoreRestaurantRequest extends FormRequest
             'type_id'=>'required|exists:types,id'
         ];
     }
+
+    public function messages()
+    {
+        return [
+            'name.required' => 'Il campo nome è obbligatorio.',
+            'name.max' => 'Il campo nome non può superare i 150 caratteri.',
+            'name.string' => 'Il campo nome deve essere una stringa.',
+            'address.required' => 'Il campo indirizzo è obbligatorio.',
+            'address.max' => 'Il campo indirizzo non può superare i 255 caratteri.',
+            'vat.required' => 'Il campo partita IVA è obbligatorio.',
+            'vat.string' => 'Il campo partita IVA deve essere una stringa.',
+            'vat.min' => 'Il campo partita IVA deve contenere esattamente 11 caratteri.',
+            'vat.max' => 'Il campo partita IVA deve contenere esattamente 11 caratteri.',
+            'thumb.nullable' => 'Il campo thumb è opzionale.',
+            'user_id.required' => 'Il campo user_id è obbligatorio.',
+            'user_id.exists' => 'Il campo user_id deve esistere nella tabella users.',
+            'type_id.required' => 'Il campo type_id è obbligatorio.',
+            'type_id.exists' => 'Il campo type_id deve esistere nella tabella types.',
+        ];
+    }
 }
