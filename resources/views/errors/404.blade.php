@@ -5,7 +5,7 @@
     <h1 class="text-danger mb-5">Errore 404. Pagina non trovata</h1>
     <p class="fs-5">La pagina che stai cercando di visualizzare non esiste. </p>
 
-    <a class="btn btn-success btn-sm" href="{{ url('/admin') }}" role="button">Torna alla Home</a>
+    <a class="btn btn-success btn-sm" href="{{ url('admin') }}" role="button">Torna alla Home</a>
     </div>
 </div>
 
