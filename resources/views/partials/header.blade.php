@@ -5,7 +5,7 @@
         </a>
     </div>
 
-    <nav class="nav d-flex px-2 justify-content-center align-items-center">
+    <nav class="nav d-flex px-2 mt-4 justify-content-center align-items-center">
         <div class="d-flex gap-5">
             @auth
             <a class="dropdown-item" href="{{ url('/') }}">{{__('Home')}}</a>
