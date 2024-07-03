@@ -4,9 +4,9 @@
 <form action="{{route('admin.dishes.store')}}" method="POST">
     @csrf
 
-    <!-- Restaurant_id value-->
 @if($restaurant !== null)
-    <input type="hidden" name="restaurant_id" value="{{ $restaurant }}">
+    <!-- Restaurant_id value-->
+    <input type="hidden" name="restaurant_id" value="{{ $restaurant->id }}">
 
     {{-- @dd($restaurant) --}}
     <div class="container">

@@ -22,9 +22,6 @@ class DishController extends Controller
         // Recupero l'utente 
         $user = Auth::user();
 
-        // Trova il ristorante associato all'utente loggato
-        // $restaurant = Restaurant::where('user_id', $user->id)->first();
-
         // Ristorante dell'utente
         $restaurant = $user->restaurant;
 
@@ -34,7 +31,7 @@ class DishController extends Controller
             return view('admin.dishes.index', compact('restaurant', 'dishes'));
         }
 
-        return view('admin.dishes.index');
+        return view('admin.dishes.index', compact('restaurant'));
     }
 
     /**

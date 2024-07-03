@@ -3,7 +3,15 @@
 @section('content')
 <section>
 @if(isset($dishes))
-    @foreach ($dishes as $dish)
+    @if($dishes->isEmpty())
+        <div class="row">
+            <h1>
+                IL TUO MENU E' VUOTO! REGISTRA IL TUO PRIMO PIATTO! <br>
+                <a class="dropdown-item btn" href="{{ url('admin/dishes/create') }}">{{__('Registra il tuo Piatto')}}</a>
+            </h1>
+        </div>
+    @else
+        @foreach ($dishes as $dish)
         <div class="d-flex gap-3">
             <ul>
                 <li class="mb-3">{{ $dish->name }}</li>
@@ -17,8 +25,6 @@
                 </div>
 
             </ul>
-
-
             <!-- Modal -->
             <div class="modal fade" id="exampleModal{{ $dish->id }}" tabindex="-1"
                 aria-labelledby="exampleModalLabel{{ $dish->id }}" aria-hidden="true">
@@ -43,17 +49,16 @@
                     </div>
                 </div>
             </div>
-
         </div>
-    @endforeach
+        @endforeach
+    @endif
 </section>
 @else
 <div class="row">
     <h1>
-        IL TUO MENU E' VUOTO! REGISTRA IL TUO PRIMO PIATTO! <br>
-        <a class="dropdown-item btn" href="{{ url('admin/dishes/create') }}">{{__('Registra il tuo Piatto')}}</a>
+        PER POTER CREARE IL TUO MENU', REGISTRA IL TUO RISTORANTE! <br>
+        <a class="dropdown-item btn" href="{{ url('admin/restaurant/create') }}">{{__('Registra il tuo Piatto')}}</a>
     </h1>
 </div>
 @endif
-
 @endsection
