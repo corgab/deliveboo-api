@@ -18,14 +18,14 @@
                 <a href="{{ route('admin.dishes.index') }}">I TUOI PIATTI</a>
             </h1>
             <div class="card restaurant-card p-5">
-                @if($dishes)
-                @foreach($dishes as $dish)
-                <ul>
-                    <li>{{$dish->name}}</li>
-                </ul>
-                @endforeach
+                @if($dishes->isEmpty())
+                    <div>Non hai ancora nessun piatto registrato!</div>
                 @else
-                <div>Non hai ancora nessun piatto registrato!</div>
+                    @foreach($dishes as $dish)
+                    <ul>
+                        <li>{{$dish->name}}</li>
+                    </ul>
+                    @endforeach
                 @endif
             </div>
         </section>
@@ -35,7 +35,9 @@
                 <a href="{{ route('admin.orders.index') }}">IL TUO ORDINI</a>
             </h1>
             <div class="card restaurant-card p-5">
-            @if($orders)
+            @if($orders->isEmpty())
+                <div>Non hai ancora nessun ordine!</div>
+            @else
                 @foreach($orders as $order)
                 <ul>
                     <li class="d-flex justify-content-between">
@@ -44,8 +46,6 @@
                     </li>
                 </ul>
                 @endforeach
-            @else
-            <div>Non hai ancora nessun ordine!</div>
             @endif
             </div>
         </section>
