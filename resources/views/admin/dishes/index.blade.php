@@ -16,8 +16,12 @@
             <ul>
                 <li class="mb-3">{{ $dish->name }}</li>
                 <div class="d-flex gap-4"> 
-                    <a href="{{ route('admin.dishes.show', $dish) }}" class="btn btn-outline-primary btn-sm"><i
-                            class="bi bi-binoculars me-1"></i>Visualizza</a>
+                    <a href="{{ route('admin.dishes.show', $dish) }}" class="btn btn-outline-primary btn-sm">
+                        <i class="bi bi-binoculars me-1"></i>Visualizza
+                    </a>
+                    <a href="{{ route('admin.dishes.edit', $dish) }}" class="btn btn-outline-primary btn-sm">
+                        Modifica
+                    </a>
                     <button type="button" class="btn btn-outline-danger btn-sm" data-bs-toggle="modal"
                         data-bs-target="#exampleModal{{ $dish->id }}"><i class="bi bi-trash"></i>
                         Elimina
