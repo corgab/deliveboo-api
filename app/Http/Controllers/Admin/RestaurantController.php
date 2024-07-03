@@ -21,8 +21,8 @@ class RestaurantController extends Controller
         $user = Auth::user();
         $restaurant = Restaurant::where('user_id', $user->id)->first();
         if($restaurant){
-            $orders = Order::where('restaurant_id', $restaurant->id)->get();
-            $dishes = Dish::where('restaurant_id', $restaurant->id)->get();
+            $orders = $restaurant->orders;
+            $dishes = $restaurant->dishes;
             return view('admin.dashboard', compact('restaurant', 'orders', 'dishes'));
         }else{
             return view('admin.dashboard');
