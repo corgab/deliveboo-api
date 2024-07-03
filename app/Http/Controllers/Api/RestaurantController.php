@@ -11,22 +11,31 @@ class RestaurantController extends Controller
     {
         // Estrae il parametro 'types' dalla query string
         $types = $request->query('types');
+
+        // Inizializza la query base
+        $query = Restaurant::query();
+
         // Se i tipi sono presenti, filtra i ristoranti
         if ($types) {
             $typesArray = explode(',', $types);
-            // Trova gli ID dei tipi corrispondenti ai nomi
-            $typeIds = Type::whereIn('name', $typesArray)->pluck('id')->toArray();
-            // Filtra i ristoranti che hanno i tipi specificati
-            $restaurants = Restaurant::whereHas('types', function($query) use ($typeIds) {
-                $query->whereIn('types.id', $typeIds);
-            })->get();
-        } else {
-            // Altrimenti restituisci tutti i ristoranti
-            $restaurants = Restaurant::all();
+
+            foreach ($typesArray as $typeName) {
+                $typeId = Type::where('name', $typeName)->pluck('id')->first();
+                if ($typeId) {
+                    $query->whereHas('types', function ($q) use ($typeId) {
+                        $q->where('types.id', $typeId);
+                    });
+                }
+            }
         }
+
+        // Esegui la query e ottieni i risultati
+        $restaurants = $query->with('types')->get();
+
         // Restituisci la lista dei ristoranti come risposta JSON
         return response()->json($restaurants);
     }
+
     public function show(Restaurant $restaurant){
         $restaurant ->load( 'dishes' );
         return response()->json([
