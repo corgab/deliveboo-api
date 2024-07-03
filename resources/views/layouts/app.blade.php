@@ -30,8 +30,6 @@
         </main>
         @include('partials.footer')
     </div>
-    @include('partials.footer')
-
     @yield('scripts')
 </body>
 
