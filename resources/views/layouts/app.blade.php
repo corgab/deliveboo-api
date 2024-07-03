@@ -23,11 +23,10 @@
     <div id="app">
         @include('partials.header')
         <main class="bg-green">
-            <div class="container">
+            <div class="container py-5">
                 @yield('content')
             </div>
         </main>
-        <!-- !! DA FIXARE !! -->
         @include('partials.footer')
     </div>
 
