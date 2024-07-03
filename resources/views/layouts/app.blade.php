@@ -4,6 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel = "icon" type = "image/png" href="{{ Vite::asset('resources/img/logo-icon.png')}}">
 
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
@@ -23,10 +24,11 @@
     <div id="app">
         @include('partials.header')
         <main class="bg-green">
-            <div class="container">
+            <div class="container py-5">
                 @yield('content')
             </div>
         </main>
+        @include('partials.footer')
     </div>
     @include('partials.footer')
 

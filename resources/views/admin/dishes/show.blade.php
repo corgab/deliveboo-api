@@ -45,10 +45,11 @@
         </div>
     </div>
 
-    <div class="text-center"> <button type="button" class="btn btn-danger my-5" data-bs-toggle="modal"
-            data-bs-target="#exampleModal">
-            Eliminazione piatto
-        </button></div>
-
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+        Eliminazione piatto
+    </button>
+    <a href="{{ route('admin.dishes.edit', $dish) }}" class="btn btn-outline-primary btn-sm">
+        Modifica
+    </a>
 </section>
 @endsection
