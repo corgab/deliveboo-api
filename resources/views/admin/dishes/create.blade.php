@@ -36,6 +36,9 @@
         </div>
         <div class="input-group">
             <input type="file" class="my-4 form-control" id="thumb" name="thumb" value="{{ old('thumb') }}">
+            @error('thumb')
+                <span class="text-danger">{{ $message }}</span>
+            @enderror
         </div>
 
         <div class="d-flex justify-content-center gap-4 align-items-center py-5">

@@ -9,14 +9,22 @@ use Illuminate\Http\Request;
 
 class RestaurantController extends Controller
 {
-    public function index(){
-        $restaurants = Restaurant::all(); //paginate
-        return response()->json([
-            'restaurants' => $restaurants
-            // 'success' => true 
-            // da valutare se usarlo o meno
-         ]);
-    }
+    public function index()
+        {
+            // passaggio parametri
+            $types = $request->query('types');
+            
+            // Se i tipi sono presenti, filtrali
+            if ($types) {
+                $typesArray = explode(',', $types);
+                $ristoranti = Ristorante::whereIn('type', $typesArray)->get();
+            } else {
+                // Altrimenti restituisci tutti i ristoranti
+                $ristoranti = Ristorante::all();
+            }
+    
+            return response()->json($ristoranti);
+        }
 
     public function show(Restaurant $restaurant){
 
