@@ -1,14 +1,8 @@
 @extends('layouts.app')
 
 @section('content')
-
 <section>
-    <h1 class="text-center" style="font-size: 1.5rem;">Lista piatti <br> <span class="text-danger">Deliveboo</span></h1>
-    @if(isset($error))
-    <div class="alert alert-danger text-center" style="font-size: 1rem;">
-        <h4>{{ $error }}</h4>
-    </div>
-    @endif
+@if(isset($dishes))
     @foreach ($dishes as $dish)
         <div class="d-flex gap-3">
             <ul>
@@ -53,5 +47,13 @@
         </div>
     @endforeach
 </section>
+@else
+<div class="row">
+    <h1>
+        IL TUO MENU E' VUOTO! REGISTRA IL TUO PRIMO PIATTO! <br>
+        <a class="dropdown-item btn" href="{{ url('admin/dishes/create') }}">{{__('Registra il tuo Piatto')}}</a>
+    </h1>
+</div>
+@endif
 
 @endsection

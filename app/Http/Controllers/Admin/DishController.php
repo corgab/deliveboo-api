@@ -23,31 +23,18 @@ class DishController extends Controller
         $user = Auth::user();
 
         // Trova il ristorante associato all'utente loggato
-        $restaurant = Restaurant::where('user_id', $user->id)->first();
+        // $restaurant = Restaurant::where('user_id', $user->id)->first();
 
         // Ristorante dell'utente
         $restaurant = $user->restaurant;
 
-
         if ($restaurant) {
-            // Prendi tutti i piatti associali
+            // Prendi tutti i piatti associati
             $dishes = $restaurant->dishes;
-
-            // Se il ristorante non ha piatti
-            if ($dishes->isEmpty()) {
-                $error = 'Crea il tuo primo piatto!';
-                return view('admin.dishes.index', compact('restaurant', 'error'));
-            }
-
             return view('admin.dishes.index', compact('restaurant', 'dishes'));
-            
-        } else {
-            // Ristorante non trovato
-            $error = 'Nessun ristorante trovato per il tuo account.';
-
-            return view('admin.dashboard', compact('error'));
-
         }
+
+        return view('admin.dishes.index');
     }
 
     /**
