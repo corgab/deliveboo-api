@@ -5,7 +5,10 @@
     @csrf
 
     <!-- Restaurant_id value-->
-    <input type="hidden" name="restaurant_id" value="{{ $restaurant->id }}">
+@if($restaurant !== null)
+    <input type="hidden" name="restaurant_id" value="{{ $restaurant }}">
+
+    {{-- @dd($restaurant) --}}
     <div class="container">
 
         <div class="mb-4">
@@ -54,4 +57,26 @@
     </div>
 </form>
 
+
+<div class="my-4 centered w-25">
+    @if ($errors->any())
+        <div class="alert alert-danger op-90">
+            <ul>
+                @foreach($errors->all() as $error)
+                    <li>
+                        {{ $error }}
+                    </li>
+                @endforeach
+            </ul>
+        </div>
+    @endif
+</div>
+@else
+<div class="row">
+    <h1>
+        PER POTER AGGIUNGERE I TUOI PIATTI, REGISTRA IL TUO RISTORANTE!   <br>
+        <a class="dropdown-item btn" href="{{ url('admin/restaurants/create') }}">{{__('Registra il tuo Ristorante!')}}</a>
+    </h1>
+</div>
+@endif
 @endsection
