@@ -12,7 +12,7 @@
 
         <div class="mb-3">
             <label for="name" class="form-label">* Nome Ristorante</label>
-            <input type="text" class="form-control {{ $errors->has('name') ? 'is-invalid' : (old('name') ? 'is-valid' : '') }}" id="name" name="name" value="{{ old('name') }}">
+            <input type="text" required class="form-control {{ $errors->has('name') ? 'is-invalid' : (old('name') ? 'is-valid' : '') }}" id="name" name="name" value="{{ old('name') }}">
             @error('name')
                 <div class="invalid-feedback">{{ $message }}</div>
             @enderror
@@ -31,14 +31,14 @@
         </div>
         <div class="mb-3">
             <label for="address" class="form-label">* Indirizzo</label>
-            <input type="text" class="form-control {{ $errors->has('address') ? 'is-invalid' : (old('address') ? 'is-valid' : '') }}" id="address" name="address" placeholder="es. Via roma 1" value="{{ old('address') }}">
+            <input type="text" required class="form-control {{ $errors->has('address') ? 'is-invalid' : (old('address') ? 'is-valid' : '') }}" id="address" name="address" placeholder="es. Via roma 1" value="{{ old('address') }}">
             @error('address')
                 <div class="invalid-feedback">{{ $message }}</div>
             @enderror
         </div>
         <div class="mb-3">
             <label for="vat" class="form-label">* P.IVA</label>
-            <input type="text" class="form-control {{ $errors->has('vat') ? 'is-invalid' : (old('vat') ? 'is-valid' : '') }}" id="vat" name="vat" value="{{ old('vat') }}">
+            <input type="text" required class="form-control {{ $errors->has('vat') ? 'is-invalid' : (old('vat') ? 'is-valid' : '') }}" id="vat" name="vat" value="{{ old('vat') }}">
             @error('vat')
             <div class="invalid-feedback">{{ $message }}</div>
         @enderror

@@ -24,7 +24,7 @@ class StoreRestaurantRequest extends FormRequest
         return [
             'name'=>'required|max:150|string',
             'address'=>'required|max:255',
-            'vat'=>'required|string|min:11|max:11',
+            'vat'=>'required|digits:11',
             'thumb'=>'nullable',
             'user_id'=> 'required|exists:users,id',
             'type_id'=>'required|exists:types,id'
@@ -40,9 +40,7 @@ class StoreRestaurantRequest extends FormRequest
             'address.required' => 'Il campo indirizzo è obbligatorio.',
             'address.max' => 'Il campo indirizzo non può superare i 255 caratteri.',
             'vat.required' => 'Il campo partita IVA è obbligatorio.',
-            'vat.string' => 'Il campo partita IVA deve essere una stringa.',
-            'vat.min' => 'Il campo partita IVA deve contenere esattamente 11 caratteri.',
-            'vat.max' => 'Il campo partita IVA deve contenere esattamente 11 caratteri.',
+            'vat.digits' => 'Il campo partita IVA deve contenere 11 numeri.',
             'thumb.nullable' => 'Il campo thumb è opzionale.',
             'user_id.required' => 'Il campo user_id è obbligatorio.',
             'user_id.exists' => 'Il campo user_id deve esistere nella tabella users.',

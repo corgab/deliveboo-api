@@ -24,7 +24,7 @@ class StoreDishRequest extends FormRequest
         return [
             'name' => 'required|max:100',
             'description_ingredients' => 'required',
-            'price' => 'required|numeric|between:0.01,999.99',
+            'price' => 'required|numeric|between:5,300',
             'visible' => 'boolean',
             'thumb' => 'nullable',
             'restaurant_id' => 'required|exists:restaurants,id'
@@ -39,7 +39,7 @@ class StoreDishRequest extends FormRequest
             'description_ingredients.required' => 'Il campo descrizione ingredienti è obbligatorio.',
             'price.required' => 'Il campo prezzo è obbligatorio.',
             'price.numeric' => 'Il campo prezzo deve essere un valore numerico.',
-            'price.between' => 'Il campo prezzo deve essere compreso tra 0.01 e 999.99.',
+            'price.between' => 'Il campo prezzo deve essere compreso tra 5 e 300',
             'visible.boolean' => 'Il campo visibile deve essere vero o falso.',
             'thumb.nullable' => 'Il campo immagine di anteprima è facoltativo.',
             'restaurant_id.required' => 'Il campo ID del ristorante è obbligatorio.',
