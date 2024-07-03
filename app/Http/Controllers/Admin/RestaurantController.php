@@ -147,7 +147,7 @@ class RestaurantController extends Controller
         // Trova il ristorante associato all'utente
         $restaurant = Restaurant::where('user_id', $user->id)->first();
 
-        // prendiamo le tipologie
+        // trova le tipologie
 
         $types = Type::orderBy('name', 'asc')->get();
 

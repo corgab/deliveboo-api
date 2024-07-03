@@ -107,7 +107,14 @@ class DishController extends Controller
      */
     public function edit(Dish $dish)
     {
-        return view('admin.dishes.edit', compact('dish'));
+
+        // Recupero l'utente 
+        $user = Auth::user();
+
+        // Trova il ristorante associato all'utente
+        $restaurant = Restaurant::where('user_id', $user->id)->first();
+
+        return view('admin.dishes.edit', compact('dish','restaurant'));
     }
 
     /**

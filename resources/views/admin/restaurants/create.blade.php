@@ -7,7 +7,7 @@
 
         <form action="{{route('admin.restaurants.store')}}" method="POST">
             @csrf
-            <!-- Restaurant_id value-->
+            <!-- user_id value-->
             <input type="hidden" name="user_id" value="{{ $user->id }}">
 
         <div class="mb-3">

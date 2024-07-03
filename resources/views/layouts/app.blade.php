@@ -22,11 +22,13 @@
 <body>
     <div id="app">
         @include('partials.header')
-        <main class="main">
-            @yield('content')
+        <main class="bg-green">
+            <div class="container">
+                @yield('content')
+            </div>
         </main>
         <!-- !! DA FIXARE !! -->
-        {{-- @include('partials.footer') --}}
+        @include('partials.footer')
     </div>
 
     @yield('scripts')
