@@ -1,8 +1,9 @@
-@use './utilities';
-.restaurant-titles{
-    color: var(--color-orange);
+@use "./utilities";
+.restaurant-titles {
+    margin-bottom: 14px;
+    font-size: 30px;
 }
 
-.restaurant-card{
-    background-color: var(--color-lightgreen);
+.restaurant-card {
+    background-color: #ffe8c8;
 }

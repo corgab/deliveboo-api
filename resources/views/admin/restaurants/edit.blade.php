@@ -7,19 +7,19 @@
             @csrf
             @method('PUT')
             <div class="mb-3">
-                <label for="name" class="form-label">Nome</label>
+                <label for="name" class="form-label"><strong>Nome</strong></label>
                 <input type="text" class="form-control" id="name" name="name" value="{{old('name', $restaurant->name)}}">
             </div>
 
             <input type="hidden" name="user_id" value="{{ $user->id }}">
 
             <div class="mb-3">
-                <label for="address" class="form-label">Indirizzo</label>
+                <label for="address" class="form-label"><strong>Indirizzo</strong></label>
                 <input type="text" class="form-control" id="address" name="address" value="{{old('address', $restaurant->address)}}">
             </div>
 
             <div class="mb-3">
-                <label for="types" class="form-label">Tipologie:</label>
+                <label for="types" class="form-label"><strong>Tipologie</strong>:</label>
                 <div class="form-check d-flex flex-wrap">
                     @foreach ($types as $type)
                         <div class="col-2">
@@ -32,7 +32,7 @@
             </div>
 
             <div class="mb-3">
-                <label for="vat" class="form-label">P.IVA</label>
+                <label for="vat" class="form-label"><strong>P.IVA</strong></label>
                 <input type="text" class="form-control" id="vat" name="vat" value="{{old('vat', $restaurant->vat)}}">
             </div>
 
@@ -43,7 +43,7 @@
                 <input type="file" class="form-control" id="thumb" name="thumb">
             </div> --}}
 
-            <button type="submit">invia</button>
+            <button type="submit">Invia</button>
 
         </form>
 

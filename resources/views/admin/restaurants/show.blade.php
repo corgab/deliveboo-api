@@ -21,6 +21,12 @@
         </ul>
 
         <a class="dropdown-item btn" href="{{ url('admin') }}">{{__('Vai nella Dashboard')}}</a>
+
+        <form action="{{ route('admin.restaurants.destroy', $restaurant) }}" method="POST">
+            @method('DELETE')
+            @csrf
+            <button class="btn btn-danger btn-sm mb-5"><i class="bi bi-trash me-1"></i>Elimina</button>
+        </form>
     </div>
 </section>
 
