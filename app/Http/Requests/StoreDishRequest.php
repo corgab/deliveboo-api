@@ -27,7 +27,8 @@ class StoreDishRequest extends FormRequest
             'price' => 'required|numeric|between:5,300',
             'visible' => 'boolean',
             'thumb' => 'nullable',
-            'restaurant_id' => 'required|exists:restaurants,id'
+            'restaurant_id' => 'required|exists:restaurants,id',
+            'thumb' => 'nullable|image|mimes:jpeg,png,jpg,svg',
         ];
     }
 
@@ -44,6 +45,9 @@ class StoreDishRequest extends FormRequest
             'thumb.nullable' => 'Il campo immagine di anteprima è facoltativo.',
             'restaurant_id.required' => 'Il campo ID del ristorante è obbligatorio.',
             'restaurant_id.exists' => 'Il ristorante selezionato non esiste.',
+            'thumb.image' => 'Il file deve essere un\'immagine.',
+            'thumb.mimes' => 'L\'immagine deve essere in uno dei seguenti formati: jpeg, png, jpg, svg.',
+            'thumb.max' => 'L\'immagine non può essere più grande di 2 MB.',
         ];
     }
 
