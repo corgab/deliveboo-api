@@ -61,21 +61,28 @@ class RestaurantController extends Controller
         // Trova il ristorante associato all'utente
         $restaurant = Restaurant::where('user_id', $user->id)->first();
 
+        // prendiamo le tipologie
+        $types = Type::orderBy('name', 'asc')->get();
+
         // Controllare se ha già un ristorante registrato
 
         if($restaurant){
-            // Se l'utente ha già un ristorante
+
+            $user = Auth::user();
             $restaurant = Restaurant::where('user_id', $user->id)->first();
+
+            $orders = $restaurant->orders;
+            $dishes = $restaurant->dishes;
 
             // Imposta un messaggio di errore
             $error = 'Hai già un Ristorante Registrato';
 
             // Restituisci la vista dell'index
-            return view('admin.restaurants.create', compact('user','error', 'restaurant'));
+            return view('admin.dashboard', compact('error','restaurant','orders','dishes'));
         }
 
-        // prendiamo le tipologie
-        $types = Type::orderBy('name', 'asc')->get();
+
+
         // Altrimenti, mostra la vista create
         return view('admin.restaurants.create', compact('user','restaurant', 'types'));
     }
@@ -209,6 +216,6 @@ class RestaurantController extends Controller
     {
         $restaurant->delete();
 
-        return to_route('admin.restaurants.index');
+        return to_route('admin.');
     }
 }
