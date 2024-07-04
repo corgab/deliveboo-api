@@ -2,6 +2,11 @@
 
 @section('content')
 <section class="mt-3">
+@if(isset($error))
+<div class="alert alert-danger text-center" style="font-size: 1rem;">
+    <h4>{{ $error }}</h4>
+</div>
+@endif
 @if(isset($dishes))
     @if($dishes->isEmpty())
         <div class="row">
@@ -73,13 +78,8 @@
 <div class="row">
     <h1>
         PER POTER CREARE IL TUO MENU', REGISTRA IL TUO RISTORANTE! <br>
-        <a class="dropdown-item btn" href="{{ url('admin/restaurant/create') }}">{{__('Registra il tuo Ristorante')}}</a>
+        <a class="dropdown-item btn" href="{{ url('admin/restaurants/create') }}">{{__('Registra il tuo Ristorante')}}</a>
     </h1>
-    @if(isset($error))
-    <div class="alert alert-danger text-center" style="font-size: 1rem;">
-        <h4>{{ $error }}</h4>
-    </div>
-    @endif
 </div>
 @endif
 @endsection
