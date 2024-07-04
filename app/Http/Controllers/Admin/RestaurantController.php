@@ -1,11 +1,8 @@
 <?php
-
 namespace App\Http\Controllers\Admin;
-
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
-
 use App\Http\Requests\StoreRestaurantRequest;
 use App\Http\Requests\UpdateRestaurantRequest;
 use App\Models\Dish;
@@ -13,10 +10,8 @@ use App\Models\Order;
 use App\Models\Restaurant;
 use App\Models\Type;
 use Illuminate\Support\Facades\Auth;
-
 class RestaurantController extends Controller
 {
-
     public function dashboard(){
         $user = Auth::user();
         $restaurant = Restaurant::where('user_id', $user->id)->first();
@@ -36,7 +31,6 @@ class RestaurantController extends Controller
     {
         // Recupero l'utente 
         $user = Auth::user();
-
         // Trova il ristorante associato all'utente
         $restaurant = Restaurant::where('user_id', $user->id)->first();
         
@@ -46,10 +40,8 @@ class RestaurantController extends Controller
             $error = 'Nessun ristorante trovato per il tuo account.';
             return view('admin.restaurants.index', compact('error'));
         }
-
         return view('admin.restaurants.index', compact('restaurant'));
     }
-
     /**
      * Show the form for creating a new resource.
      */
@@ -57,34 +49,24 @@ class RestaurantController extends Controller
     {
         // Recupero l'utente 
         $user = Auth::user();
-
         // Trova il ristorante associato all'utente
         $restaurant = Restaurant::where('user_id', $user->id)->first();
-
         // prendiamo le tipologie
         $types = Type::orderBy('name', 'asc')->get();
-
         // Controllare se ha già un ristorante registrato
-
         if($restaurant){
-
             $user = Auth::user();
             $restaurant = Restaurant::where('user_id', $user->id)->first();
-
             $orders = $restaurant->orders;
             $dishes = $restaurant->dishes;
-
             // Imposta un messaggio di errore
             $error = 'Hai già un Ristorante Registrato';
-
             // Restituisci la vista dell'index
             return view('admin.dashboard', compact('error','restaurant','orders','dishes'));
         }
-
         // Altrimenti, mostra la vista create
         return view('admin.restaurants.create', compact('user','restaurant', 'types'));
     }
-
     /**
      * Store a newly created resource in storage.
      */
@@ -92,17 +74,12 @@ class RestaurantController extends Controller
     {   
         // Validazione
         $form_data = $request->validated();
-
         // Assegna l'ID dell'utente al campo 'user_id'
         $form_data['user_id'] = $request->input('user_id');
-
         // Recupera l'utente
         $user = Auth::user();
-
         // Trova il ristorante associato all'utente
         $restaurant = Restaurant::where('user_id', $user->id)->first();
-
-
         // Gestione Slug unico
         $base_slug = Str::slug($form_data['name']);
         $slug = $base_slug;
@@ -115,52 +92,37 @@ class RestaurantController extends Controller
             }
         } while ($find !== null);
         $form_data['slug'] = $slug;
-
         // Creazione nuovo ristorante
         $new_restaurant = Restaurant::create($form_data);
-
         $new_restaurant->types()->sync($form_data['type_id']);
-
-        return to_route('admin.restaurants.show', $new_restaurant);
+        return to_route('admin.', $new_restaurant);
     }
-
     /**
      * Display the specified resource.
      */
     public function show(Restaurant $restaurant)
     {
-
         // Recupero l'utente 
         $user = Auth::user();
-
         // Trova il ristorante associato all'utente
         $restaurants = Restaurant::where('user_id', $user->id)->first();
         
         // dd($restaurants);
-
         return view('admin.restaurants.show', compact('restaurant'));
     }
-
     /**
      * Show the form for editing the specified resource.
      */
     public function edit(Restaurant $restaurant)
     {
-
-
         // Recupero l'utente 
         $user = Auth::user();
-
         // Trova il ristorante associato all'utente
         $restaurant = Restaurant::where('user_id', $user->id)->first();
-
         // trova le tipologie
-
         $types = Type::orderBy('name', 'asc')->get();
-
         return view('admin.restaurants.edit', compact('restaurant', 'user', 'types'));
     }
-
     /**
      * Update the specified resource in storage.
      */
@@ -168,17 +130,13 @@ class RestaurantController extends Controller
     {
         // Validazione
         $form_data = $request->validated();
-
         // Assegna l'ID dell'utente al campo 'user_id'
         $form_data['user_id'] = $request->input('user_id');
-
         // Recupera l'utente
         $user = Auth::user();
         
         // Trova il ristorante associato all'utente
         $restaurant = Restaurant::where('user_id', $user->id)->first();
-
-
         // Gestione Slug unico
         $base_slug = Str::slug($form_data['name']);
         $slug = $base_slug;
@@ -191,27 +149,23 @@ class RestaurantController extends Controller
             }
         } while ($find !== null);
         $form_data['slug'] = $slug;
-
         if($request->has('type_id')){
             $restaurant->types()->sync($request->type_id);
         }
         else{
             $restaurant->types()->detach();
         }
-
         // Modifica nuovo ristorante
         $restaurant->update($form_data);
         
         return to_route('admin.restaurants.show', $restaurant);
     }
-
     /**
      * Remove the specified resource from storage.
      */
     public function destroy(Restaurant $restaurant)
     {
         $restaurant->delete();
-
         return to_route('admin.');
     }
 }
