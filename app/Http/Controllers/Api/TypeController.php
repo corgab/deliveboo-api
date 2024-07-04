@@ -20,7 +20,7 @@ class TypeController extends Controller
 
     public function show(Type $type){
 
-        $type ->load( 'restaurants' );
+        $type ->load( ['restaurants'] );
 
         return response()->json([
             'type' => $type
