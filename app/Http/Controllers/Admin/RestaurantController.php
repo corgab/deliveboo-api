@@ -81,8 +81,6 @@ class RestaurantController extends Controller
             return view('admin.dashboard', compact('error','restaurant','orders','dishes'));
         }
 
-
-
         // Altrimenti, mostra la vista create
         return view('admin.restaurants.create', compact('user','restaurant', 'types'));
     }
@@ -121,10 +119,8 @@ class RestaurantController extends Controller
         // Creazione nuovo ristorante
         $new_restaurant = Restaurant::create($form_data);
 
-        if ($request->has('types')) {
-            $new_restaurant->types()->sync($request->types);
-        }
-        
+        $new_restaurant->types()->sync($form_data['type_id']);
+
         return to_route('admin.restaurants.show', $new_restaurant);
     }
 
