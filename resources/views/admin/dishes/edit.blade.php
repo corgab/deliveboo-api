@@ -44,9 +44,9 @@
         </select>
     </div>
    
-    <div class="d-flex justify-content-evenly pt-3">
-        <button type="submit" class="btn btn-primary fw-bold">Edit</button>
-        <a href="{{route('admin.dishes.show', $dish)}}" class="btn btn-warning text-primary fw-bold">Back</a>
+    <div class="d-flex justify-content-evenly mt-5">
+        <button type="submit" class="btn btn-outline-primary"></i><i class="bi bi-pen-fill"></i>Modifica</button>
+        <a href="{{route('admin.dishes.show', $dish)}}" class="btn btn-outline-warning"><i class="bi bi-arrow-left"></i>Indietro</a>
     </div>
 </form>
 

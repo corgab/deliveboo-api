@@ -1,17 +1,18 @@
 @extends('layouts.app')
 @section('content')
 <section>
-    <div class="container mt-3">
+    <div class="container">
         <h1 class="text-center pt-4 lh-base">Dettaglio Piatto <br>
             <span class="text-danger">Deliveboo</span>
         </h1>
         <ul class="lh-lg">
             <li>
-                <img class="img-dish" src="{{ Vite::asset("resources/img/dishes/$dish->thumb")}}" alt="Foto Piatto">
+                <img class="img-dish mb-2 mt-5" src="{{ Vite::asset("resources/img/dishes/$dish->thumb")}}"
+                    alt="Foto Piatto">
             </li>
-            <li class="fs-5"><strong>Nome piatto</strong>: {{ $dish->name }}</li>
-            <li class="fs-5"><strong>Descrizione ingredienti</strong>: {{ $dish->description_ingredients }}</li>
-            <li class="fs-5"><strong>Prezzo</strong>: {{ $dish->price }} €</li>
+            <li class="fs-show"><strong>Nome piatto</strong>: {{ $dish->name }}</li>
+            <li class="fs-show"><strong>Descrizione ingredienti</strong>: {{ $dish->description_ingredients }}</li>
+            <li class="fs-show"><strong>Prezzo</strong>: {{ $dish->price }} €</li>
         </ul>
     </div>
 
@@ -48,11 +49,15 @@
         </div>
     </div>
 
-    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+    <button type="button" class="btn btn-sm btn-outline-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">
         Eliminazione piatto
     </button>
     <a href="{{ route('admin.dishes.edit', $dish) }}" class="btn btn-outline-primary btn-sm">
         Modifica
     </a>
+
+
+
+
 </section>
 @endsection
