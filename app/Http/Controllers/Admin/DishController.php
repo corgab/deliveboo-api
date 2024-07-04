@@ -57,16 +57,14 @@ class DishController extends Controller
     {
         // Validazione
         $form_data = $request->validated();
-
-        // Assegna l'ID del ristorante al campo 'restaurant_id'
-        $form_data['restaurant_id'] = $request->input('restaurant_id');
-
+    
         // Ottieni l'utente autenticato
         $user = Auth::user();
-
+    
         // Trova il ristorante associato all'utente autenticato
         $restaurant = Restaurant::where('user_id', $user->id)->first();
-        
+        $form_data['restaurant_id'] = $restaurant->id;
+    
         // Gestione Slug unico
         $base_slug = Str::slug($form_data['name']);
         $slug = $base_slug;
@@ -79,12 +77,29 @@ class DishController extends Controller
             }
         } while ($find !== null);
         $form_data['slug'] = $slug;
+    
+        // Se c'è un'immagine caricata
+        if ($request->hasFile('thumb')) {
+            $image = $request->file('thumb');
 
+            // Recupero estensione
+            $extension = $image->extension();
+
+            // Genero nome file + estensione
+            $image_name = $slug . '.' . $extension;
+
+            // Salvo immagine nello storage
+            $image_path = $image->storeAs('images/dishes', $image_name, 'public');
+            $form_data['thumb'] = $image_path; // Salvo nel db il Path
+        }
+    
         // Creazione piatto
         $new_dish = Dish::create($form_data);
         
         return to_route('admin.dishes.show', $new_dish);
     }
+
+
 
     /**
      * Show the form for editing the specified resource.
