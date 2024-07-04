@@ -1,12 +1,12 @@
 <header class="main-header px-1 py-2">
-    <div class="logo text-center">
+    <div class="logo text-center mb-3 mb-md-0">
         <a class="nav-link" href="{{url('/') }}">
             <img  class="logo-img" style="width: 110px" src="{{ Vite::asset('resources/img/logo.png')}}" alt="Logo">
         </a>
     </div>
 
-    <nav class="nav d-flex px-2 mt-4 justify-content-center align-items-center">
-        <div class="d-flex gap-5">
+    <nav class="nav d-flex flex-column flex-md-row px-2 mt-4 justify-content-center align-items-center">
+        <div class="d-flex flex-column flex-md-row gap-2  gap-md-5 mb-3 mb-md-0">
             @auth
             <a class="dropdown-item" href="{{ url('/') }}">{{__('Home')}}</a>
             <a class="dropdown-item" href="{{ url('admin') }}">{{__('Dashboard')}}</a>
@@ -17,7 +17,7 @@
         </div>
 
          <!-- Right Side Of Navbar -->
-        <ul class="navbar-nav ml-auto">
+        <ul class="navbar-nav ml-auto flex-column flex-md-row gap-2">
         <!-- Authentication Links -->
         @guest
             <li class="nav-item">
