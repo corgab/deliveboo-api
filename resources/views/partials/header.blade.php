@@ -6,7 +6,7 @@
     </div>
 
     <nav class="nav d-flex flex-column flex-md-row px-2 mt-4 justify-content-center align-items-center">
-        <div class="d-flex flex-column flex-md-row gap-2  gap-md-5 mb-3 mb-md-0">
+        <div class="d-flex flex-column flex-md-row gap-2 gap-md-5 mb-3 mb-md-0">
             @auth
             <a class="dropdown-item" href="{{ url('/') }}">{{__('Home')}}</a>
             <a class="dropdown-item" href="{{ url('admin') }}">{{__('Dashboard')}}</a>
