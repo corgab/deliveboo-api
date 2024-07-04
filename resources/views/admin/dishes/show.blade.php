@@ -6,6 +6,9 @@
             <span class="text-danger">Deliveboo</span>
         </h1>
         <ul class="lh-lg">
+            <li>
+                <img class="img-dish" src="{{ Vite::asset("resources/img/dishes/$dish->thumb")}}" alt="Foto Piatto">
+            </li>
             <li class="fs-5"><strong>Nome piatto</strong>: {{ $dish->name }}</li>
             <li class="fs-5"><strong>Descrizione ingredienti</strong>: {{ $dish->description_ingredients }}</li>
             <li class="fs-5"><strong>Prezzo</strong>: {{ $dish->price }} €</li>
