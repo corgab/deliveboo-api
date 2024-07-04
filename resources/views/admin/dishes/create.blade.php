@@ -8,7 +8,6 @@
             <!-- Restaurant_id value-->
             <input type="hidden" name="restaurant_id" value="{{ $restaurant->id }}">
 
-            {{-- @dd($restaurant) --}}
             <div class="container">
 
                 <div class="my-4">
