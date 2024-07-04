@@ -75,6 +75,11 @@
         PER POTER CREARE IL TUO MENU', REGISTRA IL TUO RISTORANTE! <br>
         <a class="dropdown-item btn" href="{{ url('admin/restaurant/create') }}">{{__('Registra il tuo Ristorante')}}</a>
     </h1>
+    @if(isset($error))
+    <div class="alert alert-danger text-center" style="font-size: 1rem;">
+        <h4>{{ $error }}</h4>
+    </div>
+    @endif
 </div>
 @endif
 @endsection
