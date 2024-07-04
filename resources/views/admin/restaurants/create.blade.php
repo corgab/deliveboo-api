@@ -18,7 +18,7 @@
             @enderror
         </div>
         <div class="mb-3">
-            <label for="types" class="form-label">* <strong>Tipologie</strong>:</label>
+            <label for="types" class="form-label"><strong>* Tipologie</strong>:</label>
             <div class="form-check d-flex flex-wrap">
                 @foreach ($types as $type)
                     <div class="col-2">
@@ -47,7 +47,7 @@
             <input type="file" class="form-control" id="thumb" name="thumb" value="{{ old('thumb') }}">
         </div>
 
-        <button type="submit" class="btn btn-outline-light btn-sm mt-4">Registra la tua attività</button>
+        <button type="submit" class="btn btn-success btn-sm mt-4">Registra la tua attività</button>
     </div>
     </form>
         
