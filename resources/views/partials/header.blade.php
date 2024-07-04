@@ -1,5 +1,5 @@
 <header class="main-header px-1 py-2">
-    <div class="logo text-center mb-3 mb-md-0">
+    <div class="logo text-center mb-2 mb-md-0">
         <a class="nav-link" href="{{url('/') }}">
             <img  class="logo-img" style="width: 110px" src="{{ asset('storage/images/logo.png') }}" alt="Logo">
         </a>
