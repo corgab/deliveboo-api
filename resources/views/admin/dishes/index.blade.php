@@ -70,20 +70,20 @@
                             </div>
                         @endforeach
 
-                    </div>
-                    {{-- end row --}}
-                    <a href="{{ route('admin.dishes.create', $dish) }}" class="btn btn-outline-primary btn-sm">
-                        Aggiungi Piatto
-                    </a>
-            @endif
-        </section>
-    @else
-        <div class="row">
-            <h1>
-                Per poter creare il tuo menù, registra il tuo ristorante! <br>
-                <a class="dropdown-item btn"
-                    href="{{ url('admin/restaurant/create') }}">{{__('Registra il tuo Ristorante')}}</a>
-            </h1>
-        </div>
+        </div> 
+        {{-- end row --}}
+        <a href="{{ route('admin.dishes.create', $dish) }}" class="btn btn-outline-primary btn-sm">
+            Aggiungi Piatto
+        </a>
     @endif
+</section>
+@else
+<div class="row">
+    <h1>
+        Per poter creare il tuo menù, registra il tuo ristorante! <br>
+        <a class="dropdown-item btn"
+            href="{{ url('admin/restaurants/create') }}">{{__('Registra il tuo Ristorante')}}</a>
+    </h1>
+</div>
+@endif
 @endsection

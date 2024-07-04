@@ -135,7 +135,11 @@ class DishController extends Controller
     {
         $user = Auth::user();
         $restaurant = $user->restaurant;
-        $dishes = $restaurant->dishes;
+        
+        if ($restaurant !== null) {
+            
+            $dishes = $restaurant->dishes;
+        }
     
         if ($dish && $dish->restaurant->user_id == $user->id) {
             // Visualizza il piatto
@@ -144,7 +148,7 @@ class DishController extends Controller
     
         // Reindirizza alla dashboard con un messaggio di errore
         $error = 'Piatto non trovato o accesso negato.';
-        return view('admin.dishes.index', compact('error','dishes'));
+        return view('admin.dishes.index', compact('error'));
 
     }
 
