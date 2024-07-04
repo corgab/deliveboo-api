@@ -56,7 +56,7 @@ class RestaurantSeeder extends Seeder
                 $new_restaurant->slug = Str::slug($new_restaurant->name, '-');
                 $new_restaurant->address = $row[1];
                 $new_restaurant->vat = $row[2];
-                // Thumb
+                $new_restaurant->thumb = $row[3];
 
                 // Salvataggio dati
                 $new_restaurant->save();
