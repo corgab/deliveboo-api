@@ -14,12 +14,13 @@
             <div class="d-flex">
                 <h3>{{ $restaurant->name}}</h3>
 
-                <a href="{{route('admin.restaurants.show', $restaurant)}}"class="btn btn-primary">show</a>
+                <a href="{{route('admin.restaurants.show', $restaurant)}}"class="btn btn-primary">Mostra</a>
 
                 <form action="{{ route('admin.restaurants.destroy', $restaurant) }}" method="POST">
                     @method('DELETE')
                     @csrf
-                    <button class="btn btn-danger">elimina</button>
+                    <button class="btn btn-danger">e
+                        Elimina</button>
                 </form>
             </div>
         @endif
