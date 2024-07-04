@@ -1,14 +1,13 @@
 @extends('layouts.app')
 
 @section('content')
-<form action="{{route('admin.dishes.store')}}" method="POST">
+<form action="{{route('admin.dishes.store')}}" method="POST" enctype="multipart/form-data">
     @csrf
 
     @if($restaurant !== null)
             <!-- Restaurant_id value-->
             <input type="hidden" name="restaurant_id" value="{{ $restaurant->id }}">
 
-            {{-- @dd($restaurant) --}}
             <div class="container">
 
                 <div class="my-4">
@@ -41,7 +40,10 @@
                     @enderror
                 </div>
                 <div class="input-group">
-                    <input type="file" class="my-4 form-control" id="thumb" name="thumb" value="{{ old('thumb') }}">
+                    <div>
+                        <label for="thumb">Immagine:</label>
+                        <input type="file" name="thumb" id="thumb">
+                    {{-- <input type="file" class="my-4 form-control" id="thumb" name="thumb"> --}}
                     @error('thumb')
                         <span class="text-danger">{{ $message }}</span>
                     @enderror
@@ -67,6 +69,15 @@
                 </div>
             </div>
         </form>
+        @if ($errors->any())
+            <div class="alert alert-danger">
+                <ul>
+                    @foreach ($errors->all() as $error)
+                        <li>{{ $error }}</li>
+                    @endforeach
+                </ul>
+            </div>
+        @endif
 
     @else
             <h1>Per poter aggiungere i tuoi piatti, registra il tuo ristorante.</h1>
@@ -79,4 +90,5 @@
 
         </div>
     @endif
+
 @endsection

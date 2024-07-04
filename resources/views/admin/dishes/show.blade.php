@@ -6,9 +6,9 @@
             <span class="text-danger">Deliveboo</span>
         </h1>
         <ul class="lh-lg">
+            @if($dish->thumb)
             <li>
-                <img class="img-dish mb-2 mt-5" src="{{ Vite::asset("resources/img/dishes/$dish->thumb")}}"
-                    alt="Foto Piatto">
+                <img class="img-dish mb-2 mt-5" src="{{ Vite::asset("resources/img/dishes/$dish->thumb")}}" alt="Foto Piatto">
             </li>
             <li class="fs-show"><strong>Nome piatto</strong>: {{ $dish->name }}</li>
             <li class="fs-show"><strong>Descrizione ingredienti</strong>: {{ $dish->description_ingredients }}</li>

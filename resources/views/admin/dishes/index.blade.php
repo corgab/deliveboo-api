@@ -27,7 +27,9 @@
                 <div class="card text-center p-4">
                     <h3 class="mb-3">{{ $dish->name }}</h3>
                     <figure>
-                        <img class="img-dish" src="{{ Vite::asset("resources/img/dishes/$dish->thumb")}}" alt="Foto Piatto">
+                        @if($dish->thumb)
+                            <img class="img-dish" src="{{ asset('storage/' . $dish->thumb) }}" alt="{{ $dish->name }}">
+                        @endif
                     </figure>
                     <div class="d-flex flex-column flex-sm-row gap-2 mt-3"> 
                         <a href="{{ route('admin.dishes.show', $dish) }}" class="btn btn-outline-primary btn-sm  mb-2 mb-sm-0">
