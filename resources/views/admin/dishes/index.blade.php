@@ -2,7 +2,12 @@
 
 @section('content')
 <section class="mt-3">
-    @if(isset($dishes))
+@if(isset($error))
+<div class="alert alert-danger text-center" style="font-size: 1rem;">
+    <h4>{{ $error }}</h4>
+</div>
+@endif
+@if(isset($dishes))
     @if($dishes->isEmpty())
         <div class="row">
             <h1 class="h3 mb-4">
