@@ -60,8 +60,10 @@
                         </select>
                     </div>
 
-                    <a href="{{route('admin.dishes.index')}}" class="btn btn-sm btn-danger">Indietro</a>
-                    <button type="submit" class="btn btn-sm btn-success ">Crea piatto</button>
+                    <a href="{{route('admin.dishes.index')}}" class="btn btn-sm btn-outline-primary"><i class="bi bi-arrow-left"></i>
+                    Indietro</a>
+                    <button type="submit" class="btn btn-sm btn-outline-success"><i class="bi bi-plus-square"></i>
+                    Crea piatto</button>
                 </div>
             </div>
         </form>
