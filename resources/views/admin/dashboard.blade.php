@@ -2,6 +2,11 @@
 
 @section('content')
 <div class="container py-5">
+    @if(isset($error))
+    <div class="alert alert-danger text-center" style="font-size: 1rem;">
+        <h4>{{ $error }}</h4>
+    </div>
+    @endif
     @if(isset($restaurant))
         <section class="restaurant mb-5">
             <h1 class="restaurant-titles">IL TUO RISTORANTE</h1>
