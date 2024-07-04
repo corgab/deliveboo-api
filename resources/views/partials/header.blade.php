@@ -17,7 +17,8 @@
         </div>
 
          <!-- Right Side Of Navbar -->
-        <ul class="navbar-nav ml-auto flex-column flex-md-row gap-2">
+          
+        <ul class="navbar-nav ml-auto flex-column flex-md-row gap-3">
         <!-- Authentication Links -->
         @guest
             <li class="nav-item">
