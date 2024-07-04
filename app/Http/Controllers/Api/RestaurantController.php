@@ -19,14 +19,9 @@ class RestaurantController extends Controller
         if ($types) {
             $typesArray = explode(',', $types);
 
-            foreach ($typesArray as $typeName) {
-                $typeId = Type::where('name', $typeName)->pluck('id')->first();
-                if ($typeId) {
-                    $query->whereHas('types', function ($q) use ($typeId) {
-                        $q->where('types.id', $typeId);
-                    });
-                }
-            }
+            $query->whereHas('types', function ($q) use ($typesArray) {
+                $q->whereIn('name', $typesArray);
+            });
         }
 
         // Esegui la query e ottieni i risultati
