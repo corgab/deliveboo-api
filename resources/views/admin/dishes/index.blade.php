@@ -23,22 +23,22 @@
     <div class="container">
         <div class="row">
             @foreach ($dishes as $dish)
-            <div class="col-4 d-flex justify-content-center">
-                <div class="card text-center p-4 mb-4">
-                    <h3>{{ $dish->name }}</h3>
+            <div class="col-12 col-md-6 col-lg-4 d-flex justify-content-center mb-4">
+                <div class="card text-center p-4">
+                    <h3 class="mb-3">{{ $dish->name }}</h3>
                     <figure>
                         <img class="img-dish" src="{{ Vite::asset("resources/img/dishes/$dish->thumb")}}" alt="Foto Piatto">
                     </figure>
-                    <div class="d-flex gap-4"> 
-                        <a href="{{ route('admin.dishes.show', $dish) }}" class="btn btn-outline-primary btn-sm">
+                    <div class="d-flex flex-column flex-sm-row gap-2 mt-3"> 
+                        <a href="{{ route('admin.dishes.show', $dish) }}" class="btn btn-outline-primary btn-sm  mb-2 mb-sm-0">
                             <i class="bi bi-binoculars me-1"></i>
                             Visualizza
                         </a>
-                        <a href="{{ route('admin.dishes.edit', $dish) }}" class="btn btn-outline-primary btn-sm">
+                        <a href="{{ route('admin.dishes.edit', $dish) }}" class="btn btn-outline-primary btn-sm  mb-2 mb-sm-0">
                             <i class="bi bi-pen-fill"></i>
                             Modifica
                         </a>
-                        <button type="button" class="btn btn-outline-danger btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModal{{ $dish->id }}">
+                        <button type="button" class="btn btn-outline-danger btn-sm  mb-2 mb-sm-0" data-bs-toggle="modal" data-bs-target="#exampleModal{{ $dish->id }}">
                             <i class="bi bi-trash"></i>
                             Elimina
                         </button>
