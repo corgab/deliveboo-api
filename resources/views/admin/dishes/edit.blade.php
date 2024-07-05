@@ -17,14 +17,14 @@
 
     <div class="mb-4">
         <label for="description_ingredients" class="form-label fw-bold">* Descrizione / Ingredienti</label>
-        <input type="text" required name="description_ingredients" class="form-control @error('description_ingredients') is-invalid @enderror" id="description_ingredients" value="{{old('description_ingredients', $dish->description_ingredients)}}">
+        <input type="text" required maxlength="100" name="description_ingredients" class="form-control @error('description_ingredients') is-invalid @enderror" id="description_ingredients" value="{{old('description_ingredients', $dish->description_ingredients)}}">
         @error('description_ingredients')
             <div class="invalid-feedback">{{ $message }}</div>
         @enderror
     </div>
     <div class="mb-4">
         <label for="price" class="form-label fw-bold">* Prezzo €</label>
-        <input type="text" required name="price" class="form-control @error('price') is-invalid @enderror" id="price" value="{{old('price', $dish->price)}}">
+        <input type="text" required min="1" max="900" name="price" class="form-control @error('price') is-invalid @enderror" id="price" value="{{old('price', $dish->price)}}">
         @error('price')
             <div class="invalid-feedback">{{ $message }}</div>
         @enderror

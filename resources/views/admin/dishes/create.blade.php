@@ -12,7 +12,7 @@
 
                 <div class="my-4">
                     <label for="name" class="form-label fw-bold mt-5">* Nome piatto</label>
-                    <input type="text" name="name" required
+                    <input type="text" required maxlength="100" name="name" required
                         class="form-control {{ $errors->has('name') ? 'is-invalid' : (old('name') ? 'is-valid' : '') }}"
                         id="name" placeholder="Scrivi il nome del piatto" value="{{old('name')}}">
                     @error('name')
@@ -32,7 +32,7 @@
                 </div>
                 <div class="my-4">
                     <label for="price" class="form-label fw-bold">* Prezzo €</label>
-                    <input type="text" required name="price"
+                    <input type="text" required min="1" max="900" name="price"
                         class="form-control {{ $errors->has('price') ? 'is-invalid' : (old('price') ? 'is-valid' : '') }}"
                         id="price" placeholder="0.00" value="{{old('price')}}">
                     @error('price')
