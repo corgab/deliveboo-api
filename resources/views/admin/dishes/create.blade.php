@@ -11,8 +11,8 @@
             <div class="container">
 
                 <div class="my-4">
-                    <label for="name" class="form-label fw-bold mt-5">Nome piatto</label>
-                    <input type="text" name="name" required
+                    <label for="name" class="form-label fw-bold mt-5">* Nome piatto</label>
+                    <input type="text" required maxlength="100" name="name" required
                         class="form-control {{ $errors->has('name') ? 'is-invalid' : (old('name') ? 'is-valid' : '') }}"
                         id="name" placeholder="Scrivi il nome del piatto" value="{{old('name')}}">
                     @error('name')
@@ -20,7 +20,7 @@
                     @enderror
                 </div>
                 <div class="my-4">
-                    <label for="description_ingredients" class="form-label fw-bold">Descrizione ingredienti</label>
+                    <label for="description_ingredients" class="form-label fw-bold">* Descrizione ingredienti</label>
                     <input type="text" required name="description_ingredients"
                         class="form-control {{ $errors->has('description_ingredients') ? 'is-invalid' : (old('description_ingredients') ? 'is-valid' : '') }}"
                         id="description_ingredients" placeholder="Inserisci gli incredienti usati"
@@ -31,10 +31,10 @@
 
                 </div>
                 <div class="my-4">
-                    <label for="price" class="form-label fw-bold">Prezzo €</label>
-                    <input type="text" required name="price"
+                    <label for="price" class="form-label fw-bold">* Prezzo €</label>
+                    <input type="text" required min="1" max="900" name="price"
                         class="form-control {{ $errors->has('price') ? 'is-invalid' : (old('price') ? 'is-valid' : '') }}"
-                        id="description_ingredients" id="price" placeholder="0.00" value="{{old('price')}}">
+                        id="price" placeholder="0.00" value="{{old('price')}}">
                     @error('price')
                         <div class="invalid-feedback">{{ $message }}</div>
                     @enderror
@@ -53,7 +53,7 @@
                     <div class="d-flex gap-3">
                         <div class="form-check">
                             <label class="form-check-label" for="visible">
-                                Visibile
+                                * Visibile
                             </label>
                         </div>
                         <select name="visible" id="visible">
@@ -69,16 +69,9 @@
                 </div>
             </div>
         </form>
-        @if ($errors->any())
-            <div class="alert alert-danger">
-                <ul>
-                    @foreach ($errors->all() as $error)
-                        <li>{{ $error }}</li>
-                    @endforeach
-                </ul>
-            </div>
-        @endif
-
+        <div class="text-center my-4">
+            <h5 class="pb-5">I campi contrassegnati con * sono obbligatori.</h5>
+        </div>
     @else
             <h1>Per poter aggiungere i tuoi piatti, registra il tuo ristorante.</h1>
 
@@ -90,5 +83,22 @@
 
         </div>
     @endif
+
+@section('script')
+<script>
+// Prendere elemento dal dom
+document.getElementById('price').addEventListener('keydown', function(event) {
+    const validChars = [
+        '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 
+        'Backspace', 'ArrowLeft', 'ArrowRight', '.'
+    ];
+
+    // Bloccare la scrittura delle lettere
+    if (!validChars.includes(event.key)) { // Se il tasto premuto non è nell'array
+        event.preventDefault(); // Blocca l'inserimento del tasto
+    }
+})
+</script>
+@endsection
 
 @endsection

@@ -31,7 +31,7 @@
         </main>
         @include('partials.footer')
     </div>
-    @yield('scripts')
+    @yield('script')
 </body>
 
 </html>

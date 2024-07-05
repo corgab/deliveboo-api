@@ -41,7 +41,6 @@ class StoreRestaurantRequest extends FormRequest
             'address.max' => 'Il campo indirizzo non può superare i 255 caratteri.',
             'vat.required' => 'Il campo partita IVA è obbligatorio.',
             'vat.digits' => 'Il campo partita IVA deve contenere 11 numeri.',
-            'thumb.nullable' => 'Il campo thumb è opzionale.',
             'user_id.required' => 'Il campo user_id è obbligatorio.',
             'user_id.exists' => 'Il campo user_id deve esistere nella tabella users.',
             'type_id.required' => 'Il campo type_id è obbligatorio.',
