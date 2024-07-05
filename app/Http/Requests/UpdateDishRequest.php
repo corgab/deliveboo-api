@@ -24,10 +24,10 @@ class UpdateDishRequest extends FormRequest
         return [
             'name' => 'required|max:100',
             'description_ingredients' => 'required',
-            'price' => 'required|numeric|min:1|max:300',
+            'price' => 'required|numeric|between:1,900',
             'visible' => 'required|boolean',
-            'thumb' => 'nullable',
-            'restaurant_id' => 'required|exists:restaurants,id'
+            'restaurant_id' => 'required|exists:restaurants,id',
+            'thumb' => 'nullable|image|mimes:jpeg,png,jpg,svg|max:2048'
         ];
     }
 
@@ -39,11 +39,13 @@ class UpdateDishRequest extends FormRequest
             'description_ingredients.required' => 'Il campo descrizione ingredienti è obbligatorio.',
             'price.required' => 'Il campo prezzo è obbligatorio.',
             'price.numeric' => 'Il campo prezzo deve essere un valore numerico.',
-            'price.min' => 'Il campo prezzo deve essere almeno 1.',
-            'price.max' => 'Il campo prezzo non può essere superiore a 900.',
+            'price.between' => 'Il campo prezzo deve essere compreso tra 1 e 900',
             'visible.required' => 'Il campo visibile è obbligatorio.',
             'visible.boolean' => 'Il campo visibile deve essere vero o falso.',
             'thumb.nullable' => 'Il campo immagine di anteprima è facoltativo.',
+            'thumb.image' => 'Il file deve essere un\'immagine.',
+            'thumb.mimes' => 'L\'immagine deve essere in uno dei seguenti formati: jpeg, png, jpg, svg.',
+            'thumb.max' => 'L\'immagine non può essere più grande di 2 MB.',
             'restaurant_id.required' => 'Il campo ID del ristorante è obbligatorio.',
             'restaurant_id.exists' => 'Il ristorante selezionato non esiste.',
         ];
