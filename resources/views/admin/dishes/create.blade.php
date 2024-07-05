@@ -34,7 +34,7 @@
                     <label for="price" class="form-label fw-bold">* Prezzo €</label>
                     <input type="text" required name="price"
                         class="form-control {{ $errors->has('price') ? 'is-invalid' : (old('price') ? 'is-valid' : '') }}"
-                        id="description_ingredients" id="price" placeholder="0.00" value="{{old('price')}}">
+                        id="price" placeholder="0.00" value="{{old('price')}}">
                     @error('price')
                         <div class="invalid-feedback">{{ $message }}</div>
                     @enderror
@@ -83,5 +83,22 @@
 
         </div>
     @endif
+
+@section('script')
+<script>
+// Prendere elemento dal dom
+document.getElementById('price').addEventListener('keydown', function(event) {
+    const validChars = [
+        '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 
+        'Backspace', 'ArrowLeft', 'ArrowRight', '.'
+    ];
+
+    // Bloccare la scrittura delle lettere
+    if (!validChars.includes(event.key)) { // Se il tasto premuto non è nell'array
+        event.preventDefault(); // Blocca l'inserimento del tasto
+    }
+})
+</script>
+@endsection
 
 @endsection

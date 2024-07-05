@@ -52,5 +52,21 @@
 <div class="text-center my-4">
     <h5 class="pb-5">I campi contrassegnati con * sono obbligatori.</h5>
 </div>
+@section('script')
+<script>
+// Prendere elemento dal dom
+document.getElementById('price').addEventListener('keydown', function(event) {
+    const validChars = [
+        '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 
+        'Backspace', 'ArrowLeft', 'ArrowRight', '.'
+    ];
+
+    // Bloccare la scrittura delle lettere
+    if (!validChars.includes(event.key)) { // Se il tasto premuto non è nell'array
+        event.preventDefault(); // Blocca l'inserimento del tasto
+    }
+})
+</script>
+@endsection
 
 @endsection

@@ -57,7 +57,20 @@
     </div>
 
 </section>
-@section('sections')
-<!-- !! JAVASCRIPT !! -->
+@section('script')
+<script>
+// Prendere elemento dal dom
+document.getElementById('vat').addEventListener('keydown', function(event) {
+    const validChars = [
+        '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 
+        'Backspace', 'ArrowLeft', 'ArrowRight', '.'
+    ];
+
+    // Bloccare la scrittura delle lettere
+    if (!validChars.includes(event.key)) { // Se il tasto premuto non è nell'array
+        event.preventDefault(); // Blocca l'inserimento del tasto
+    }
+})
+</script>
 @endsection
 @endsection
