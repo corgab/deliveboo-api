@@ -15,15 +15,28 @@ class RestaurantController extends Controller
         // Inizializza la query base
         $query = Restaurant::query();
 
-        // Se i tipi sono presenti, filtra i ristoranti
+        // *** FILTRO SINGOLA TIPOLOGIA***
+        // if ($types) {
+        //     $typesArray = explode(',', $types); //fai l'array dei tipi di ristorante
+
+        //     $query->whereHas('types', function ($q) use ($typesArray) {
+        //         $q->whereIn('name', $typesArray);
+        //     });
+        // }
+
+
+        // *** FILTRO PIU TIPOLOGIE***
         if ($types) {
             $typesArray = explode(',', $types);
-
-            $query->whereHas('types', function ($q) use ($typesArray) {
-                $q->whereIn('name', $typesArray);
-            });
+            foreach ($typesArray as $typeName) {
+                $typeId = Type::where('name', $typeName)->pluck('id')->first();
+                if ($typeId) {
+                    $query->whereHas('types', function ($q) use ($typeId) {
+                        $q->where('types.id', $typeId);
+                    });
+                }
+            }
         }
-
         // Esegui la query e ottieni i risultati
         $restaurants = $query->with('types')->get();
 
