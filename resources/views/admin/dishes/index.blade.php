@@ -64,7 +64,7 @@
                                 <form action="{{ route('admin.dishes.destroy', $dish) }}" method="POST">
                                     @csrf
                                     @method('DELETE')
-                                    <button type="submit" class="btn btn-danger">Elimina definitivamente</button>
+                                    <button type="submit" class="btn btn-danger">Elimina</button>
                                 </form>
                             </div>
                         </div>

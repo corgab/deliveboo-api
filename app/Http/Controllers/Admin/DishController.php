@@ -70,7 +70,7 @@ class DishController extends Controller
         $slug = $base_slug;
         $n = 0;
         do {
-            $find = Dish::where('slug', $slug)->first();
+            $find = Dish::withTrashed()->where('slug', $slug)->first();
             if ($find !== null) {
                 $n++;
                 $slug = $base_slug . '-' . $n;
