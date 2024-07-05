@@ -15,9 +15,9 @@
                 <h3>{{$restaurant->name}}</h3>
                 <h4>{{$restaurant->address}}</h4>
                 <p>P.IVA: {{$restaurant->vat}}</p>
-                <ul>
+                <ul class="p-0">
                     @foreach($restaurant->types as $type)
-                        <li class="badge">{{$type->name}}</li>
+                        <li class="badge p-2 me-2">{{$type->name}}</li>
                     @endforeach
                 </ul>
             </div>
