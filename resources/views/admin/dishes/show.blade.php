@@ -10,11 +10,11 @@
             <li>
                 <img class="img-dish mb-2 mt-5" src="{{ asset('storage/' . $dish->thumb) }}" alt="Foto Piatto">
             </li>
+        @endif
             <li class="fs-show"><strong>Nome piatto</strong>: {{ $dish->name }}</li>
             <li class="fs-show"><strong>Descrizione ingredienti</strong>: {{ $dish->description_ingredients }}</li>
             <li class="fs-show"><strong>Prezzo</strong>: {{ $dish->price }} €</li>
         </ul>
-        @endif
     </div>
 
 
