@@ -44,7 +44,6 @@
                 <li><a class="nav-link dropdown-item" href="{{ url('admin/dishes') }}">{{__('Il tuo menu')}}</a></li>
                 <li><a class="nav-link dropdown-item" href="{{ url('admin/dishes/create') }}">{{__('Aggiungi un piatto')}}</a></li>
                 <li><a class="nav-link dropdown-item" href="{{ url('admin/orders') }}">{{__('I tuoi ordini')}}</a></li>
-                <li><a class="nav-link dropdown-item" href="{{ url('profile') }}">{{__('Profile')}}</a></li>
                 <li><a class="nav-link dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
                     document.getElementById('logout-form').submit();">{{ __('Esci') }}</a></li>
                 </li>
