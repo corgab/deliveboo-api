@@ -32,6 +32,17 @@ class LoginRequest extends FormRequest
         ];
     }
 
+    public function messages(): array
+    {
+        return [
+            'email.required' => 'L\'indirizzo email è obbligatorio.',
+            'email.string' => 'L\'indirizzo email deve essere una stringa.',
+            'email.email' => 'L\'indirizzo email deve essere un indirizzo email valido.',
+            'password.required' => 'La password è obbligatoria.',
+            'password.string' => 'La password deve essere una stringa.',
+        ];
+    }
+
     /**
      * Attempt to authenticate the request's credentials.
      *
@@ -45,7 +56,7 @@ class LoginRequest extends FormRequest
             RateLimiter::hit($this->throttleKey());
 
             throw ValidationException::withMessages([
-                'email' => trans('auth.failed'),
+                'email' => 'Le credenziali fornite non sono corrette.',
             ]);
         }
 
