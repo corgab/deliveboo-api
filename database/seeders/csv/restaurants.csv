@@ -1,6 +1,6 @@
 name,address,vat,thumb
-La Bella Italia,123 Main St,12345678901,la-bella-italia.png
-El Mexicano,456 Oak St,98765432102,el-mexicano.jpeg
-Sushi Paradise,789 Pine St,12345678903,sushi-paradise.jpeg
-Burger Kingdom,101 Maple St,98765432104,burger-kingdom.jpeg
-Vegan Delights,202 Birch St,12345678905,vegan-delights.jpeg
+La Bella Italia,123 Main St,12345678901,images/restaurants/la-bella-italia.png
+El Mexicano,456 Oak St,98765432102,images/restaurants/el-mexicano.jpeg
+Sushi Paradise,789 Pine St,12345678903,images/restaurants/sushi-paradise.jpeg
+Burger Kingdom,101 Maple St,98765432104,images/restaurants/burger-kingdom.jpeg
+Vegan Delights,202 Birch St,12345678905,images/restaurants/vegan-delights.jpeg
