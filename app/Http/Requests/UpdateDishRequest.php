@@ -24,7 +24,7 @@ class UpdateDishRequest extends FormRequest
         return [
             'name' => 'required|max:100',
             'description_ingredients' => 'required',
-            'price' => 'required|numeric|min:5|max:300',
+            'price' => 'required|numeric|min:1|max:300',
             'visible' => 'required|boolean',
             'thumb' => 'nullable',
             'restaurant_id' => 'required|exists:restaurants,id'
@@ -39,8 +39,8 @@ class UpdateDishRequest extends FormRequest
             'description_ingredients.required' => 'Il campo descrizione ingredienti è obbligatorio.',
             'price.required' => 'Il campo prezzo è obbligatorio.',
             'price.numeric' => 'Il campo prezzo deve essere un valore numerico.',
-            'price.min' => 'Il campo prezzo deve essere almeno 5.',
-            'price.max' => 'Il campo prezzo non può essere superiore a 300.',
+            'price.min' => 'Il campo prezzo deve essere almeno 1.',
+            'price.max' => 'Il campo prezzo non può essere superiore a 900.',
             'visible.required' => 'Il campo visibile è obbligatorio.',
             'visible.boolean' => 'Il campo visibile deve essere vero o falso.',
             'thumb.nullable' => 'Il campo immagine di anteprima è facoltativo.',
