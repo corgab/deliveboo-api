@@ -46,7 +46,7 @@ class RestaurantController extends Controller
 
     public function show(Restaurant $restaurant){
         
-        // Carica i piatti con gli ordini e la quantità dalla tabella pivot, e i tipi di piatti
+        // Carica i ristoranti con i piatti
         $restaurant->load(['dishes']);
 
         return response()->json([
