@@ -20,7 +20,7 @@ class DishController extends Controller
     public function show(Dish $dish){
 
         $dish ->load( 'restaurant' );
-
+        
         return response()->json([
             'dish' => $dish
         ]);
