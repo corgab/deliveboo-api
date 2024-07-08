@@ -2,9 +2,7 @@
 @section('content')
 <section>
     <div class="container">
-        <h1 class="text-center pt-4 lh-base">Dettaglio Piatto <br>
-            <span class="text-danger">Deliveboo</span>
-        </h1>
+        <h1 class="text-center mb-5 text-primary">Dettaglio Piatto</h1>
         @if($dish->thumb)
         <ul class="lh-lg">
             <li>

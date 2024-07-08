@@ -9,6 +9,7 @@
             <input type="hidden" name="restaurant_id" value="{{ $restaurant->id }}">
 
             <div class="container">
+                <h1 class="text-center mb-5 text-primary">Crea il tuo piatto</h1>
 
                 <div class="my-4">
                     <label for="name" class="form-label fw-bold mt-5">* Nome piatto</label>

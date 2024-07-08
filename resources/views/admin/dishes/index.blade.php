@@ -10,8 +10,9 @@
 @if(isset($dishes))
     @if($dishes->isEmpty())
         <div class="row">
-            <h1 class="h3 mb-4">
-                Il tuo menù è vuoto. Registra il tuo primo piatto.</h1>
+            <h1 class="text-center mb-5 text-primary">Il tuo menù</h1>
+            <h2 class="h3 mb-4">
+                Il tuo menù è vuoto. Registra il tuo primo piatto.</h2>
 
             <form action="{{ url('admin/dishes/create') }}" method="GET">
                 <button type="submit" class="btn btn-success btn-sm">
