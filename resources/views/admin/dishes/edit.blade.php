@@ -6,7 +6,8 @@
     @method('PUT')
 
     <input type="hidden" name="restaurant_id" value="{{ $restaurant->id }}">
-    
+
+    <h1 class="mb-5 text-primary text-center">Modifica piatto</h1>
     <div class="mb-4">
         <label for="name" class="form-label fw-bold">* Nome</label>
         <input type="text" required name="name" class="form-control @error('name') is-invalid @enderror" id="name" value="{{old('name', $dish->name)}}">
@@ -50,7 +51,7 @@
     </div>
 </form>
 <div class="text-center my-4">
-    <h5 class="pb-5">I campi contrassegnati con * sono obbligatori.</h5>
+    <h5>I campi contrassegnati con * sono obbligatori.</h5>
 </div>
 @section('script')
 <script>

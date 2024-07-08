@@ -4,19 +4,19 @@
     <div class="container">
         <h1 class="text-center mb-5 text-primary">Dettaglio Piatto</h1>
         @if($dish->thumb)
-        <ul class="lh-lg">
-            <li>
-                <img class="img-dish mb-2 mt-5" src="{{ asset('storage/' . $dish->thumb) }}" alt="Foto Piatto">
-            </li>
+            <ul class="lh-lg">
+                <li>
+                    <img class="img-dish mb-3 mt-5" src="{{ asset('storage/' . $dish->thumb) }}" alt="Foto Piatto">
+                </li>
         @endif
-            <li class="fs-show"><strong>Nome piatto</strong>: {{ $dish->name }}</li>
-            <li class="fs-show"><strong>Descrizione ingredienti</strong>: {{ $dish->description_ingredients }}</li>
-            <li class="fs-show"><strong>Prezzo</strong>: {{ $dish->price }} €</li>
+            <li class="fs-show mb-3"><strong>Nome piatto</strong>: {{ $dish->name }}</li>
+            <li class="fs-show mb-3"><strong>Descrizione ingredienti</strong>: {{ $dish->description_ingredients }}</li>
+            <li class="fs-show mb-3"><strong>Prezzo</strong>: {{ $dish->price }} €</li>
         </ul>
     </div>
 
 
-    <div class="container">
+    <div class="container mt-4">
         <!-- Check Boolean -->
         @if ($dish->visible == true)
             <h3 class="h5">Visibile</h3>
@@ -41,22 +41,21 @@
                     <form action="{{route('admin.dishes.destroy', $dish)}}" method="POST">
                         @csrf
                         @method('DELETE')
-                        <button type="submit" class="btn btn-sm btn-secondary">Elimina</button>
+                        <button type="submit" class="btn btn-sm btn-danger">Elimina</button>
                     </form>
                 </div>
             </div>
         </div>
     </div>
 
-    <button type="button" class="btn btn-sm btn-outline-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">
-        Eliminazione piatto
-    </button>
-    <a href="{{ route('admin.dishes.edit', $dish) }}" class="btn btn-outline-primary btn-sm">
-        Modifica
-    </a>
-
-
-
-
+    <div class="d-flex flex-column flex-md-row justify-content-center justify-content-md-start align-items-center gap-3 mt-4">
+        <button type="button" class="btn btn-sm btn-outline-danger mb-2 mb-md-0 me-md-2" data-bs-toggle="modal"
+            data-bs-target="#exampleModal"><i class="bi bi-trash-fill"></i>
+            Eliminazione piatto
+        </button>
+        <a href="{{ route('admin.dishes.edit', $dish) }}" class="btn btn-outline-primary btn-sm"><i class="bi bi-pen-fill"></i>
+            Modifica
+        </a>
+    </div>
 </section>
 @endsection

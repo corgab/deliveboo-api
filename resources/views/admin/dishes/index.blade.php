@@ -23,6 +23,7 @@
     @else
     <div class="container">
         <div class="row">
+            <h1 class="text-center text-primary mb-5">I tuoi piatti</h1>
             @foreach ($dishes as $dish)
             <div class="col-12 col-md-6 col-lg-4 d-flex justify-content-center mb-4">
                 <div class="card text-center p-4">

@@ -9,7 +9,7 @@
     @endif
     @if(isset($restaurant))
         <section class="restaurant mb-5">
-            <h1 class="restaurant-titles">IL TUO RISTORANTE</h1>
+            <h1 class="restaurant-titles text-center text-md-start">IL TUO RISTORANTE</h1>
             <div class="card restaurant-card p-5">
 
                 <h3>{{$restaurant->name}}</h3>
@@ -24,7 +24,7 @@
         </section>
 
         <section class="dishes mb-5">
-            <h1 class="restaurant-titles">
+            <h1 class="restaurant-titles text-center text-md-start">
                 <a href="{{ route('admin.dishes.index') }}">I TUOI PIATTI</a>
             </h1>
             <div class="card restaurant-card p-5">
@@ -41,7 +41,7 @@
         </section>
 
         <section class="orders mb-5">
-            <h1 class="restaurant-titles">
+            <h1 class="restaurant-titles text-center text-md-start">
                 <a href="{{ route('admin.orders.index') }}">I TUO ORDINI</a>
             </h1>
             <div class="card restaurant-card p-5">
@@ -61,7 +61,7 @@
         </section>
 
         <section class="order-statistics mb-5">
-            <h1 class="restaurant-titles">STATISTICHE ORDINI</h1>
+            <h1 class="restaurant-titles text-center text-md-start">STATISTICHE ORDINI</h1>
         </section>
     @else
         <div class="row">

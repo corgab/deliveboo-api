@@ -70,7 +70,7 @@
                 </div>
             </div>
         </form>
-        <div class="text-center my-4">
+        <div class="text-center mt-2">
             <h5 class="pb-5">I campi contrassegnati con * sono obbligatori.</h5>
         </div>
     @else
