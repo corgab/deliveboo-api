@@ -71,7 +71,7 @@
             </h1>
 
             <form action="{{ url('admin/restaurants/create') }}" method="GET">
-                <button type="submit" class="btn btn-success btn-sm">
+                <button type="submit" class="btn btn-success btn-sm"><i class="bi bi-plus-square"></i>
                     {{ __('Registra il tuo ristorante') }}
                 </button>
             </form>

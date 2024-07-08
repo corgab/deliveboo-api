@@ -4,7 +4,7 @@
 
 <section>
 
-    <h1>INDEX</h1>
+    <h1>Il tuo ristorante</h1>
     {{-- @foreach ($restaurants as $restaurant) --}}
 
     

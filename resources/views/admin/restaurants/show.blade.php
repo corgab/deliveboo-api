@@ -3,8 +3,7 @@
 
 <section>
     <div class="container">
-        <h1 class="mb-5 text-center" style="font-size: 1.5rem;">Dettaglio ristorante <br> <span
-                class="text-danger">Deliveboo</span></h1>
+        <h1 class="mb-5 text-center" style="font-size: 1.5rem;">Dettaglio ristorante</h1>
         <ul class="lh-lg mb-4" style="font-size: 1rem;">
             <li><strong>Nome attività</strong>: "{{ $restaurant->name }}"</li>
             <li><strong>Slug</strong>: {{ $restaurant->slug }}</li>

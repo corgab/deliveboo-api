@@ -59,14 +59,14 @@
                         </div>
                         <select name="visible" id="visible">
                             <option value="0">No</option>
-                            <option value="1" selected>Si</option>
+                            <option value="1" selected>Sì</option>
                         </select>
                     </div>
 
                     <a href="{{route('admin.dishes.index')}}" class="btn btn-sm btn-outline-primary"><i class="bi bi-arrow-left"></i>
-                    Indietro</a>
+                    Back</a>
                     <button type="submit" class="btn btn-sm btn-outline-success"><i class="bi bi-plus-square"></i>
-                    Crea piatto</button>
+                    Crea</button>
                 </div>
             </div>
         </form>
