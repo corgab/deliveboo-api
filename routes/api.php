@@ -6,7 +6,6 @@ use App\Http\Controllers\Api\RestaurantController;
 use App\Http\Controllers\Api\TypeController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\PaymentController;
 
 /*
 |--------------------------------------------------------------------------
@@ -35,12 +34,10 @@ Route::get('/dishes/{dish:id}', [DishController::class, 'show']);
 Route::get('/types', [TypeController::class, 'index']);
 Route::get('/types/{type:id}', [TypeController::class, 'show']);
 
-// ROTTE ORDERS
-Route::get('/orders', [OrderController::class, 'index']);
-Route::get('/orders/{order:id}', [OrderController::class, 'show']);
-
 // PAYMENTS
-Route::post('/checkout', [PaymentController::class, 'checkout']);
+Route::post('/checkout', [OrderController::class, 'checkout']);
+
+
 
 
 

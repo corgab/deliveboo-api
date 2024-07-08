@@ -9,6 +9,15 @@ class Order extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+        'name',
+        'email',
+        'number',
+        'address',
+        'total_price',
+        'restaurant_id'
+    ];
+
     // Many-to-many
     public function dishes()
     {
