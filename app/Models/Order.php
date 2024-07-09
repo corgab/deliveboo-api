@@ -15,16 +15,11 @@ class Order extends Model
         'number',
         'address',
         'total_price',
-        'restaurant_id'
     ];
 
     // Many-to-many
     public function dishes()
     {
         return $this->belongsToMany(Dish::class);
-    }
-
-    public function restaurant(){
-        return $this->belongsTo(Restaurant::class);
     }
 }

@@ -45,12 +45,8 @@ class OrderSeeder extends Seeder
         foreach ($data as $index=>$row) {
             if ($index !== 0) {
                 
-                // Seleziona un ID ristorante casuale dai ristoranti
-                $restaurant_id = $restaurants->random()->id;
-                
                 $new_order = new Order();
 
-                $new_order->restaurant_id = $restaurant_id;
                 $new_order->name = $row[0];
                 $new_order->email = $row[1];
                 $new_order->number = $row[2];
