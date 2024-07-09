@@ -7,7 +7,7 @@
 
     <input type="hidden" name="restaurant_id" value="{{ $restaurant->id }}">
 
-    <h1 class="mb-5 text-primary text-center">Modifica piatto</h1>
+    <h1 class="mb-5 text-success text-center">Modifica piatto</h1>
     <div class="mb-4">
         <label for="name" class="form-label fw-bold">* Nome</label>
         <input type="text" required name="name" class="form-control @error('name') is-invalid @enderror" id="name" value="{{old('name', $dish->name)}}">
@@ -46,8 +46,8 @@
     </div>
    
     <div class="d-flex justify-content-evenly mt-5">
-        <button type="submit" class="btn btn-outline-primary"></i><i class="bi bi-pen-fill"></i>Modifica</button>
-        <a href="{{route('admin.dishes.show', $dish)}}" class="btn btn-outline-warning"><i class="bi bi-arrow-left"></i>Indietro</a>
+        <button type="submit" class="btn btn-outline-success"></i><i class="bi bi-pen-fill"></i>Modifica</button>
+        <a href="{{route('admin.dishes.show', $dish)}}" class="btn btn-outline-success"><i class="bi bi-arrow-left"></i>Indietro</a>
     </div>
 </form>
 <div class="text-center my-4">

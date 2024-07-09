@@ -2,7 +2,7 @@
 @section('content')
 <section>
     <div class="container">
-        <h1 class="text-center mb-5 text-primary">Dettaglio Piatto</h1>
+        <h1 class="text-center mb-5 text-success">Dettaglio Piatto</h1>
         @if($dish->thumb)
             <ul class="lh-lg">
                 <li>
@@ -53,7 +53,7 @@
             data-bs-target="#exampleModal"><i class="bi bi-trash-fill"></i>
             Eliminazione piatto
         </button>
-        <a href="{{ route('admin.dishes.edit', $dish) }}" class="btn btn-outline-primary btn-sm"><i class="bi bi-pen-fill"></i>
+        <a href="{{ route('admin.dishes.edit', $dish) }}" class="btn btn-outline-success btn-sm"><i class="bi bi-pen-fill"></i>
             Modifica
         </a>
     </div>

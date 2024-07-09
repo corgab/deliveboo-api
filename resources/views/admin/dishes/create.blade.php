@@ -9,7 +9,7 @@
             <input type="hidden" name="restaurant_id" value="{{ $restaurant->id }}">
 
             <div class="container">
-                <h1 class="text-center mb-5 text-primary">Crea il tuo piatto</h1>
+                <h1 class="text-center mb-5 text-success">Crea il tuo piatto</h1>
 
                 <div class="my-4">
                     <label for="name" class="form-label fw-bold mt-5">* Nome piatto</label>
@@ -63,7 +63,7 @@
                         </select>
                     </div>
 
-                    <a href="{{route('admin.dishes.index')}}" class="btn btn-sm btn-outline-primary"><i class="bi bi-arrow-left"></i>
+                    <a href="{{route('admin.dishes.index')}}" class="btn btn-sm btn-outline-success"><i class="bi bi-arrow-left"></i>
                     Back</a>
                     <button type="submit" class="btn btn-sm btn-outline-success"><i class="bi bi-plus-square"></i>
                     Crea</button>

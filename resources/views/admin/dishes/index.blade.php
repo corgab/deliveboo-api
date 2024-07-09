@@ -10,7 +10,7 @@
 @if(isset($dishes))
     @if($dishes->isEmpty())
         <div class="row">
-            <h1 class="text-center mb-5 text-primary">Il tuo menù</h1>
+            <h1 class="text-center mb-5 text-success">Il tuo menù</h1>
             <h2 class="h3 mb-4">
                 Il tuo menù è vuoto. Registra il tuo primo piatto.</h2>
 
@@ -22,7 +22,7 @@
     @else
     <div class="container">
         <div class="row">
-            <h1 class="text-center text-primary mb-5">I tuoi piatti</h1>
+            <h1 class="text-center text-success mb-5">I tuoi piatti</h1>
             @foreach ($dishes as $dish)
             <div class="col-12 col-md-6 col-lg-4 d-flex justify-content-center mb-4">
                 <div class="card text-center p-4">
@@ -33,11 +33,11 @@
                         @endif
                     </figure>
                     <div class="d-flex flex-column flex-sm-row gap-2 mt-3"> 
-                        <a href="{{ route('admin.dishes.show', $dish) }}" class="btn btn-outline-primary btn-sm  mb-2 mb-sm-0">
+                        <a href="{{ route('admin.dishes.show', $dish) }}" class="btn btn-outline-success btn-sm  mb-2 mb-sm-0">
                             <i class="bi bi-binoculars me-1"></i>
                             Visualizza
                         </a>
-                        <a href="{{ route('admin.dishes.edit', $dish) }}" class="btn btn-outline-primary btn-sm  mb-2 mb-sm-0">
+                        <a href="{{ route('admin.dishes.edit', $dish) }}" class="btn btn-outline-success btn-sm  mb-2 mb-sm-0">
                             <i class="bi bi-pen-fill"></i>
                             Modifica
                         </a>
@@ -76,7 +76,7 @@
 
         </div> 
         {{-- end row --}}
-        <a href="{{ route('admin.dishes.create', $dish) }}" class="btn btn-primary btn-sm"><i class="bi bi-plus-square"></i>
+        <a href="{{ route('admin.dishes.create', $dish) }}" class="btn btn-outline-success btn-sm"><i class="bi bi-plus-square"></i>
             Aggiungi Piatto
         </a>
     @endif
