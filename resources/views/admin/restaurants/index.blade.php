@@ -5,9 +5,7 @@
 <section>
 
     <h1>Il tuo ristorante</h1>
-    {{-- @foreach ($restaurants as $restaurant) --}}
 
-    
         @if (is_null($restaurant) === null)
             <h1>Crea il tuo primo ristorante</h1>
         @else
