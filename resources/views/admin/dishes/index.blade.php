@@ -67,6 +67,11 @@
                                     @method('DELETE')
                                     <button type="submit" class="btn btn-danger">Elimina</button>
                                 </form>
+                                <form action="{{ route('admin.dishes.permanentDelete', $dish->id) }}" method="POST" style="display:inline-block;">
+                                    @csrf
+                                    @method('DELETE')
+                                    <button type="submit" class="btn btn-danger">Elimina definitivamente</button>
+                                </form>
                             </div>
                         </div>
                     </div>
