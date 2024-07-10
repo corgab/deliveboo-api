@@ -27,7 +27,7 @@ class UpdateDishRequest extends FormRequest
             'price' => 'required|numeric|between:1,900',
             'visible' => 'required|boolean',
             'restaurant_id' => 'required|exists:restaurants,id',
-            'thumb' => 'nullable|image|mimes:jpeg,png,jpg,svg|max:2048'
+            'thumb' => 'nullable'
         ];
     }
 

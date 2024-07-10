@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<form action="{{route('admin.dishes.update', $dish)}}" method="POST">
+<form action="{{ route('admin.dishes.update', $dish) }}" method="POST" enctype="multipart/form-data">
     @csrf
     @method('PUT')
 
@@ -10,7 +10,7 @@
     <h1 class="mb-5 text-success text-center">Modifica piatto</h1>
     <div class="mb-4">
         <label for="name" class="form-label fw-bold">* Nome</label>
-        <input type="text" required name="name" class="form-control @error('name') is-invalid @enderror" id="name" value="{{old('name', $dish->name)}}">
+        <input type="text" required name="name" class="form-control @error('name') is-invalid @enderror" id="name" value="{{ old('name', $dish->name) }}">
         @error('name')
             <div class="invalid-feedback">{{ $message }}</div>
         @enderror
@@ -18,21 +18,29 @@
 
     <div class="mb-4">
         <label for="description_ingredients" class="form-label fw-bold">* Descrizione / Ingredienti</label>
-        <input type="text" required maxlength="100" name="description_ingredients" class="form-control @error('description_ingredients') is-invalid @enderror" id="description_ingredients" value="{{old('description_ingredients', $dish->description_ingredients)}}">
+        <input type="text" required maxlength="100" name="description_ingredients" class="form-control @error('description_ingredients') is-invalid @enderror" id="description_ingredients" value="{{ old('description_ingredients', $dish->description_ingredients) }}">
         @error('description_ingredients')
             <div class="invalid-feedback">{{ $message }}</div>
         @enderror
     </div>
     <div class="mb-4">
         <label for="price" class="form-label fw-bold">* Prezzo €</label>
-        <input type="text" required min="1" max="900" name="price" class="form-control @error('price') is-invalid @enderror" id="price" value="{{old('price', $dish->price)}}">
+        <input type="text" required min="1" max="900" name="price" class="form-control @error('price') is-invalid @enderror" id="price" value="{{ old('price', $dish->price) }}">
         @error('price')
             <div class="invalid-feedback">{{ $message }}</div>
         @enderror
     </div>
-    <div class="input-group mb-3">
-        <input type="file" class="form-control" id="thumb" name="thumb" value="{{ old('thumb',  $dish->thumb)}}">
+    @if($dish->thumb)
+    <div class="py-2">
+        <img src="{{ asset('storage/' . $dish->thumb) }}" alt="foto piatto" style="width:200px">
     </div>
+    <button name="remove_image" value="1" class="btn btn-danger">Rimuovi immagine</button>
+    @endif
+    <div class="input-group mb-3">
+        <label for="thumb">Inserisci immagine:</label>
+        <input type="file" class="form-control" id="thumb" name="thumb">
+    </div>
+    
     <div class="d-flex gap-3">
         <div class="form-check">
             <label class="form-check-label" for="visible">
@@ -40,19 +48,22 @@
             </label>
         </div>
         <select name="visible" id="visible">
-            <option value="0">No</option>
-            <option value="1">Si</option>
+            <option value="0" {{ old('visible', $dish->visible) == 0 ? 'selected' : '' }}>No</option>
+            <option value="1" {{ old('visible', $dish->visible) == 1 ? 'selected' : '' }}>Si</option>
         </select>
     </div>
    
     <div class="d-flex justify-content-evenly mt-5">
-        <button type="submit" class="btn btn-outline-success"></i><i class="bi bi-pen-fill"></i>Modifica</button>
-        <a href="{{route('admin.dishes.show', $dish)}}" class="btn btn-outline-success"><i class="bi bi-arrow-left"></i>Indietro</a>
+        <button type="submit" class="btn btn-outline-success"><i class="bi bi-pen-fill"></i> Modifica</button>
+        <a href="{{ route('admin.dishes.show', $dish) }}" class="btn btn-outline-success"><i class="bi bi-arrow-left"></i> Indietro</a>
     </div>
 </form>
 <div class="text-center my-4">
     <h5>I campi contrassegnati con * sono obbligatori.</h5>
 </div>
+
+@endsection
+
 @section('script')
 <script>
 // Prendere elemento dal dom
@@ -66,8 +77,6 @@ document.getElementById('price').addEventListener('keydown', function(event) {
     if (!validChars.includes(event.key)) { // Se il tasto premuto non è nell'array
         event.preventDefault(); // Blocca l'inserimento del tasto
     }
-})
+});
 </script>
-@endsection
-
 @endsection

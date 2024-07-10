@@ -92,7 +92,7 @@ class DishController extends Controller
             $image_path = $image->storeAs('images/dishes', $image_name, 'public');
             $form_data['thumb'] = $image_path; // Salvo nel db il Path
         }
-    
+        
         // Creazione piatto
         $new_dish = Dish::create($form_data);
         
@@ -123,20 +123,47 @@ class DishController extends Controller
     {
         // Validazione
         $form_data = $request->validated();
-
+    
         // Gestione Slug unico
         $base_slug = Str::slug($form_data['name']);
         $slug = $base_slug;
         $n = 0;
         do {
             $find = Dish::where('slug', $slug)->first();
-            if ($find !== null) {
+            if ($find !== null && $find->id !== $dish->id) {
                 $n++;
                 $slug = $base_slug . '-' . $n;
             }
-        } while ($find !== null);
+        } while ($find !== null && $find->id !== $dish->id);
         $form_data['slug'] = $slug;
+    
+        // Rimuove l'immagine
+        if ($request->has('remove_image') && $request->remove_image == 1) {
+            if ($dish->thumb && \Storage::disk('public')->exists($dish->thumb)) {
+                \Storage::disk('public')->delete($dish->thumb);
+            }
+            $form_data['thumb'] = null;
+        } 
+        // Se c'è un'immagine caricata
+        elseif ($request->hasFile('thumb')) {
+            $image = $request->file('thumb');
 
+            // Recupero estensione
+            $extension = $image->extension();
+
+            // Genero nome file + estensione
+            $image_name = $slug . '.' . $extension;
+
+            // Salvo immagine nello storage
+            $image_path = $image->storeAs('images/dishes', $image_name, 'public');
+            $form_data['thumb'] = 'images/dishes/' . $image_name; // Salvo nel db il Path completo
+
+            // Rimuovo l'immagine precedente 
+            if ($dish->thumb && \Storage::disk('public')->exists($dish->thumb)) {
+                \Storage::disk('public')->delete($dish->thumb);
+            }
+        }
+    
         // Modifica piatto
         $dish->update($form_data);
         
