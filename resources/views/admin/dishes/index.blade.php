@@ -15,7 +15,7 @@
                 Il tuo menù è vuoto. Registra il tuo primo piatto.</h2>
 
             <form action="{{ url('admin/dishes/create') }}" method="GET">
-                <button type="submit" class="btn btn-success btn-sm"><i class="bi bi-plus-square"></i>{{ __('Registra il tuo piatto') }}
+                <button type="submit" class="btn btn-outline-success btn-sm"><i class="bi bi-plus-square me-2"></i>{{ __('Registra il tuo piatto') }}
                 </button>
             </form>
         </div>
