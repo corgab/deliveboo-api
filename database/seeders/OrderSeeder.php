@@ -41,11 +41,11 @@ class OrderSeeder extends Seeder
         $dishes = Dish::all();
         $restaurants = Restaurant::all();
 
-        // Seleziona un ID ristorante casuale dai ristoranti
-        $restaurant_id = $restaurants->random()->id;
-        
         foreach ($data as $index=>$row) {
             if ($index !== 0) {
+
+                // Seleziona un ID ristorante casuale dai ristoranti
+                $restaurant_id = $restaurants->random()->id;
                 
                 $new_order = new Order();
                 $new_order->restaurant_id = $restaurant_id;

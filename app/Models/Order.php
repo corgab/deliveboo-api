@@ -15,6 +15,7 @@ class Order extends Model
         'number',
         'address',
         'total_price',
+        'restaurant_id'
     ];
 
     // Many-to-many
