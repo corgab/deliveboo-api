@@ -49,15 +49,17 @@ class RestaurantController extends Controller
         // Carica i ristoranti con i piatti
         $restaurant->load(['dishes']);
 
-        // Aggiungi il percorso completo dell'immagine per ogni piatto
-        foreach ($restaurant->dishes as $dish) {
+        // Aggiungi l'URL completo dell'immagine per ogni piatto
+        $dishes = $restaurant->dishes->map(function ($dish) {
             if ($dish->thumb) {
-                $dish->thumb_url = asset('storage/' . $dish->thumb);
+                $dish->thumb_url = url('storage/' . $dish->thumb);
             }
-        }
+            return $dish;
+        });
 
         return response()->json([
-            'restaurant' => $restaurant
+            'restaurant' => $restaurant,
+            'dishes' => $dishes
         ]);
     }
 }
