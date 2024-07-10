@@ -60,8 +60,24 @@
             </div>
         </section>
 
-        <section class="order-statistics mb-5">
-            <h1 class="restaurant-titles text-center text-md-start">STATISTICHE ORDINI</h1>
+        <section class="orders mb-5">
+            <h1 class="restaurant-titles text-center text-md-start">
+                <a href="{{ route('admin.orders.index') }}">STATISTICHE ORDINI</a>
+            </h1>
+            <div class="card restaurant-card p-5">
+                @if($orders->isEmpty())
+                    <div>Le statistche non sono disponibili. Non ci sono ordini.</div>
+                @else
+                    @foreach($orders as $order)
+                        <ul>
+                            <li class="d-flex justify-content-between">
+                                <p>{{$order->name}}</p>
+                                <p>{{$order->total_price}} €</p>
+                            </li>
+                        </ul>
+                    @endforeach
+                @endif
+            </div>
         </section>
     @else
         <div class="row">
