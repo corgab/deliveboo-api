@@ -1,7 +1,7 @@
 @extends('layouts.app')
 @section('content')
 <div class="container">
-    <h1 class="text-center mb-5 text-primary">I tuoi ordini</h1>
+    <h1 class="text-center mb-5 text-success">I tuoi ordini</h1>
     @if(isset($orders))
         <div class="row">
             @if($orders->isEmpty())
