@@ -17,9 +17,7 @@ class RestaurantController extends Controller
         $restaurant = Restaurant::where('user_id', $user->id)->first();
         if($restaurant){
             $dishes = $restaurant->dishes;
-            $orders = Order::whereHas('dishes', function($query) use ($dishes) {
-                $query->whereIn('dishes.id', $dishes->pluck('id'));
-            })->get();
+            $orders = $restaurant->orders;
             return view('admin.dashboard', compact('restaurant', 'orders', 'dishes'));
         }else{
             return view('admin.dashboard');

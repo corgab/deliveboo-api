@@ -36,6 +36,7 @@ class OrderController extends Controller
                 'number' => $request->input('number'),
                 'address' => $request->input('address'),
                 'total_price' => $amount,
+                'restaurant_id' => $request->input('restaurant_id'),
             ]);
 
             // Logica piatti

@@ -20,7 +20,7 @@
     @else
         <div class="row">
             <h1>
-                Per poter gestire i tuoi ordini, registra il tuo ristoranteh</h1>
+                Per poter gestire i tuoi ordini, registra il tuo ristorante</h1>
 
             <form action="{{ url('admin/restaurants/create') }}" method="GET">
                 <button type="submit" class="btn btn-success btn-sm mt-4"><i class="bi bi-plus-square"></i>

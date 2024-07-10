@@ -40,13 +40,15 @@ class OrderSeeder extends Seeder
         // Recupero dati
         $dishes = Dish::all();
         $restaurants = Restaurant::all();
-        
+
+        // Seleziona un ID ristorante casuale dai ristoranti
+        $restaurant_id = $restaurants->random()->id;
         
         foreach ($data as $index=>$row) {
             if ($index !== 0) {
                 
                 $new_order = new Order();
-
+                $new_order->restaurant_id = $restaurant_id;
                 $new_order->name = $row[0];
                 $new_order->email = $row[1];
                 $new_order->number = $row[2];
