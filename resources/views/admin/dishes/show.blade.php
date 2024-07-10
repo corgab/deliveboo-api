@@ -37,17 +37,23 @@
                     Sicuro di voler eliminare il piatto ("{{ $dish->name }}")?
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-sm btn-primary" data-bs-dismiss="modal">Annulla</button>
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Annulla</button>
                     <form action="{{route('admin.dishes.destroy', $dish)}}" method="POST">
                         @csrf
                         @method('DELETE')
-                        <button type="submit" class="btn btn-sm btn-danger">Elimina</button>
+                        <button type="submit" class="btn btn-danger">Elimina</button>
+                    </form>
+                    <form action="{{ route('admin.dishes.permanentDelete', $dish->id) }}" method="POST" style="display:inline-block;">
+                        @csrf
+                        @method('DELETE')
+                        <button type="submit" class="btn btn-danger">Elimina definitivamente</button>
                     </form>
                 </div>
             </div>
         </div>
     </div>
 
+    {{-- Da togliere --}}
     <div class="d-flex flex-column flex-md-row justify-content-center justify-content-md-start align-items-center gap-3 mt-4">
         <button type="button" class="btn btn-sm btn-outline-danger mb-2 mb-md-0 me-md-2" data-bs-toggle="modal"
             data-bs-target="#exampleModal"><i class="bi bi-trash-fill"></i>

@@ -40,6 +40,7 @@ Route::middleware(['auth', 'verified'])
         Route::get('dishes/{dish:slug}/edit', [DishController::class, 'edit'])->name('dishes.edit');
         Route::put('dishes/{dish:slug}', [DishController::class, 'update'])->name('dishes.update');
         Route::delete('dishes/{dish:slug}', [DishController::class, 'destroy'])->name('dishes.destroy');
+        Route::delete('dishes/{dish}/permanent-delete', [DishController::class, 'permanentDelete'])->name('dishes.permanentDelete');
         
         // Restaurants
         Route::resource('restaurants', RestaurantController::class)->only(['index','store','create']);
