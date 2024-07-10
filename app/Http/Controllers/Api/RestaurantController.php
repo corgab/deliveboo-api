@@ -44,10 +44,17 @@ class RestaurantController extends Controller
         return response()->json($restaurants);
     }
 
-    public function show(Restaurant $restaurant){
-        
+    public function show(Restaurant $restaurant)
+    {
         // Carica i ristoranti con i piatti
         $restaurant->load(['dishes']);
+
+        // Aggiungi il percorso completo dell'immagine per ogni piatto
+        foreach ($restaurant->dishes as $dish) {
+            if ($dish->thumb) {
+                $dish->thumb_url = asset('storage/' . $dish->thumb);
+            }
+        }
 
         return response()->json([
             'restaurant' => $restaurant
