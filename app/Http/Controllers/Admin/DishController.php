@@ -28,7 +28,8 @@ class DishController extends Controller
         if ($restaurant) {
             // Prendi tutti i piatti associati
             $dishes = $restaurant->dishes;
-            return view('admin.dishes.index', compact('restaurant', 'dishes'));
+            // $dishes_deleted = Dish::withTrashed()->where('restaurant_id', $restaurant->id)->get();
+            return view('admin.dishes.index', compact('restaurant', 'dishes',)); // dishes_deleted
         }
 
         return view('admin.dishes.index', compact('restaurant'));

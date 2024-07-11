@@ -29,7 +29,7 @@
                     <h3 class="mb-3">{{ $dish->name }}</h3>
                     <figure>
                         @if($dish->thumb)
-                            <img class="img-dish" src="{{ asset('storage/' . $dish->thumb) }}" alt="{{ $dish->name }}">
+                            <img class="img-dish" src="{{ asset('storage/' . $dish->thumb) }}" alt="piatto {{ $dish->name }}">
                         @endif
                     </figure>
                     <div class="d-flex flex-column flex-sm-row gap-2 mt-3"> 
@@ -84,6 +84,7 @@
         <a href="{{ route('admin.dishes.create', $dish) }}" class="btn btn-outline-success btn-sm"><i class="bi bi-plus-square"></i>
             Aggiungi Piatto
         </a>
+        {{-- <a href="{{route('admin.dishes.deletelist')}}">cestino</a> --}}
     @endif
 </section>
 @else
