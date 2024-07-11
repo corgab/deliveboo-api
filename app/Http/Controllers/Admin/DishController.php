@@ -28,7 +28,8 @@ class DishController extends Controller
         if ($restaurant) {
             // Prendi tutti i piatti associati
             $dishes = $restaurant->dishes;
-            return view('admin.dishes.index', compact('restaurant', 'dishes'));
+            // $dishes_deleted = Dish::withTrashed()->where('restaurant_id', $restaurant->id)->get();
+            return view('admin.dishes.index', compact('restaurant', 'dishes',)); // dishes_deleted
         }
 
         return view('admin.dishes.index', compact('restaurant'));
@@ -204,16 +205,16 @@ class DishController extends Controller
         return to_route('admin.dishes.index');
     }
 
-    public function permanentDelete(Dish $dish)
-    {
-        // Controlla se l'immagine esiste e la elimina
-        if ($dish->thumb && \Storage::disk('public')->exists($dish->thumb)) {
-            \Storage::disk('public')->delete($dish->thumb);
-        }
+    // public function permanentDelete(Dish $dish)
+    // {
+    //     // Controlla se l'immagine esiste e la elimina
+    //     if ($dish->thumb && \Storage::disk('public')->exists($dish->thumb)) {
+    //         \Storage::disk('public')->delete($dish->thumb);
+    //     }
 
-        // Elimina definitivamente il piatto
-        $dish->forceDelete();
+    //     // Elimina definitivamente il piatto
+    //     $dish->forceDelete();
 
-        return redirect()->route('admin.dishes.index')->with('success', 'Piatto eliminato definitivamente');
-    }
+    //     return redirect()->route('admin.dishes.index')->with('success', 'Piatto eliminato definitivamente');
+    // }
 }
