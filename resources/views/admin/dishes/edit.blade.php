@@ -41,16 +41,12 @@
         <input type="file" class="form-control" id="thumb" name="thumb">
     </div>
     
-    <div class="d-flex gap-3">
-        <div class="form-check">
-            <label class="form-check-label" for="visible">
-                * Visibile
-            </label>
+    <div class="mb-4">
+        <div class="form-check form-switch">
+            <input type="hidden" name="visible" value="0">
+            <input class="form-check-input" type="checkbox" role="switch" id="visible" name="visible" value="1" {{old('visible', $dish->visible) == 1 ? 'checked' : ''}}>
+            <label class="form-check-label" for="visible">Mostra</label>
         </div>
-        <select name="visible" id="visible">
-            <option value="0" {{ old('visible', $dish->visible) == 0 ? 'selected' : '' }}>No</option>
-            <option value="1" {{ old('visible', $dish->visible) == 1 ? 'selected' : '' }}>Si</option>
-        </select>
     </div>
    
     <div class="d-flex justify-content-evenly mt-5">
