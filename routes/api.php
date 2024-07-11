@@ -39,7 +39,7 @@ Route::get('/types/{type:id}', [TypeController::class, 'show']);
 Route::post('/checkout', [OrderController::class, 'checkout']);
 
 // EMAIL MESSAGE
-Route::post('/contatti', [LeadController::class, 'store']);
+Route::post('/contacts', [LeadController::class, 'store']);
 
 
 
