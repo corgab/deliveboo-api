@@ -14,8 +14,9 @@
 
                 <h3>{{$restaurant->name}}</h3>
                 <h4>{{$restaurant->address}}</h4>
-                <p>P.IVA: {{$restaurant->vat}}</p>
-                <ul class="p-0">
+                {{-- <p>P.IVA: {{$restaurant->vat}}</p> --}}
+                <ul class="p-0 my-3">
+                <h5>Tipologie:</h5>
                     @foreach($restaurant->types as $type)
                         <li class="badge p-2 me-2">{{$type->name}}</li>
                     @endforeach
@@ -33,8 +34,12 @@
                 @else
                     @foreach($dishes as $dish)
                         <ul>
+                            @if($dish->visible === 1)
                             <li><i class="bi bi-check"></i>
-                                {{$dish->name}}</li>
+                            @else
+                            <li><i class="bi bi-x"></i>
+                            @endif
+                            {{$dish->name}}</li>
                         </ul>
                     @endforeach
                 @endif
@@ -67,7 +72,7 @@
             </h1>
             <div class="card restaurant-card p-5">
                 @if($orders->isEmpty())
-                    <div>Le statistche non sono disponibili. Non ci sono ordini.</div>
+                    <div>Le statistiche non sono disponibili. Non ci sono ordini.</div>
                 @else
                     @foreach($orders as $order)
                         <ul>
