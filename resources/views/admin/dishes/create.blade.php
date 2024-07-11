@@ -12,7 +12,7 @@
                 <h1 class="text-center mb-5 text-success">Crea il tuo piatto</h1>
 
                 <div class="my-4">
-                    <label for="name" class="form-label fw-bold mt-5">* Nome piatto</label>
+                    <label for="name" class="form-label fw-bold mt-5">Nome piatto *</label>
                     <input type="text" required maxlength="100" name="name" required
                         class="form-control {{ $errors->has('name') ? 'is-invalid' : (old('name') ? 'is-valid' : '') }}"
                         id="name" placeholder="Scrivi il nome del piatto" value="{{old('name')}}">
@@ -21,7 +21,7 @@
                     @enderror
                 </div>
                 <div class="my-4">
-                    <label for="description_ingredients" class="form-label fw-bold">* Descrizione ingredienti</label>
+                    <label for="description_ingredients" class="form-label fw-bold">Descrizione ingredienti *</label>
                     <input type="text" required name="description_ingredients"
                         class="form-control {{ $errors->has('description_ingredients') ? 'is-invalid' : (old('description_ingredients') ? 'is-valid' : '') }}"
                         id="description_ingredients" placeholder="Inserisci gli incredienti usati"
@@ -32,7 +32,7 @@
 
                 </div>
                 <div class="my-4">
-                    <label for="price" class="form-label fw-bold">* Prezzo €</label>
+                    <label for="price" class="form-label fw-bold">Prezzo € *</label>
                     <input type="text" required min="1" max="900" name="price"
                         class="form-control {{ $errors->has('price') ? 'is-invalid' : (old('price') ? 'is-valid' : '') }}"
                         id="price" placeholder="0.00" value="{{old('price')}}">
@@ -64,7 +64,7 @@
                     </div>
 
                     <a href="{{route('admin.dishes.index')}}" class="btn btn-sm btn-outline-success"><i class="bi bi-arrow-left"></i>
-                    Back</a>
+                    Indietro</a>
                     <button type="submit" class="btn btn-sm btn-outline-success"><i class="bi bi-plus-square"></i>
                     Crea</button>
                 </div>
