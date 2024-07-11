@@ -1,12 +1,12 @@
 @extends('layouts.app')
 @section('content')
 <div class="container">
-    <h1 class="text-center mb-5 text-success">I tuoi ordini</h1>
     @if(isset($orders))
         <div class="row">
             @if($orders->isEmpty())
-                <div>Non hai ancora nessun ordine!</div>
+                <h1 class="text-center mb-5 text-success">Non hai ancora nessun ordine!</h1>
             @else
+            <h1 class="text-center mb-5 text-success">I tuoi ordini</h1>
                 @foreach($orders as $order)
                     <div class="col-12">
                         {{$order->name}}

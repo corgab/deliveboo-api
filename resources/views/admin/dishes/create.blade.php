@@ -54,7 +54,7 @@
                     <div class="d-flex gap-3">
                         <div class="form-check">
                             <label class="form-check-label" for="visible">
-                                * Visibile
+                                Visibile *
                             </label>
                         </div>
                         <select name="visible" id="visible">
@@ -74,15 +74,13 @@
             <h5 class="pb-5">I campi contrassegnati con * sono obbligatori.</h5>
         </div>
     @else
-            <h1>Per poter aggiungere i tuoi piatti, registra il tuo ristorante.</h1>
-
-            <form action="{{ url('admin/restaurants/create') }}" method="GET">
-                <button type="submit" class="btn btn-success btn-sm mt-4">
-                    {{ __('Registra il tuo ristorante') }}
-                </button>
-            </form>
-
-        </div>
+    <div class="row">
+        <h1>Per poter creare il tuo piatto, registra il tuo ristorante!<h1>
+    
+        <a href="{{ url('admin/restaurants/create') }}" class="btn btn-sm btn-success">
+        <i class="bi bi-plus-square"></i> {{ __('Registra il tuo Ristorante') }}</a>
+    
+    </div>
     @endif
 
 @section('script')
