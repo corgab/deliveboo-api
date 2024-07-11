@@ -4,6 +4,7 @@ use App\Http\Controllers\Api\DishController;
 use App\Http\Controllers\Api\OrderController;
 use App\Http\Controllers\Api\RestaurantController;
 use App\Http\Controllers\Api\TypeController;
+use App\Http\Controllers\Api\LeadController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -36,6 +37,9 @@ Route::get('/types/{type:id}', [TypeController::class, 'show']);
 
 // PAYMENTS
 Route::post('/checkout', [OrderController::class, 'checkout']);
+
+// EMAIL MESSAGE
+Route::post('/contatti', [LeadController::class, 'store']);
 
 
 
