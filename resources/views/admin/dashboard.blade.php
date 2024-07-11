@@ -3,9 +3,9 @@
 @section('content')
 <div class="container py-5">
     @if(isset($error))
-    <div class="alert alert-danger text-center" style="font-size: 1rem;">
-        <h4>{{ $error }}</h4>
-    </div>
+        <div class="alert alert-danger text-center" style="font-size: 1rem;">
+            <h4>{{ $error }}</h4>
+        </div>
     @endif
     @if(isset($restaurant))
         <section class="restaurant mb-5">
@@ -33,7 +33,8 @@
                 @else
                     @foreach($dishes as $dish)
                         <ul>
-                            <li>{{$dish->name}}</li>
+                            <li><i class="bi bi-check"></i>
+                                {{$dish->name}}</li>
                         </ul>
                     @endforeach
                 @endif
