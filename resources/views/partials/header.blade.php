@@ -12,7 +12,7 @@
         <div class="collapse navbar-collapse" id="navbarToggler">
             <ul class="navbar-nav ms-auto mb-2 mb-md-0">
                 @auth
-                    <li class="nav-item"><a class="nav-link" href="{{ url('/') }}">{{__('Home')}}</a></li>
+                    <!-- <li class="nav-item"><a class="nav-link" href="{{ url('/') }}">{{__('Home')}}</a></li> -->
                     <li class="nav-item"><a class="nav-link" href="{{ url('admin') }}">{{__('Dashboard')}}</a></li>
                     <li class="nav-item"><a class="nav-link" href="{{ url('admin/dishes') }}">{{__('Il tuo menu')}}</a></li>
                     <li class="nav-item"><a class="nav-link"
