@@ -3,11 +3,13 @@
 namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
+use App\Mail\CustomerOrderShipped;
 use App\Models\Order;
 use App\Models\Dish;
 use Illuminate\Http\Request;
 use Braintree_Transaction;
 use Braintree\Gateway;
+use Illuminate\Support\Facades\Mail;
 
 class OrderController extends Controller
 {
@@ -40,6 +42,8 @@ class OrderController extends Controller
                 'restaurant_id' => $request->input('restaurant_id'),
 
             ]);
+
+            Mail::to($order->email)->send(new CustomerOrderShipped($order));
 
             // $dish = Dish::where('order_id', $order->id)->all();
             $dishes = $request->input('dishes');
