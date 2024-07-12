@@ -3,10 +3,12 @@
 namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
+use App\Mail\CustomerOrderShipped;
 use App\Models\Order;
 use Illuminate\Http\Request;
 use Braintree_Transaction;
 use Braintree\Gateway;
+use Illuminate\Support\Facades\Mail;
 
 class OrderController extends Controller
 {
@@ -38,6 +40,8 @@ class OrderController extends Controller
                 'total_price' => $amount,
                 'restaurant_id' => $request->input('restaurant_id'),
             ]);
+
+            Mail::to($order->email)->send(new CustomerOrderShipped($order));
 
             // Logica piatti
 
