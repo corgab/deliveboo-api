@@ -38,7 +38,7 @@ class RestaurantController extends Controller
             }
         }
         // Esegui la query e ottieni i risultati
-        $restaurants = $query->with('types')->get();
+        $restaurants = $query->with('types')->paginate(6);
 
         // Restituisci la lista dei ristoranti come risposta JSON
         return response()->json($restaurants);
@@ -46,20 +46,21 @@ class RestaurantController extends Controller
 
     public function show(Restaurant $restaurant)
     {
-        // Carica i ristoranti con i piatti
-        $restaurant->load(['dishes']);
-
-        // Aggiungi l'URL completo dell'immagine per ogni piatto
-        $dishes = $restaurant->dishes->map(function ($dish) {
+        // Ottieni i piatti del ristorante con paginazione
+        $dishes = $restaurant->dishes()->paginate(2); // Imposta il numero di piatti per pagina
+    
+        // Aggiungi l'URL completo dell'immagine per ogni piatto e assicurati che tutte le proprietà necessarie siano incluse
+        $dishes->getCollection()->transform(function ($dish) {
             if ($dish->thumb) {
                 $dish->thumb_url = url('storage/' . $dish->thumb);
             }
             return $dish;
         });
-
-        return response()->json([
-            'restaurant' => $restaurant,
-            'dishes' => $dishes
-        ]);
+    
+        // Manualmente aggiungi i piatti paginati al modello restaurant per mantenerli nella stessa struttura
+        $restaurant->setRelation('dishes', $dishes);
+    
+        return response()->json($restaurant);
     }
+    
 }
