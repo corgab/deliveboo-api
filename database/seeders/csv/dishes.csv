@@ -1,11 +1,146 @@
-name,description_ingredients,price,visible,thumb
-Spaghetti Carbonara, Pasta - eggs pancetta - pecorino cheese - pepper, 12.5, 1,images/dishes/spaghetti-carbonara.jpeg
-Margherita Pizza, Tomato - mozzarella - basil, 10.0, 1,images/dishes/margherita-pizza.jpeg
-Tacos al Pastor, Pork - pineapple - onions - cilantro - lime, 8.0, 0,images/dishes/tacos-al-pastor.jpeg
-Guacamole, Avocado - lime - onions - tomatoes - cilantro, 5.5, 0,images/dishes/guacamole.jpeg
-Salmon Sushi, Salmon - rice - seaweed, 15.0, 1,images/dishes/salmon-sushi.jpeg
-Tuna Sashimi, Tuna - soy sauce - wasabi, 17.0, 1,images/dishes/tuna-sashimi.jpeg
-Cheeseburger, Beef patty - cheese - lettuce - tomato - bun, 8.5, 1,images/dishes/cheeseburger.jpeg
-French Fries, Potatoes - salt, 6.0, 1,images/dishes/french-fries.jpeg
-Quinoa Salad, Quinoa - mixed greens - cherry tomatoes - cucumbers, 9.0, 1,images/dishes/quinoa-salad.jpeg
-Vegan Burger, Vegan patty - lettuce - tomato - vegan bun, 10.0, 1,images/dishes/vegan-burger.jpeg
+name,description_ingredients,price,visible
+Spaghetti alla Carbonara,Spaghetti-Guanciale-Uova-Pecorino Romano,10,1
+Pizza Margherita,Farina di grano-Mozzarella-Pomodoro-Foglie di basilico,8,1
+Insalata Caprese,Pomodoro-Mozzarella di bufala-Origano-Foglie di basilico-Olio extravergine d'oliva,7,1
+Risotto ai Funghi,Arborio-Risotto-funghi porcini-Cipolla-Rosmarino,9,1
+Pollo alla Cacciatora,Pollo-Olive-Noci-Pepe-Rosmarino,12,1
+Tagliatelle al Ragu,Tagliatelle-Ragu di carne-Grana Padano-Pomodoro,11,1
+Lasagna alla Bolognese,Lasagna-Ragu di carne-Bechamel-Grana Padano-Pomodoro,13,1
+Cotoletta alla Milanese,Cotoletta di vitello-Pan grattato-Uova-Limone-Patate fritte,15,1
+Gnocchi al Pesto,Gnocchi-Pesto genovese-Pinoli-Pecorino-Foglie di basilico,10,1
+Tiramisù,Savoiardi-Mascarpone-Uova-Zucchero-Caffè cotto,8,1
+Risotto al Salto,Arborio-Risotto-Formaggio grattugiato-Burro-Pepe,10,1
+Polpettone,Pan grattato-Carne macinata-Uova-Parmigiano-Pane,11,1
+Zuppa di Verdure,Zucchine-Patate-Pomodoro-Carote-Prezzemolo,7,1
+Frittata di Patate,Uova-Patate-Cipolla-Formaggio grattugiato-Prezzemolo,9,1
+Arrosto di Maiale,Carne di maiale-Patate-Aglio-Rosmarino-Alloro,14,1
+Insalata di Mare,Gamberetti-Calamari-Cozze-Vongole-Pomodorini,12,1
+Risotto alla Milanese,Arborio-Risotto-Zafferano-Brodo di carne-Formaggio grattugiato,12,1
+Fettuccine Alfredo,Fettuccine-Panna-Formaggio Parmigiano-Rosmarino,10,1
+Spaghetti Aglio e Olio,Spaghetti-Aglio-Peperoncino-Prezzemolo-Olio extravergine d'oliva,9,1
+Bistecca alla Fiorentina,Bistecca di manzo-Patate arrosto-Rosmarino-Pepe,16,1
+Carpaccio di Manzo,Filetto di manzo-Rucola-Scaglie di Parmigiano-Aceto balsamico,10,1
+Tartare di Tonno,Tonno fresco-Capperi-Cetriolini-Scorza di limone-Olio extravergine d'oliva,14,1
+Pasta alla Norma,Pasta-Melanzane-Pomodoro-Ricotta salata-Basilico,11,1
+Cannelloni Ricotta e Spinaci,Cannelloni-Ricotta-Spinaci-Passata di pomodoro-Formaggio grattugiato,12,1
+Ratatouille,Zucchine-Melanzane-Peperoni-Pomodoro-Cipolla,8,1
+Calamari Fritti,Calamari-Prezzemolo-Aglio-Limone-Pepe,13,1
+Risotto al Nero di Seppia,Arborio-Risotto-Nero di seppia-Gamberi-Cipolla,15,1
+Gnocchi alla Sorrentina,Gnocchi-Pomodoro-Fiordilatte-Basilico-Olio extravergine d'oliva,10,1
+Spaghetti alle Vongole,Spaghetti-Vongole-Aglio-Prezzemolo-Peperoncino,12,1
+Branzino al Cartoccio,Branzino-Pomodorini-Patate-Origano-Prezzemolo,18,1
+Saltimbocca alla Romana,Vitello-Prosciutto crudo-Salvia-Burro-Salame,17,1
+Ravioli di Magro,Ravioli-Ricotta-Spinaci-Noci-Burro,14,1
+Panzerotti Ripieni,Pasta fresca-Mozzarella-Prosciutto cotto-Pomodoro-Basilico,9,1
+Ossobuco alla Milanese,Ossobuco-Carote-Cipolla-Sedano-Alloro,20,1
+Frittelle di Zucchine,Zucchine-Uova-Formaggio grattugiato-Menta-Prezzemolo,8,1
+Carbonade Flamande,Carne di manzo-Cipolle-Pan di spezie-Birra bruna-Patate,16,1
+Crostata di Frutta,Farina-Zucchero-Burro-Marmellata di frutta-Frutta fresca,10,1
+Gelato alla Crema,Panna-Latte-Uova-Zucchero-Vaniglia,6,1
+Vitello Tonnato,Vitello-Acciughe-Salsa tonnata-Capperi-Limone,14,1
+Coda alla Vaccinara,Coda di manzo-Passata di pomodoro-Cipolla-Carote-Celery,15,1
+Risotto alla Zucca,Arborio-Risotto-Zucca-Gorgonzola-Noci,11,1
+Pappardelle al Cinghiale,Pappardelle-Cinghiale-Rosmarino-Cipolla-Carote,16,1
+Torta di Mele,Farina-Zucchero-Burro-Mele-Cannella,9,1
+Pizza Quattro Stagioni,Farina di grano-Mozzarella-Prosciutto cotto-Funghi-Pomodoro,14,1
+Baccalà alla Livornese,Baccalà-Pomodoro-Cipolla-Olive nere-Prezzemolo,13,1
+Farinata di Ceci,Farina di ceci-Acqua-Olio extravergine d'oliva-Rosmarino-Pepe,8,1
+Tonno alla Siciliana,Tonno fresco-Capperi-Olive nere-Pomodorini-Prezzemolo,17,1
+Panna Cotta,Panna-Latte-Zucchero-Vaniglia-Gelatina,7,1
+Minestrone,Verdure miste-Fagioli-Pasta-Zucchine-Patate,9,1
+Cozze alla Marinara,Cozze-Pomodoro-Aglio-Peperoncino-Prezzemolo,12,1
+Spaghetti al Nero di Seppia,Spaghetti-Nero di seppia-Gamberi-Aglio-Pomodorini,15,1
+Orecchiette alle Cime di Rapa,Orecchiette-Cime di rapa-Aglio-Peperoncino-Pangrattato,11,1
+Torta Salata di Verdure,Farina-Zucchine-Melanzane-Pomodoro-Formaggio grattugiato,10,1
+Carpaccio di Salmone,Salmone affumicato-Rucola-Cetriolini-Capresca-Aceto balsamico,14,1
+Sformato di Verdure,Zucchine-Melanzane-Pomodoro-Formaggio grattugiato-Uova,12,1
+Maiale al Latte,Carne di maiale-Latte-Aglio-Rosmarino-Salvia,13,1
+Pasta al Pesto di Rucola,Pasta-Pesto di rucola-Pinoli-Formaggio grattugiato-Olio extravergine d'oliva,10,1
+Crespelle ai Funghi,Crespelle-Funghi porcini-Besciamella-Formaggio grattugiato-Burro,11,1
+Focaccia al Rosmarino,Farina di grano-Olio extravergine d'oliva-Rosmarino-Sale grosso-Acqua,8,1
+Cous Cous di Verdure,Cous cous-Zucchine-Melanzane-Pomodorini-Cipolla,11,1
+Cernia alla Mediterranea,Cernia-Pomodorini-Origano-Aglio-Capperi,18,1
+Tortellini in Brodo,Tortellini-Carne di maiale-Prosciutto crudo-Formaggio Parmigiano-Brodo di carne,12,1
+Fregola ai Frutti di Mare,Fregola-Gamberi-Calamari-Vongole-Pomodorini-Pecorino,14,1
+Zucchine Ripiene di Carne,Zucchine-Carne macinata-Pangrattato-Parmigiano-Prezzemolo,10,1
+Zuppa di Cozze e Patate,Cozze-Patate-Pomodoro-Aglio-Prezzemolo,12,1
+Penne all'Arrabbiata,Penne-Pomodoro-Peperoncino-Aglio-Olio extravergine d'oliva,9,1
+Costolette di Agnello,Costolette di agnello-Rosmarino-Aglio-Limone-Patate arrosto,18,1
+Insalata di Pollo,Pollo misto-Insalata-Cetrioli-Pomodorini-Formaggio grattugiato,11,1
+Tortelli di Zucca,Tortelli-Zucca-Amaretti-Grana Padano-Salvia,13,1
+Cotoletta alla Bolognese,Cotoletta di vitello-Pan grattato-Uova-Limone-Pomodoro,16,1
+Risotto alle Cozze,Arborio-Risotto-Cozze-Pomodoro-Aglio-Vino bianco,14,1
+Tartufo Nero,Tagliolini-Tartufo nero-Burro-Parmigiano-Prezzemolo,20,1
+Carpaccio di Bresaola,Bresaola-Rucola-Scaglie di Parmigiano-Aceto balsamico,12,1
+Fettine Panate,Fettine di carne-Pan grattato-Uova-Limone-Patate fritte,15,1
+Mezze Maniche alla Gricia,Mezze maniche-Guanciale-Pecorino-Romano-Peperoncino,11,1
+Pesce Spada alla Siciliana,Pesce spada-Pomodorini-Olive nere-Capperi-Aglio,17,1
+Strudel di Mele,Farina-Zucchero-Burro-Mele-Cannella,10,1
+Cacciatora di Pollo,Pollo-Pomodoro-Cipolla-Peperoncino-Oliva nera,13,1
+Lasagna ai Frutti di Mare,Lasagna-Frutti di mare-Ricotta-Pomodoro-Prezzemolo,18,1
+Pasta al Pesto Rosso,Pasta-Pesto rosso-Pomodorini secchi-Rucola-Parmigiano,12,1
+Involtini Primavera,Involtini di carne-Verdure miste-Prosciutto crudo-Formaggio,14,1
+Barchette di Zucchine,Zucchine-Prosciutto cotto-Formaggio grattugiato,11,1
+Torta al Cioccolato,Farina di grano-Zucchero-Burro-Cacao-Uova,9,1
+Fagioli all'Uccelletto,Fagioli-Pomodoro-Aglio-Salvia-Olio extravergine d'oliva,8,1
+Crostini Toscani,Pane toscano-Olio extravergine d'oliva-Aglio-Salame-Tomino,10,1
+Torta di Ricotta e Limone,Farina di grano-Zucchero-Burro-Ricotta-Limone,10,1
+Patate al Forno,Patate-Rosmarino-Aglio-Olio extravergine d'oliva,7,1
+Risotto alla Pescatora,Arborio-Risotto-Pesce misto-Pomodoro-Aglio-Vino bianco,16,1
+Insalata di Quinoa,Quinoa-Pomodorini-Cetrioli-Avocado-Mais,9,1
+Pollo alla Parmigiana,Pollo-Pomodoro-Mozzarella-Parmigiano-Pan grattato,15,1
+Gnocchi al Radicchio,Gnocchi-Radicchio-Pancetta-Scalogno-Parmigiano,12,1
+Carpaccio di Polpo,Polpo-Rucola-Pomodorini-Capperi-Aceto balsamico,13,1
+Budino di Pane,Pane-Zucchero-Burro-Uova-Latte,8,1
+Risotto al Prosecco,Arborio-Risotto-Prosecco-Asparagi-Parmigiano,14,1
+Salmone Grigliato,Salmone-Limone-Olio extravergine d'oliva-Aglio-Rosmarino,17,1
+Insalata Greca,Pomodorini-Cetrioli-Olive nere-Cipolla-Feta,10,1
+Bucatini all'Amatriciana,Bucatini-Guanciale-Pomodoro-Pecorino-Peperoncino,11,1
+Pizza Marinara,Farina di grano-Pomodoro-Aglio-Origano,7,1
+Sgombro alla Griglia,Sgombro-Limone-Aglio-Rosmarino-Pepe,16,1
+Crema di Zucca,Crema di zucca-Patate-Cipolla-Aglio-Timo,8,1
+Tortelli di Carne,Tortelli-Carne macinata-Formaggio grattugiato-Sugo di carne,12,1
+Gelato alla Fragola,Panna-Latte-Zucchero-Fragole-Vaniglia,6,1
+Patate Hasselback,Patate-Burro-Aglio-Rosmarino-Formaggio grattugiato,9,1
+Pasta al Limone,Pasta-Limone-Panna-Formaggio Parmigiano,10,1
+Vitello alla Pizzaiola,Vitello-Pomodoro-Capperi-Olive nere-Aglio,18,1
+Frittata di Zucchine,Uova-Zucchine-Formaggio grattugiato-Menta-Prezzemolo,7,1
+Risotto alle Barbabietole,Arborio-Risotto-Barbabietole-Gorgonzola-Noci,13,1
+Filetto di Branzino,Filetto di branzino-Limone-Patate-Aglio-Rosmarino,19,1
+Crespelle ai Porcini,Crespelle-Funghi porcini-Besciamella-Formaggio grattugiato-Burro,14,1
+Focaccia al Pomodoro,Farina di grano-Olio extravergine d'oliva-Rosmarino-Sale grosso-Acqua-Pomodorini,9,1
+Cous Cous con Pollo,Cous cous-Pollo-Curry-Zucchine-Cipolla,12,1
+Cernia al Cartoccio,Cernia-Pomodorini-Patate-Origano-Prezzemolo,17,1
+Tortelloni alla Zucca,Tortelloni-Zucca-Amaretti-Grana Padano-Salvia,15,1
+Sushi Vegano,Quinoa-Avocado-Cetriolo-Peperone-Tofu,11,1
+Frittelle di Mele,Farina-Zucchero-Burro-Mele-Cannella,8,1
+Caponata di Melanzane,Melanzane-Pomodoro-Cipolla-Capperi-Oliva,10,1
+Fettuccine ai Funghi,Fettuccine-Funghi misti-Panna-Formaggio Parmigiano-Peperoncino,13,1
+Torta Salata di Patate e Pancetta,Farina-Zucchine-Patate-Pancetta-Formaggio grattugiato,11,1
+Salmone Marinato,Salmone-Limone-Avocado-Cetrioli-Peperoncino,16,1
+Risotto al Curry,Arborio-Risotto-Curry-Carote-Cipolla,14,1
+Pasta con Crema di Peperoni,Pasta-Peperoni-Panna-Formaggio grattugiato-Aglio,12,1
+Involtini di Melanzane,Melanzane-Prosciutto cotto-Formaggio grattugiato-Pomodoro-Basilico,9,1
+Melanzane alla Parmigiana,Melanzane-Pomodoro-Mozzarella-Parmigiano-Basilico,13,1
+Cous Cous di Pesce,Cous cous-Pesce misto salmone gamberi calamari Zucchine-Cipolla,17,1
+Spaghetti alla Puttanesca,Spaghetti-Pomodoro-Acciacchi-Riccioli di Capperi-Oliva nera,12,1
+Insalata di Riso,Riso-Pomodorini-Oliva nera-Mais-Cetriolo,9,1
+Gnocchi al Gorgonzola,Gnocchi-Gorgonzola-Noci-Panna-Parmigiano,11,1
+Frittata di Asparagi,Uova-Asparagi-Formaggio grattugiato-Aglio-Prezzemolo,8,1
+Bistecca alla Griglia,Bistecca-Patate arrosto-Rosmarino-Aglio-Peperoncino,18,1
+Insalata di Farro,Farro-Pomodorini-Cetrioli-Oliva nera-Rucola,10,1
+Crespelle al Radicchio,Crespelle-Radicchio-Speck-Besciamella-Formaggio grattugiato,13,1
+Tagliatelle al Tartufo,Tagliatelle-Tartufo-Burro-Parmigiano-Peperoncino,20,1
+Pasta al Tonno,Pasta-Tonno-Pomodorini-Capperi-Prezzemolo,14,1
+Caponata Siciliana,Melanzane-Pomodoro-Cipolla-Capperi-Oliva,11,1
+Risotto ai Frutti di Mare,Arborio-Risotto-Frutti di mare-Pomodoro-Aglio-Vino bianco,17,1
+Penne alla Boscaiola,Penne-Funghi-Pancetta-Pomodoro-Parmigiano,12,1
+Lasagna Vegetariana,Lasagna-Melanzane-Zucchine-Pomodoro-Ricotta,14,1
+Pollo alla Diavola,Pollo-Peperoncino-Aglio-Limone-Rosmarino,15,1
+Risotto ai Porcini,Arborio-Risotto-Funghi porcini-Burro-Parmigiano,15,1
+Pizza Quattro Formaggi,Farina di grano-Mozzarella-Gorgonzola-Fontina-Parmigiano,13,1
+Calamari Ripieni,Calamari-Ricotta-Pangrattato-Parmigiano-Limone,16,1
+Risotto al Salmone,Arborio-Risotto-Salmone-Pomodorini-Aglio-Vino bianco,18,1
+Salsiccia con Patate,Salsiccia-Patate-Rosmarino-Aglio-Pepe,11,1
+Insalata Waldorf,Mele-Cetrioli-Noci-Pollo-Ricotta,9,1
+Involtini di Pollo,Pollo-Prosciutto crudo-Formaggio-Parmigiano,12,1

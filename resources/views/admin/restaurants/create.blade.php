@@ -3,7 +3,7 @@
 
 <section>
     <div class="container">
-        <h1 class="text-center py-5 text-white">Crea il tuo ristorante</h1>
+        <h1 class="text-center py-5 text-success">Crea il tuo ristorante</h1>
 
         <form id="restaurant-form" action="{{route('admin.restaurants.store')}}" method="POST">
             @csrf
@@ -11,14 +11,14 @@
             <input type="hidden" name="user_id" value="{{ $user->id }}">
 
             <div class="mb-3">
-                <label for="name" class="form-label"><strong>* Nome Ristorante</strong></label>
+                <label for="name" class="form-label"><strong>Nome Ristorante * </strong></label>
                 <input type="text" required maxlength="150" class="form-control {{ $errors->has('name') ? 'is-invalid' : (old('name') ? 'is-valid' : '') }}" id="name" name="name" value="{{ old('name') }}">
                 @error('name')
                     <div class="invalid-feedback">{{ $message }}</div>
                 @enderror
             </div>
             <div class="mb-3">
-                <label for="types" class="form-label"><strong>* Tipologie</strong>:</label>
+                <label for="types" class="form-label"><strong>Tipologie * </strong>:</label>
                 @error('type_id')
                 <div class="invalid-feedback d-block">
                     {{ $message }}
@@ -35,22 +35,22 @@
                 <div id="type-error" class="text-danger" style="display: none;">Seleziona almeno una tipologia.</div>
             </div>
             <div class="mb-3">
-                <label for="address" class="form-label"><strong>* Indirizzo</strong></label>
+                <label for="address" class="form-label"><strong>Indirizzo * </strong></label>
                 <input type="text" required maxlength="255" class="form-control {{ $errors->has('address') ? 'is-invalid' : (old('address') ? 'is-valid' : '') }}" id="address" name="address" placeholder="es. Via roma 1" value="{{ old('address') }}">
                 @error('address')
                     <div class="invalid-feedback">{{ $message }}</div>
                 @enderror
             </div>
             <div class="mb-3">
-                <label for="vat" class="form-label"><strong>* P.IVA</strong></label>
+                <label for="vat" class="form-label"><strong>P.IVA *</strong></label>
                 <input type="text" required minlength="11" maxlength="11" class="form-control {{ $errors->has('vat') ? 'is-invalid' : (old('vat') ? 'is-valid' : '') }}" id="vat" name="vat" value="{{ old('vat') }}">
                 @error('vat')
                 <div class="invalid-feedback">{{ $message }}</div>
                 @enderror
             </div>
-            <div class="input-group mb-3">
+            {{-- <div class="input-group mb-3">
                 <input type="file" class="form-control" id="thumb" name="thumb" value="{{ old('thumb') }}">
-            </div>
+            </div> --}}
 
             <button type="submit" id="submit-btn" class="btn btn-success btn-sm mt-4">Registra la tua attività</button>
         </form>

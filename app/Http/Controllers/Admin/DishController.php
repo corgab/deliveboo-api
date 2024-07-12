@@ -11,6 +11,7 @@ use Illuminate\Http\Request;
 use App\Http\Requests\StoreDishRequest;
 use App\Http\Requests\UpdateDishRequest;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Pagination\Paginator;
 
 class DishController extends Controller
 {
@@ -27,9 +28,9 @@ class DishController extends Controller
 
         if ($restaurant) {
             // Prendi tutti i piatti associati
-            $dishes = $restaurant->dishes;
+            $dishes = $restaurant->dishes()->paginate(6);
             // $dishes_deleted = Dish::withTrashed()->where('restaurant_id', $restaurant->id)->get();
-            return view('admin.dishes.index', compact('restaurant', 'dishes',)); // dishes_deleted
+            return view('admin.dishes.index', compact('restaurant', 'dishes')); // dishes_deleted
         }
 
         return view('admin.dishes.index', compact('restaurant'));

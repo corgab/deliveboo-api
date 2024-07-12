@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
 use App\Models\Order;
+use App\Models\Dish;
 use Illuminate\Http\Request;
 use Braintree_Transaction;
 use Braintree\Gateway;
@@ -37,9 +38,17 @@ class OrderController extends Controller
                 'address' => $request->input('address'),
                 'total_price' => $amount,
                 'restaurant_id' => $request->input('restaurant_id'),
+
             ]);
 
-            // Logica piatti
+            // $dish = Dish::where('order_id', $order->id)->all();
+            $dishes = $request->input('dishes');
+
+            for($i = 0; $i < count($dishes); $i++) {
+                $order->dishes()->attach($dishes[$i]);
+            }
+
+
 
             return response()->json(['success' => true, 'order' => $order]); // Da verificare 'transaction' => $result->transaction
         } else {
