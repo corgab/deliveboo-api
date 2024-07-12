@@ -43,8 +43,6 @@ class OrderController extends Controller
 
             ]);
 
-            Mail::to($order->email)->send(new CustomerOrderShipped($order));
-
             // $dish = Dish::where('order_id', $order->id)->all();
             $dishes = $request->input('dishes');
 
@@ -52,7 +50,7 @@ class OrderController extends Controller
                 $order->dishes()->attach($dishes[$i]);
             }
 
-
+            Mail::to($order->email)->send(new CustomerOrderShipped($order));
 
             return response()->json(['success' => true, 'order' => $order]); // Da verificare 'transaction' => $result->transaction
         } else {
