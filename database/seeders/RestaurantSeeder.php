@@ -62,7 +62,9 @@ class RestaurantSeeder extends Seeder
                 $new_restaurant->save();
 
                 // Id randomico di Type in un array
-                $type_ids = $types->random(rand(1, 4))->pluck('id')->toArray();
+                for($i = 0; $i < rand(1, 3); $i++) {
+                    $type_ids = $types->random(rand(1, 4))->pluck('id')->toArray();
+                }
 
                 // Attach Pivot
                 $new_restaurant->types()->attach($type_ids);
