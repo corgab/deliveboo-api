@@ -1,6 +1,31 @@
-name,address,vat,thumb
-La Bella Italia,123 Main St,12345678901,images/restaurants/la-bella-italia.png
-El Mexicano,456 Oak St,98765432102,images/restaurants/el-mexicano.jpeg
-Sushi Paradise,789 Pine St,12345678903,images/restaurants/sushi-paradise.jpeg
-Burger Kingdom,101 Maple St,98765432104,images/restaurants/burger-kingdom.jpeg
-Vegan Delights,202 Birch St,12345678905,images/restaurants/vegan-delights.jpeg
+name,address,vat,
+Ristorante La Pergola,"Via della Pergola, 12, Roma",62744115408,
+Osteria Francescana,"Via Stella, 22, Modena",91022685842,
+Da Vittorio,"Via Cavour, 21, Bergamo",11403369422,
+Enoteca Pinchiorri,"Via Ghibellina, 87, Firenze",47313496604,
+Le Calandre,"Via Liguria, 1, Rubano",77686351336,
+Piazza Duomo,"Piazza Risorgimento, 4, Alba",46151810627,
+Ristorante Cracco,"Corso Venezia, 18, Milano",86570605243,
+Il Luogo di Aimo e Nadia,"Via Montecuccoli, 6, Milano",54155145485,
+Ristorante Reale,"Località Casadonna, Castel di Sangro",38521086480,
+Ristorante Uliassi,"Banchina di Levante, Senigallia",20763550425,
+Dal Pescatore,"Via Runate, 15, Canneto sull'Oglio",45930780271,
+Ristorante La Madia,"Corso Filippo Re Capriata, Licata",28724216848,
+Antica Osteria Cera,"Via Marghera, 24, Campagna Lupia",57933176183,
+Ristorante St. Hubertus,"Strada Micurá de Rü, 20, San Cassiano",30957728500,
+Ristorante Don Alfonso 1890,"Corso Sant'Agata, 11, Sant'Agata sui Due Golfi",81710738758,
+La Peca,"Via Alberto Giovannelli, 2, Lonigo",97926597371,
+La Trota,"Via S. Rocco, 8, Rivodutri",90677298684,
+Ristorante Al Sorriso,"Via Roma, 18, Soriso",77052451096,
+Ristorante Enrico Bartolini,"Via Tortona, 1, Milano",75533118316,
+Ristorante Il Pagliaccio,"Via dei Banchi Vecchi, 129, Roma",39144691448,
+Ristorante L'Olivo,"Località Cala di Volpe, Porto Cervo",41243811204,
+Ristorante Villa Crespi,"Via Fava, 18, Orta San Giulio",64894760192,
+Ristorante Il Desco,"Via Dietro San Sebastiano, 7, Verona",31601010261,
+Ristorante Duomo,"Via Capitano Bocchieri, 31, Ragusa",64976349935,
+Ristorante La Torre,"Via della Torre, 1, Tavarnelle Val di Pesa",23888821713,
+Ristorante Caino,"Via Chiesa, 4, Montemerano",44406482873,
+Ristorante Guido da Costigliole,"Località San Maurizio, Santo Stefano Belbo",30649670985,
+Ristorante Da Caino,"Via della Chiesa, 3, Montemerano",39393006719,
+Ristorante Del Cambio,"Piazza Carignano, 2, Torino",27412631551,
+Ristorante Il Luogo,"Via Montecuccoli, 6, Milano",48034825665,

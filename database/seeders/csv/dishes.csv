@@ -1,11 +1,101 @@
-name,description_ingredients,price,visible,thumb
-Spaghetti Carbonara, Pasta - eggs pancetta - pecorino cheese - pepper, 12.5, 1,images/dishes/spaghetti-carbonara.jpeg
-Margherita Pizza, Tomato - mozzarella - basil, 10.0, 1,images/dishes/margherita-pizza.jpeg
-Tacos al Pastor, Pork - pineapple - onions - cilantro - lime, 8.0, 0,images/dishes/tacos-al-pastor.jpeg
-Guacamole, Avocado - lime - onions - tomatoes - cilantro, 5.5, 0,images/dishes/guacamole.jpeg
-Salmon Sushi, Salmon - rice - seaweed, 15.0, 1,images/dishes/salmon-sushi.jpeg
-Tuna Sashimi, Tuna - soy sauce - wasabi, 17.0, 1,images/dishes/tuna-sashimi.jpeg
-Cheeseburger, Beef patty - cheese - lettuce - tomato - bun, 8.5, 1,images/dishes/cheeseburger.jpeg
-French Fries, Potatoes - salt, 6.0, 1,images/dishes/french-fries.jpeg
-Quinoa Salad, Quinoa - mixed greens - cherry tomatoes - cucumbers, 9.0, 1,images/dishes/quinoa-salad.jpeg
-Vegan Burger, Vegan patty - lettuce - tomato - vegan bun, 10.0, 1,images/dishes/vegan-burger.jpeg
+name,description_ingredients,price,visible,
+Spaghetti Carbonara,"Un classico piatto di pasta italiana con uova, formaggio, pancetta e pepe.",15.09,0,
+Pizza Margherita,"Pizza napoletana tradizionale con pomodori freschi, mozzarella e basilico.",7.57,0,
+Lasagna,"Strati di pasta, ragù di carne, besciamella e formaggio cotti alla perfezione.",14.24,0,
+Ravioli,"Cuscinetti di pasta ripieni di ricotta e spinaci, serviti con salsa marinara.",6.68,1,
+Tiramisu,Dessert italiano a strati di savoiardi imbevuti di caffè e mascarpone.,14.78,1,
+Bruschetta,"Pane grigliato con pomodori, aglio, olio d'oliva e basilico.",13.23,1,
+Risotto,"Piatto di riso cremoso cotto con brodo, burro e parmigiano.",7.83,1,
+Gelato,"Gelato italiano fatto con latte, panna, zucchero e vari aromi.",15.7,0,
+Fettuccine Alfredo,Pasta in una ricca salsa di panna con burro e parmigiano.,15.09,0,
+Gnocchi,Gnocchi di patate serviti con salsa di pomodoro o crema.,12.59,1,
+Panna Cotta,Dessert cremoso italiano fatto con panna zuccherata addensata con gelatina.,23.23,0,
+Polenta,Polenta bollita servita cremosa o cotta al forno o fritta.,18.46,0,
+Minestrone,Zuppa di verdure italiana con fagioli e pasta.,17.33,1,
+Osso Buco,"Stinco di vitello brasato con verdure, vino bianco e brodo.",10.64,1,
+Saltimbocca,"Vitello avvolto in prosciutto e salvia, cotto in vino bianco e burro.",12.1,0,
+Arancini,"Palle di riso fritte ripiene di carne, formaggio e piselli.",21.74,1,
+Caprese Salad,"Insalata con pomodori freschi, mozzarella e basilico.",21.11,1,
+Calzone,"Pizza piegata al forno ripiena di formaggio, carni e verdure.",10.92,1,
+Prosciutto e Melone,Antipasto dolce e salato con prosciutto crudo e melone.,18.52,1,
+Bistecca alla Fiorentina,"Bistecca toscana alla griglia condita con olio d'oliva, sale e pepe.",21.78,1,
+Cannelloni,"Grandi tubi di pasta ripieni di carne o formaggio, cotti in salsa di pomodoro.",14.52,0,
+Zabaglione,"Zabaione italiano fatto con tuorli d'uovo, zucchero e vino dolce.",11.45,1,
+Crostini,Piccole fette di pane tostato con vari ingredienti come formaggio e pomodori.,6.47,0,
+Frutti di Mare,"Piatto di frutti di mare con gamberi, calamari, cozze e vongole.",23.41,0,
+Cioppino,"Zuppa di pesce italo-americana con pesce, gamberi, vongole e pomodori.",17.08,1,
+Insalata di Mare,"Insalata di mare mista con polpo, calamari, gamberi e limone.",20.38,0,
+Supplì,"Palle di riso fritte simili agli arancini, tipicamente ripiene di formaggio.",7.67,1,
+Ribollita,"Zuppa di pane toscana con verdure, fagioli e pane raffermo.",9.35,0,
+Pappa al Pomodoro,"Spessa zuppa toscana con pomodori, pane, olio d'oliva e aglio.",12.92,1,
+Pesto Genovese,"Pasta genovese con una salsa di basilico, aglio, pinoli e parmigiano.",8.73,1,
+Agnolotti,Pasta ripiena del Piemonte farcita con carne arrostita e verdure.,17.08,0,
+Stracciatella,Zuppa di formaggio fresco con una consistenza morbida fatta di cagliata di mozzarella.,7.73,0,
+Spiedini,Spiedini di carne e verdure grigliati alla perfezione.,15.18,1,
+Scaloppine,"Fettine di vitello cotte in salsa di vino, spesso con limone e capperi.",15.16,1,
+Tagliatelle al Ragù,Pasta a nastro piatta servita con un ricco ragù di carne.,13.57,1,
+Cotoletta alla Milanese,Cotoletta di vitello impanata e fritta servita con spicchi di limone.,24.78,1,
+Panettone,Pane dolce tradizionalmente mangiato durante il Natale.,17.04,1,
+Pandoro,"Pane dolce lievitato con una consistenza leggera e soffice, anche un classico natalizio.",5.99,1,
+Zuppa Inglese,"Dessert a strati con pan di spagna, crema pasticcera e liquore.",11.94,0,
+Torta Caprese,Torta al cioccolato e mandorle dell'isola di Capri.,6.51,0,
+Cacciucco,"Zuppa di pesce toscana con pomodori, aglio e vino rosso.",7.76,1,
+Baccalà,Baccalà cotto in salsa di pomodoro con olive e capperi.,14.78,1,
+Fritto Misto,"Frittura mista di pesce tra cui gamberi, calamari e verdure.",19.81,1,
+Torta della Nonna,Crostata alla crema con pinoli e zucchero a velo.,20.41,0,
+Torta di Ricotta,Crostata di ricotta aromatizzata con scorza di agrumi e vaniglia.,16.29,0,
+Sfinciuni,"Pizza siciliana con crosta spessa, cipolle, acciughe e formaggio.",8.61,0,
+Caponata,"Piatto siciliano di melanzane con pomodori, olive e capperi.",6.53,1,
+Pasta e Fagioli,Zuppa di pasta e fagioli aromatizzata con pancetta e erbe.,11.49,0,
+Strudel,"Pasticceria austriaca ripiena di mele, uvetta e cannella.",20.18,0,
+Stracciatella Soup,Zuppa di stracciatella fatta con brodo di pollo e uova.,19.94,0,
+Pasta Primavera,"Pasta con verdure fresche, olio d'oliva e parmigiano.",19.9,1,
+Spaghetti alle Cozze,"Spaghetti, Cozze, Aglio, Prezzemolo, Olio d'oliva",5.15,1
+Pizza Diavola,"Pomodoro, Mozzarella, Salame piccante, Olio d'oliva",19.71,0
+Lasagna Vegetariana,"Pasta, Verdure miste, Besciamella, Parmigiano Reggiano",6.08,0
+Ravioli di Zucca,"Pasta ripiena, Zucca, Amaretti, Parmigiano Reggiano",10.68,1
+Panna Cotta al Caffè,"Panna, Zucchero, Caffè, Gelatina",11.02,1
+Bruschetta al Pomodoro,"Pane, Pomodoro, Aglio, Basilico, Olio d'oliva",16.63,0
+Risotto allo Zafferano,"Riso, Zafferano, Brodo, Parmigiano Reggiano, Burro",16.79,1
+Sorbetto al Limone,"Limone, Zucchero, Acqua",11.32,1
+Fettuccine ai Funghi,"Fettuccine, Funghi misti, Panna, Parmigiano Reggiano",17.08,1
+Gnocchi al Gorgonzola,"Gnocchi di patate, Gorgonzola, Panna",11.66,1
+Tiramisù alle Fragole,"Mascarpone, Uova, Savoiardi, Fragole",12.26,0
+Polenta Taragna,"Farina di mais, Formaggio, Burro",20.99,0
+Zuppa di Verdure,"Verdure miste, Brodo vegetale",19.65,0
+Ossobuco in Gremolata,"Ossobuco, Limone, Prezzemolo, Aglio, Vino bianco",11.72,1
+Saltimbocca alla Romana,"Vitello, Prosciutto, Salvia, Vino bianco",7.59,0
+Arancini di Riso,"Riso, Ragù, Piselli, Mozzarella, Panatura",23.56,1
+Insalata Caprese,"Pomodoro, Mozzarella, Basilico, Olio d'oliva",6.76,0
+Pizza ai Quattro Formaggi,"Pomodoro, Mozzarella, Formaggi misti",17.34,1
+Prosciutto e Fichi,"Prosciutto, Fichi",10.95,1
+Fiorentina alla Brace,"Bistecca, Sale, Pepe",6.95,0
+Cannelloni di Carne,"Pasta, Carne macinata, Pomodoro, Besciamella",11.99,1
+Zabaione,"Tuorlo d'uovo, Zucchero, Marsala",11.79,0
+Crostini Toscani,"Pane, Fegatini di pollo, Capperi, Acciughe",12.6,1
+Spaghetti ai Frutti di Mare,"Spaghetti, Frutti di mare, Aglio, Prezzemolo, Olio d'oliva",17.84,0
+Zuppa di Pesce,"Pesce misto, Pomodoro, Aglio, Prezzemolo",21.38,0
+Insalata di Polpo,"Polpo, Patate, Prezzemolo, Limone",7.29,0
+Supplì al Telefono,"Riso, Ragù, Mozzarella, Panatura",22.27,1
+Ribollita Toscana,"Verdure miste, Pane, Olio d'oliva",12.59,1
+Pesto di Pistacchi,"Pistacchi, Aglio, Parmigiano Reggiano, Olio d'oliva",24.74,0
+Agnolotti al Brasato,"Pasta ripiena, Brasato di manzo",19.43,0
+Stracciatella al Limone,"Limone, Uova, Brodo di pollo",15.48,0
+Spiedini di Pollo,"Pollo, Peperoni, Cipolle, Pangrattato",11.3,0
+Scaloppine ai Funghi,"Vitello, Funghi, Vino bianco",6.57,0
+Tagliatelle ai Funghi Porcini,"Tagliatelle, Funghi Porcini, Panna",16.06,1
+Cotoletta alla Bolognese,"Cotoletta di vitello, Prosciutto, Formaggio, Pangrattato",4.29,0
+Panettone Artigianale,"Farina, Uova, Zucchero, Uvetta, Canditi",17.75,1
+Pandoro Veronese,"Farina, Uova, Zucchero, Burro",22.07,0
+Zuppa di Cipolle,"Cipolle, Brodo di carne, Pane, Formaggio",21.27,0
+Torta al Cioccolato,"Cioccolato fondente, Uova, Zucchero, Burro",11.41,0
+Cacciucco alla Livornese,"Pesce misto, Pomodoro, Aglio, Prezzemolo",18.53,0
+Baccalà alla Vicentina,"Baccalà, Patate, Cipolle, Pomodoro",12.66,0
+Frittura di Paranza,"Pesce misto, Frittura",9.34,1
+Torta della Nonna al Limone,"Pasta frolla, Crema pasticcera, Pinoli",18.59,1
+Cassata Siciliana,"Ricotta, Zucchero, Frutta candita, Pan di Spagna",8.25,0
+Pizza Fritta,"Pasta lievitata, Pomodoro, Mozzarella, Salumi",24.62,0
+Caponata di Melanzane,"Melanzane, Pomodoro, Capperi, Olive",7.73,0
+Pasta e Ceci,"Pasta, Ceci, Pomodoro, Rosmarino",8.94,1
+Strudel di Mele,"Pasta sfoglia, Mele, Cannella",20.55,1
+Zuppa di Pesce e Patate,"Pesce misto, Patate, Pomodoro",14.19,0

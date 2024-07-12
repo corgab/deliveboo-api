@@ -58,7 +58,7 @@ class DishSeeder extends Seeder
                 $new_dish->description_ingredients = $row[1];
                 $new_dish->price = $row[2];
                 $new_dish->visible = $row[3];
-                $new_dish->thumb = $row[4];
+                // $new_dish->thumb = $row[4];
 
                 
                 // Salvataggio dati 
