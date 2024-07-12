@@ -34,7 +34,7 @@
     <div class="py-2">
         <img src="{{ asset('storage/' . $dish->thumb) }}" alt="foto piatto" style="width:200px">
     </div>
-    <button name="remove_image" value="1" class="btn btn-danger">Rimuovi immagine</button>
+    <button name="remove_image" value="1" class="btn btn-outline-danger btn-sm my-2">Rimuovi immagine</button>
     @endif
     <div class="input-group mb-3">
         <label for="thumb">Inserisci immagine:</label>
