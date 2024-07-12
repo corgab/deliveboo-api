@@ -10,6 +10,8 @@ use App\Models\Order;
 use App\Models\Restaurant;
 use App\Models\Type;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Pagination\Paginator;
+
 class RestaurantController extends Controller
 {
     public function dashboard(){
@@ -17,7 +19,8 @@ class RestaurantController extends Controller
         $restaurant = Restaurant::where('user_id', $user->id)->first();
         if($restaurant){
             $dishes = $restaurant->dishes;
-            $orders = $restaurant->orders;
+            $orders = $restaurant->orders()->with('dishes')->paginate(2);
+            
             return view('admin.dashboard', compact('restaurant', 'orders', 'dishes'));
         }else{
             return view('admin.dashboard');

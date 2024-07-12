@@ -62,7 +62,7 @@ class OrderSeeder extends Seeder
                 $dish_ids = Dish::all()->pluck('id')->all();
 
                 // Genera un array di ID di piatti casuali
-                $random_dish_ids = $faker->randomElements($dish_ids, rand(1, 10));
+                $random_dish_ids = $faker->randomElements($dish_ids, rand(1, 4));
 
                 // Inizializza un array per le quantità dei piatti
                 $dish_quantities = [];

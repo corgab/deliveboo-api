@@ -42,6 +42,7 @@
                             {{$dish->name}}</li>
                         </ul>
                     @endforeach
+                    
                 @endif
             </div>
         </section>
@@ -59,9 +60,39 @@
                             <li class="d-flex justify-content-between">
                                 <p>{{$order->name}}</p>
                                 <p>{{$order->total_price}} €</p>
+                                <p>{{$order->address}}</p>
+                                    <ul>
+                                    @foreach($order->dishes as $dish)
+                                    <li>{{$dish->name}}</li>
+                                    @endforeach
+                                    </ul>
                             </li>
                         </ul>
                     @endforeach
+                <!-- Link di paginazione -->
+                <nav aria-label="Page navigation">
+                    <ul class="pagination justify-content-center">
+                        @if ($orders->onFirstPage())
+                            <li class="page-item disabled">
+                                <span class="page-link">&laquo;</span>
+                            </li>
+                        @else
+                            <li class="page-item">
+                                <a class="page-link" href="{{ $orders->previousPageUrl() }}" aria-label="Previous">&laquo;</a>
+                            </li>
+                        @endif
+
+                        @if ($orders->hasMorePages())
+                            <li class="page-item">
+                                <a class="page-link" href="{{ $orders->nextPageUrl() }}" aria-label="Next">&raquo;</a>
+                            </li>
+                        @else
+                            <li class="page-item disabled">
+                                <span class="page-link">&raquo;</span>
+                            </li>
+                        @endif
+                    </ul>
+                </nav>
                 @endif
             </div>
         </section>
