@@ -47,7 +47,7 @@ class RestaurantController extends Controller
     public function show(Restaurant $restaurant)
     {
         // Ottieni i piatti del ristorante con paginazione
-        $dishes = $restaurant->dishes()->paginate(2); // Imposta il numero di piatti per pagina
+        $dishes = $restaurant->dishes()->paginate(4); // Imposta il numero di piatti per pagina
     
         // Aggiungi l'URL completo dell'immagine per ogni piatto e assicurati che tutte le proprietà necessarie siano incluse
         $dishes->getCollection()->transform(function ($dish) {
