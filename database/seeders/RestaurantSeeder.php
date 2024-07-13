@@ -40,6 +40,8 @@ class RestaurantSeeder extends Seeder
         // Data file restaurants.csv
         $data = $this->getCSVData(__DIR__.'/csv/restaurants.csv');
 
+        // $dataTypes = $this->getCSVData(__DIR__.'/csv/restaurant_type.csv');
+
         // Recupero data
         $types = Type::all();
 
@@ -61,13 +63,6 @@ class RestaurantSeeder extends Seeder
                 // Salvataggio dati
                 $new_restaurant->save();
 
-                // Id randomico di Type in un array
-                for($i = 0; $i < rand(1, 4); $i++) {
-                    $type_ids = $types->random(rand(1, 2))->pluck('id')->toArray();
-                }
-
-                // Attach Pivot
-                $new_restaurant->types()->attach($type_ids);
             }
         }
     }
