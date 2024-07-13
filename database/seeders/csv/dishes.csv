@@ -1,50 +1,50 @@
-name,description_ingredients,price,visible
-Spaghetti alla Carbonara,Spaghetti-Guanciale-Uova-Pecorino Romano,10,1
-Pizza Margherita,Farina di grano-Mozzarella-Pomodoro-Foglie di basilico,8,1
-Insalata Caprese,Pomodoro-Mozzarella di bufala-Origano-Foglie di basilico-Olio extravergine d'oliva,7,1
-Risotto ai Funghi,Arborio-Risotto-funghi porcini-Cipolla-Rosmarino,9,1
-Pollo alla Cacciatora,Pollo-Olive-Noci-Pepe-Rosmarino,12,1
-Tagliatelle al Ragu,Tagliatelle-Ragu di carne-Grana Padano-Pomodoro,11,1
-Lasagna alla Bolognese,Lasagna-Ragu di carne-Bechamel-Grana Padano-Pomodoro,13,1
-Cotoletta alla Milanese,Cotoletta di vitello-Pan grattato-Uova-Limone-Patate fritte,15,1
-Gnocchi al Pesto,Gnocchi-Pesto genovese-Pinoli-Pecorino-Foglie di basilico,10,1
-Tiramisù,Savoiardi-Mascarpone-Uova-Zucchero-Caffè cotto,8,1
-Risotto al Salto,Arborio-Risotto-Formaggio grattugiato-Burro-Pepe,10,1
-Polpettone,Pan grattato-Carne macinata-Uova-Parmigiano-Pane,11,1
-Zuppa di Verdure,Zucchine-Patate-Pomodoro-Carote-Prezzemolo,7,1
-Frittata di Patate,Uova-Patate-Cipolla-Formaggio grattugiato-Prezzemolo,9,1
-Arrosto di Maiale,Carne di maiale-Patate-Aglio-Rosmarino-Alloro,14,1
-Insalata di Mare,Gamberetti-Calamari-Cozze-Vongole-Pomodorini,12,1
-Risotto alla Milanese,Arborio-Risotto-Zafferano-Brodo di carne-Formaggio grattugiato,12,1
-Fettuccine Alfredo,Fettuccine-Panna-Formaggio Parmigiano-Rosmarino,10,1
-Spaghetti Aglio e Olio,Spaghetti-Aglio-Peperoncino-Prezzemolo-Olio extravergine d'oliva,9,1
-Bistecca alla Fiorentina,Bistecca di manzo-Patate arrosto-Rosmarino-Pepe,16,1
-Carpaccio di Manzo,Filetto di manzo-Rucola-Scaglie di Parmigiano-Aceto balsamico,10,1
-Tartare di Tonno,Tonno fresco-Capperi-Cetriolini-Scorza di limone-Olio extravergine d'oliva,14,1
-Pasta alla Norma,Pasta-Melanzane-Pomodoro-Ricotta salata-Basilico,11,1
-Cannelloni Ricotta e Spinaci,Cannelloni-Ricotta-Spinaci-Passata di pomodoro-Formaggio grattugiato,12,1
-Ratatouille,Zucchine-Melanzane-Peperoni-Pomodoro-Cipolla,8,1
-Calamari Fritti,Calamari-Prezzemolo-Aglio-Limone-Pepe,13,1
-Risotto al Nero di Seppia,Arborio-Risotto-Nero di seppia-Gamberi-Cipolla,15,1
-Gnocchi alla Sorrentina,Gnocchi-Pomodoro-Fiordilatte-Basilico-Olio extravergine d'oliva,10,1
-Spaghetti alle Vongole,Spaghetti-Vongole-Aglio-Prezzemolo-Peperoncino,12,1
-Branzino al Cartoccio,Branzino-Pomodorini-Patate-Origano-Prezzemolo,18,1
-Saltimbocca alla Romana,Vitello-Prosciutto crudo-Salvia-Burro-Salame,17,1
-Ravioli di Magro,Ravioli-Ricotta-Spinaci-Noci-Burro,14,1
-Panzerotti Ripieni,Pasta fresca-Mozzarella-Prosciutto cotto-Pomodoro-Basilico,9,1
-Ossobuco alla Milanese,Ossobuco-Carote-Cipolla-Sedano-Alloro,20,1
-Frittelle di Zucchine,Zucchine-Uova-Formaggio grattugiato-Menta-Prezzemolo,8,1
-Carbonade Flamande,Carne di manzo-Cipolle-Pan di spezie-Birra bruna-Patate,16,1
-Crostata di Frutta,Farina-Zucchero-Burro-Marmellata di frutta-Frutta fresca,10,1
-Gelato alla Crema,Panna-Latte-Uova-Zucchero-Vaniglia,6,1
-Vitello Tonnato,Vitello-Acciughe-Salsa tonnata-Capperi-Limone,14,1
-Coda alla Vaccinara,Coda di manzo-Passata di pomodoro-Cipolla-Carote-Celery,15,1
-Risotto alla Zucca,Arborio-Risotto-Zucca-Gorgonzola-Noci,11,1
-Pappardelle al Cinghiale,Pappardelle-Cinghiale-Rosmarino-Cipolla-Carote,16,1
-Torta di Mele,Farina-Zucchero-Burro-Mele-Cannella,9,1
-Pizza Quattro Stagioni,Farina di grano-Mozzarella-Prosciutto cotto-Funghi-Pomodoro,14,1
-Baccalà alla Livornese,Baccalà-Pomodoro-Cipolla-Olive nere-Prezzemolo,13,1
-Farinata di Ceci,Farina di ceci-Acqua-Olio extravergine d'oliva-Rosmarino-Pepe,8,1
+name,description_ingredients,price,visible,thumb
+Spaghetti alla Carbonara,Spaghetti-Guanciale-Uova-Pecorino Romano,10,1,images/dishes/spaghetti-carbonara.jpeg
+Pizza Margherita,Farina di grano-Mozzarella-Pomodoro-Foglie di basilico,8,1,images/dishes/margherita-pizza.jpeg
+Insalata Caprese,Pomodoro-Mozzarella di bufala-Origano-Foglie di basilico-Olio extravergine d'oliva,7,1,images/dishes/caprese.jpeg
+Risotto ai Funghi,Arborio-Risotto-funghi porcini-Cipolla-Rosmarino,9,1,images/dishes/risotto-funghi.jpg
+Pollo alla Cacciatora,Pollo-Olive-Noci-Pepe-Rosmarino,12,1,images/dishes/pollo-alla-cacciatora.jpeg
+Tagliatelle al Ragu,Tagliatelle-Ragu di carne-Grana Padano-Pomodoro,11,1,images/dishes/tagliatelle-ragu.jpeg
+Lasagna alla Bolognese,Lasagna-Ragu di carne-Bechamel-Grana Padano-Pomodoro,13,1,images/dishes/lasagna.jpeg
+Cotoletta alla Milanese,Cotoletta di vitello-Pan grattato-Uova-Limone-Patate fritte,15,1,images/dishes/cotoletta-milanese.jpeg
+Gnocchi al Pesto,Gnocchi-Pesto genovese-Pinoli-Pecorino-Foglie di basilico,10,1,images/dishes/gnocchi-pesto.jpeg
+Tiramisù,Savoiardi-Mascarpone-Uova-Zucchero-Caffè cotto,8,1,images/dishes/tiramisu.jpeg
+Risotto al Salto,Arborio-Risotto-Formaggio grattugiato-Burro-Pepe,10,1,images/dishes/risotto-al-salto.jpg
+Polpettone,Pan grattato-Carne macinata-Uova-Parmigiano-Pane,11,1,images/dishes/polpettone.jpeg
+Zuppa di Verdure,Zucchine-Patate-Pomodoro-Carote-Prezzemolo,7,1,images/dishes/zuppa-verdure.jpeg
+Frittata di Patate,Uova-Patate-Cipolla-Formaggio grattugiato-Prezzemolo,9,1,images/dishes/frittura-patate.jpeg
+Arrosto di Maiale,Carne di maiale-Patate-Aglio-Rosmarino-Alloro,14,1,images/dishes/arrosto-maiale.jpeg
+Insalata di Mare,Gamberetti-Calamari-Cozze-Vongole-Pomodorini,12,1,images/dishes/insalata-mare.jpeg
+Risotto alla Milanese,Arborio-Risotto-Zafferano-Brodo di carne-Formaggio grattugiato,12,1,images/dishes/risotto-milanese.jpeg
+Fettuccine Alfredo,Fettuccine-Panna-Formaggio Parmigiano-Rosmarino,10,1,images/dishes/alfredo.jpeg
+Spaghetti Aglio e Olio,Spaghetti-Aglio-Peperoncino-Prezzemolo-Olio extravergine d'oliva,9,1,images/dishes/spaghetti-aop.jpeg
+Bistecca alla Fiorentina,Bistecca di manzo-Patate arrosto-Rosmarino-Pepe,16,1,images/dishes/fiorentina.jpeg
+Carpaccio di Manzo,Filetto di manzo-Rucola-Scaglie di Parmigiano-Aceto balsamico,10,1,images/dishes/carpaccio-manzo.jpeg
+Tartare di Tonno,Tonno fresco-Capperi-Cetriolini-Scorza di limone-Olio extravergine d'oliva,14,1,images/dishes/tartare-tonno.jpeg
+Pasta alla Norma,Pasta-Melanzane-Pomodoro-Ricotta salata-Basilico,11,1,images/dishes/pasta-norma.jpeg
+Cannelloni Ricotta e Spinaci,Cannelloni-Ricotta-Spinaci-Passata di pomodoro-Formaggio grattugiato,12,1,images/dishes/cannelloni-spinaci.jpeg
+Ratatouille,Zucchine-Melanzane-Peperoni-Pomodoro-Cipolla,8,1,images/dishes/ratatouille.jpeg
+Calamari Fritti,Calamari-Prezzemolo-Aglio-Limone-Pepe,13,1,images/dishes/calamari-fritti.jpeg
+Risotto al Nero di Seppia,Arborio-Risotto-Nero di seppia-Gamberi-Cipolla,15,1,images/dishes/risotto-seppia.jpeg
+Gnocchi alla Sorrentina,Gnocchi-Pomodoro-Fiordilatte-Basilico-Olio extravergine d'oliva,10,1,images/dishes/gnocchi-sorrentina.jpeg
+Spaghetti alle Vongole,Spaghetti-Vongole-Aglio-Prezzemolo-Peperoncino,12,1,images/dishes/spaghetti-vongole.jpeg
+Branzino al Cartoccio,Branzino-Pomodorini-Patate-Origano-Prezzemolo,18,1,images/dishes/branzino.jpeg
+Saltimbocca alla Romana,Vitello-Prosciutto crudo-Salvia-Burro-Salame,17,1,images/dishes/saltimbocca.jpeg
+Ravioli di Magro,Ravioli-Ricotta-Spinaci-Noci-Burro,14,1,images/dishes/ravioli-magro.jpeg
+Panzerotti Ripieni,Pasta fresca-Mozzarella-Prosciutto cotto-Pomodoro-Basilico,9,1,images/dishes/panzerotti.jpeg
+Ossobuco alla Milanese,Ossobuco-Carote-Cipolla-Sedano-Alloro,20,1,images/dishes/ossobuco.jpeg
+Frittelle di Zucchine,Zucchine-Uova-Formaggio grattugiato-Menta-Prezzemolo,8,1,images/dishes/frittelle-zucchine.jpeg
+Carbonade Flamande,Carne di manzo-Cipolle-Pan di spezie-Birra bruna-Patate,16,1,images/dishes/carbonade.jpeg
+Crostata di Frutta,Farina-Zucchero-Burro-Marmellata di frutta-Frutta fresca,10,1,images/dishes/crostata-frutta.jpeg
+Gelato alla Crema,Panna-Latte-Uova-Zucchero-Vaniglia,6,1,images/dishes/gelato-crema.jpeg
+Vitello Tonnato,Vitello-Acciughe-Salsa tonnata-Capperi-Limone,14,1,images/dishes/vitello-tonnato.jpeg
+Coda alla Vaccinara,Coda di manzo-Passata di pomodoro-Cipolla-Carote-Celery,15,1,images/dishes/coda.jpeg
+Risotto alla Zucca,Arborio-Risotto-Zucca-Gorgonzola-Noci,11,1,images/dishes/risotto-zucca.jpeg
+Pappardelle al Cinghiale,Pappardelle-Cinghiale-Rosmarino-Cipolla-Carote,16,1,images/dishes/pappardelle.jpeg
+Torta di Mele,Farina-Zucchero-Burro-Mele-Cannella,9,1,images/dishes/torta-mele.jpeg
+Pizza Quattro Stagioni,Farina di grano-Mozzarella-Prosciutto cotto-Funghi-Pomodoro,14,1,images/dishes/pizza-4-stagioni.jpeg
+Baccalà alla Livornese,Baccalà-Pomodoro-Cipolla-Olive nere-Prezzemolo,13,1,images/dishes/baccala.jpeg
+Farinata di Ceci,Farina di ceci-Acqua-Olio extravergine d'oliva-Rosmarino-Pepe,8,1,images/dishes/farinata-ceci.jpeg
 Tonno alla Siciliana,Tonno fresco-Capperi-Olive nere-Pomodorini-Prezzemolo,17,1
 Panna Cotta,Panna-Latte-Zucchero-Vaniglia-Gelatina,7,1
 Minestrone,Verdure miste-Fagioli-Pasta-Zucchine-Patate,9,1
