@@ -45,8 +45,8 @@ Torta di Mele,Farina-Zucchero-Burro-Mele-Cannella,9,1,images/dishes/torta-mele.j
 Pizza Quattro Stagioni,Farina di grano-Mozzarella-Prosciutto cotto-Funghi-Pomodoro,14,1,images/dishes/pizza-4-stagioni.jpeg
 Baccalà alla Livornese,Baccalà-Pomodoro-Cipolla-Olive nere-Prezzemolo,13,1,images/dishes/baccala.jpeg
 Farinata di Ceci,Farina di ceci-Acqua-Olio extravergine d'oliva-Rosmarino-Pepe,8,1,images/dishes/farinata-ceci.jpeg
-Tonno alla Siciliana,Tonno fresco-Capperi-Olive nere-Pomodorini-Prezzemolo,17,1
-Panna Cotta,Panna-Latte-Zucchero-Vaniglia-Gelatina,7,1
+Tonno alla Siciliana,Tonno fresco-Capperi-Olive nere-Pomodorini-Prezzemolo,17,1,images/dishes/tonno-alla-siciliana.jpg
+Panna Cotta,Panna-Latte-Zucchero-Vaniglia-Gelatina,7,1,images/dishes/panna-cotta.jpeg
 Minestrone,Verdure miste-Fagioli-Pasta-Zucchine-Patate,9,1
 Cozze alla Marinara,Cozze-Pomodoro-Aglio-Peperoncino-Prezzemolo,12,1
 Spaghetti al Nero di Seppia,Spaghetti-Nero di seppia-Gamberi-Aglio-Pomodorini,15,1
@@ -97,50 +97,49 @@ Salmone Grigliato,Salmone-Limone-Olio extravergine d'oliva-Aglio-Rosmarino,17,1
 Insalata Greca,Pomodorini-Cetrioli-Olive nere-Cipolla-Feta,10,1
 Bucatini all'Amatriciana,Bucatini-Guanciale-Pomodoro-Pecorino-Peperoncino,11,1
 Pizza Marinara,Farina di grano-Pomodoro-Aglio-Origano,7,1
-Sgombro alla Griglia,Sgombro-Limone-Aglio-Rosmarino-Pepe,16,1
-Crema di Zucca,Crema di zucca-Patate-Cipolla-Aglio-Timo,8,1
-Tortelli di Carne,Tortelli-Carne macinata-Formaggio grattugiato-Sugo di carne,12,1
-Gelato alla Fragola,Panna-Latte-Zucchero-Fragole-Vaniglia,6,1
-Patate Hasselback,Patate-Burro-Aglio-Rosmarino-Formaggio grattugiato,9,1
-Pasta al Limone,Pasta-Limone-Panna-Formaggio Parmigiano,10,1
-Vitello alla Pizzaiola,Vitello-Pomodoro-Capperi-Olive nere-Aglio,18,1
-Frittata di Zucchine,Uova-Zucchine-Formaggio grattugiato-Menta-Prezzemolo,7,1
-Risotto alle Barbabietole,Arborio-Risotto-Barbabietole-Gorgonzola-Noci,13,1
-Filetto di Branzino,Filetto di branzino-Limone-Patate-Aglio-Rosmarino,19,1
-Crespelle ai Porcini,Crespelle-Funghi porcini-Besciamella-Formaggio grattugiato-Burro,14,1
-Focaccia al Pomodoro,Farina di grano-Olio extravergine d'oliva-Rosmarino-Sale grosso-Acqua-Pomodorini,9,1
-Cous Cous con Pollo,Cous cous-Pollo-Curry-Zucchine-Cipolla,12,1
-Cernia al Cartoccio,Cernia-Pomodorini-Patate-Origano-Prezzemolo,17,1
-Tortelloni alla Zucca,Tortelloni-Zucca-Amaretti-Grana Padano-Salvia,15,1
-Sushi Vegano,Quinoa-Avocado-Cetriolo-Peperone-Tofu,11,1
-Frittelle di Mele,Farina-Zucchero-Burro-Mele-Cannella,8,1
-Caponata di Melanzane,Melanzane-Pomodoro-Cipolla-Capperi-Oliva,10,1
-Fettuccine ai Funghi,Fettuccine-Funghi misti-Panna-Formaggio Parmigiano-Peperoncino,13,1
-Torta Salata di Patate e Pancetta,Farina-Zucchine-Patate-Pancetta-Formaggio grattugiato,11,1
-Salmone Marinato,Salmone-Limone-Avocado-Cetrioli-Peperoncino,16,1
-Risotto al Curry,Arborio-Risotto-Curry-Carote-Cipolla,14,1
-Pasta con Crema di Peperoni,Pasta-Peperoni-Panna-Formaggio grattugiato-Aglio,12,1
-Involtini di Melanzane,Melanzane-Prosciutto cotto-Formaggio grattugiato-Pomodoro-Basilico,9,1
-Melanzane alla Parmigiana,Melanzane-Pomodoro-Mozzarella-Parmigiano-Basilico,13,1
-Cous Cous di Pesce,Cous cous-Pesce misto salmone gamberi calamari Zucchine-Cipolla,17,1
-Spaghetti alla Puttanesca,Spaghetti-Pomodoro-Acciacchi-Riccioli di Capperi-Oliva nera,12,1
-Insalata di Riso,Riso-Pomodorini-Oliva nera-Mais-Cetriolo,9,1
-Gnocchi al Gorgonzola,Gnocchi-Gorgonzola-Noci-Panna-Parmigiano,11,1
-Frittata di Asparagi,Uova-Asparagi-Formaggio grattugiato-Aglio-Prezzemolo,8,1
-Bistecca alla Griglia,Bistecca-Patate arrosto-Rosmarino-Aglio-Peperoncino,18,1
-Insalata di Farro,Farro-Pomodorini-Cetrioli-Oliva nera-Rucola,10,1
-Crespelle al Radicchio,Crespelle-Radicchio-Speck-Besciamella-Formaggio grattugiato,13,1
-Tagliatelle al Tartufo,Tagliatelle-Tartufo-Burro-Parmigiano-Peperoncino,20,1
-Pasta al Tonno,Pasta-Tonno-Pomodorini-Capperi-Prezzemolo,14,1
-Caponata Siciliana,Melanzane-Pomodoro-Cipolla-Capperi-Oliva,11,1
-Risotto ai Frutti di Mare,Arborio-Risotto-Frutti di mare-Pomodoro-Aglio-Vino bianco,17,1
-Penne alla Boscaiola,Penne-Funghi-Pancetta-Pomodoro-Parmigiano,12,1
-Lasagna Vegetariana,Lasagna-Melanzane-Zucchine-Pomodoro-Ricotta,14,1
-Pollo alla Diavola,Pollo-Peperoncino-Aglio-Limone-Rosmarino,15,1
-Risotto ai Porcini,Arborio-Risotto-Funghi porcini-Burro-Parmigiano,15,1
-Pizza Quattro Formaggi,Farina di grano-Mozzarella-Gorgonzola-Fontina-Parmigiano,13,1
-Calamari Ripieni,Calamari-Ricotta-Pangrattato-Parmigiano-Limone,16,1
-Risotto al Salmone,Arborio-Risotto-Salmone-Pomodorini-Aglio-Vino bianco,18,1
-Salsiccia con Patate,Salsiccia-Patate-Rosmarino-Aglio-Pepe,11,1
-Insalata Waldorf,Mele-Cetrioli-Noci-Pollo-Ricotta,9,1
-Involtini di Pollo,Pollo-Prosciutto crudo-Formaggio-Parmigiano,12,1
+Sgombro alla Griglia,Sgombro-Limone-Aglio-Rosmarino-Pepe,16,1,images/dishes/sgombro-griglia.jpeg
+Crema di Zucca,Crema di zucca-Patate-Cipolla-Aglio-Timo,8,1,images/dishes/crema-zucca.jpeg
+Tortelli di Carne,Tortelli-Carne macinata-Formaggio grattugiato-Sugo di carne,12,1,images/dishes/tortelli-carne.jpeg
+Gelato alla Fragola,Panna-Latte-Zucchero-Fragole-Vaniglia,6,1,images/dishes/gelato-alla-fragola.jpg
+Patate Hasselback,Patate-Burro-Aglio-Rosmarino-Formaggio grattugiato,9,1,images/dishes/patate-hasselback.jpeg
+Pasta al Limone,Pasta-Limone-Panna-Formaggio Parmigiano,10,1,images/dishes/pasta-limone.jpeg
+Vitello alla Pizzaiola,Vitello-Pomodoro-Capperi-Olive nere-Aglio,18,1,images/dishes/vitello-pizzaiola.jpeg
+Frittata di Zucchine,Uova-Zucchine-Formaggio grattugiato-Menta-Prezzemolo,7,1,images/dishes/frittata-zucchine.jpeg
+Risotto alle Barbabietole,Arborio-Risotto-Barbabietole-Gorgonzola-Noci,13,1,images/dishes/risotto-barbabietola.jpeg
+Filetto di Branzino,Filetto di branzino-Limone-Patate-Aglio-Rosmarino,19,1,images/dishes/filetto-branzino.jpeg
+Crespelle ai Porcini,Crespelle-Funghi porcini-Besciamella-Formaggio grattugiato-Burro,14,1,images/dishes/crespelle-porcini.jpeg
+Focaccia al Pomodoro,Farina di grano-Olio extravergine d'oliva-Rosmarino-Sale grosso-Acqua-Pomodorini,9,1,images/dishes/focaccia-pomodoro.jpeg
+Cous Cous con Pollo,Cous cous-Pollo-Curry-Zucchine-Cipolla,12,1,images/dishes/cous-pollo.jpeg
+Cernia al Cartoccio,Cernia-Pomodorini-Patate-Origano-Prezzemolo,17,1,images/dishes/cernia-cartoccio.jpeg
+Tortelloni alla Zucca,Tortelloni-Zucca-Amaretti-Grana Padano-Salvia,15,1,images/dishes/tortelloni-zucca.jpeg
+Sushi Vegano,Quinoa-Avocado-Cetriolo-Peperone-Tofu,11,1,images/dishes/sushi-vegano.jpeg
+Frittelle di Mele,Farina-Zucchero-Burro-Mele-Cannella,8,1,images/dishes/frittelle-di-mele.jpg
+Caponata di Melanzane,Melanzane-Pomodoro-Cipolla-Capperi-Oliva,10,1,images/dishes/caponata-melanzane.jpeg
+Torta Salata di Patate e Pancetta,Farina-Zucchine-Patate-Pancetta-Formaggio grattugiato,11,1,images/dishes/torta-salata.png
+Salmone Marinato,Salmone-Limone-Avocado-Cetrioli-Peperoncino,16,1,images/dishes/salmone-marinato.jpeg
+Risotto al Curry,Arborio-Risotto-Curry-Carote-Cipolla,14,1,images/dishes/risotto-curry.jpeg
+Pasta con Crema di Peperoni,Pasta-Peperoni-Panna-Formaggio grattugiato-Aglio,12,1,images/dishes/pasta-peperoni.jpeg
+Involtini di Melanzane,Melanzane-Prosciutto cotto-Formaggio grattugiato-Pomodoro-Basilico,9,1,images/dishes/involtini-melanzane.jpeg
+Melanzane alla Parmigiana,Melanzane-Pomodoro-Mozzarella-Parmigiano-Basilico,13,1,images/dishes/parmigiana.jpeg
+Cous Cous di Pesce,Cous cous-Pesce misto salmone gamberi calamari Zucchine-Cipolla,17,1,images/dishes/couscous-pesce.jpeg
+Spaghetti alla Puttanesca,Spaghetti-Pomodoro-Acciacchi-Riccioli di Capperi-Oliva nera,12,1,images/dishes/spaghetti-puttanesca.jpeg
+Insalata di Riso,Riso-Pomodorini-Oliva nera-Mais-Cetriolo,9,1,images/dishes/insalata-riso.jpeg
+Gnocchi al Gorgonzola,Gnocchi-Gorgonzola-Noci-Panna-Parmigiano,11,1,images/dishes/gnocchi-gorgonzola.jpeg
+Frittata di Asparagi,Uova-Asparagi-Formaggio grattugiato-Aglio-Prezzemolo,8,1,images/dishes/frittata-di-asparagi.jpg
+Bistecca alla Griglia,Bistecca-Patate arrosto-Rosmarino-Aglio-Peperoncino,18,1,images/dishes/bistecca-griglia.jpeg
+Insalata di Farro,Farro-Pomodorini-Cetrioli-Oliva nera-Rucola,10,1,images/dishes/insalata-farro.jpeg
+Crespelle al Radicchio,Crespelle-Radicchio-Speck-Besciamella-Formaggio grattugiato,13,1,images/dishes/crespelle-radicchio.jpeg
+Tagliatelle al Tartufo,Tagliatelle-Tartufo-Burro-Parmigiano-Peperoncino,20,1,images/dishes/tagliatelle-tartufo.jpeg
+Pasta al Tonno,Pasta-Tonno-Pomodorini-Capperi-Prezzemolo,14,1,images/dishes/pasta-tonno.jpeg
+Caponata Siciliana,Melanzane-Pomodoro-Cipolla-Capperi-Oliva,11,1,images/dishes/caponata.jpeg
+Risotto ai Frutti di Mare,Arborio-Risotto-Frutti di mare-Pomodoro-Aglio-Vino bianco,17,1,images/dishes/risotto-mare.jpeg
+Penne alla Boscaiola,Penne-Funghi-Pancetta-Pomodoro-Parmigiano,12,1,images/dishes/pennette-boscaiola.jpeg
+Lasagna Vegetariana,Lasagna-Melanzane-Zucchine-Pomodoro-Ricotta,14,1,images/dishes/lasagne.jpg
+Pollo alla Diavola,Pollo-Peperoncino-Aglio-Limone-Rosmarino,15,1,images/dishes/pollo-diavola.jpeg
+Risotto ai Porcini,Arborio-Risotto-Funghi porcini-Burro-Parmigiano,15,1,images/dishes/risotto-porcini.jpg
+Pizza Quattro Formaggi,Farina di grano-Mozzarella-Gorgonzola-Fontina-Parmigiano,13,1,images/dishes/pizza-4-formaggi.jpeg
+Calamari Ripieni,Calamari-Ricotta-Pangrattato-Parmigiano-Limone,16,1,images/dishes/calamari.jpg
+Risotto al Salmone,Arborio-Risotto-Salmone-Pomodorini-Aglio-Vino bianco,18,1,images/dishes/risotto-salmone.jpeg
+Salsiccia con Patate,Salsiccia-Patate-Rosmarino-Aglio-Pepe,11,1,images/dishes/salsiccia.jpg
+Insalata Waldorf,Mele-Cetrioli-Noci-Pollo-Ricotta,9,1,images/dishes/insalata-waldorf.jpeg
+Involtini di Pollo,Pollo-Prosciutto crudo-Formaggio-Parmigiano,12,1,images/dishes/involtini-pollo.jpeg
