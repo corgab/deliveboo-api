@@ -32,7 +32,7 @@ class CustomerOrderShipped extends Mailable
     public function envelope()
     {
         return new Envelope(
-            subject: 'Order Confirmed',
+            subject: 'Ordine Confermato',
             from: new Address('deliveboo94@gmail.com', 'Deliveboo')
         );
     }
