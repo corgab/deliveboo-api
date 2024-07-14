@@ -55,7 +55,8 @@
                 @if($orders->isEmpty())
                     <div>Non hai ancora nessun ordine!</div>
                 @else
-                    <table class="table orders-table">
+                <div class="table-responsive my-2">
+                    <table class="table orders-table ">
                         <thead>
                             <tr>
                                 <th>Nome</th>
@@ -67,19 +68,23 @@
                         <tbody>
                             @foreach($orders as $order)
                             <tr>
-                                <td>{{$order->name}}</td>
+                                <th scope="row">{{$order->name}}</td>
                                 <td>{{$order->total_price}} €</td>
                                 <td>{{$order->address}}</td>
                                 <td>
-                                    @foreach($order->dishes as $dish)
-                                    {{$dish->name}} | {{$dish->pivot->qty}} € <br>
-                                    @endforeach
+                                        @foreach($order->dishes as $dish)
+                                        <i class="bi bi-caret-right"></i> {{$dish->name}} {{$dish->pivot->qty}} € <br>
+                                        @endforeach
+                                    </ul>
+
                                 </td>
                             </tr>
                             @endforeach
                         </tbody>
 
                     </table>
+                </div>
+                    
                 <!-- Link di paginazione -->
                 <nav aria-label="Page navigation">
                     <ul class="pagination justify-content-center">
