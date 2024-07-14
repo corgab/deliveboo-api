@@ -42,12 +42,15 @@ class OrderController extends Controller
                 'restaurant_id' => $request->input('restaurant_id'),
 
             ]);
-
-            // $dish = Dish::where('order_id', $order->id)->all();
+            
+            // Logica piatti
             $dishes = $request->input('dishes');
 
-            for($i = 0; $i < count($dishes); $i++) {
-                $order->dishes()->attach($dishes[$i]);
+            foreach($dishes as $dish) {
+                $dishId = $dish['id'];
+                $qty = $dish['qty'];
+
+                $order->dishes()->attach($dish, ['qty' => $qty]);
             }
 
             Mail::to($order->email)->send(new CustomerOrderShipped($order));

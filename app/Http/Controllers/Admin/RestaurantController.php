@@ -19,8 +19,11 @@ class RestaurantController extends Controller
         $restaurant = Restaurant::where('user_id', $user->id)->first();
         if($restaurant){
             $dishes = $restaurant->dishes;
-            $orders = $restaurant->orders()->with('dishes')->paginate(2);
-            
+            // $orders = $restaurant->orders()->with('dishes')->paginate(2);
+            $orders = $restaurant->orders()->with(['dishes' => function ($query) {
+                $query->withPivot('qty');
+            }])->paginate(4);
+            // dd($orders);
             return view('admin.dashboard', compact('restaurant', 'orders', 'dishes'));
         }else{
             return view('admin.dashboard');

@@ -11,3 +11,8 @@
 .restaurant-card .badge{
     background-color: #f09c65;
 }
+
+.table.orders-table {
+    --bs-table-bg: #faebcd;
+    --bs-table-border-color: rgba(0, 0, 0, 0.242);
+}
