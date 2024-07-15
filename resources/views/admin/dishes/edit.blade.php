@@ -50,7 +50,7 @@
     </div>
    
     <div class="d-flex justify-content-evenly mt-5">
-        <button type="submit" class="btn btn-outline-success"><i class="bi bi-pen-fill"></i>Modifica</button>
+        <button type="submit" class="btn btn-outline-success"><i class="bi bi-pen-fill"></i>Salva Modifica</button>
         <a href="{{ route('admin.dishes.show', $dish) }}" class="btn btn-outline-success"><i class="bi bi-arrow-left"></i> Indietro</a>
     </div>
 </form>

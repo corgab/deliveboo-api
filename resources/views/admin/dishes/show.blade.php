@@ -12,19 +12,15 @@
             <li class="fs-show mb-3"><strong>Nome piatto</strong>: {{ $dish->name }}</li>
             <li class="fs-show mb-3"><strong>Descrizione ingredienti</strong>: {{ $dish->description_ingredients }}</li>
             <li class="fs-show mb-3"><strong>Prezzo</strong>: {{ $dish->price }} €</li>
+            <li>
+                @if ($dish->visible == true)
+                    <h3 class="h5 text-success">Visibile</h3>
+                @else
+                    <h3 class="h5 text-danger">Non visibile</h3>
+                @endif
+            </li>
         </ul>
     </div>
-
-
-    <div class="container mt-4">
-        <!-- Check Boolean -->
-        @if ($dish->visible == true)
-            <h3 class="h5">Visibile</h3>
-        @else
-            <h3 class="h5">Non visibile</h3>
-        @endif
-    </div>
-
 
     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
