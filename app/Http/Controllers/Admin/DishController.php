@@ -98,7 +98,7 @@ class DishController extends Controller
         // Creazione piatto
         $new_dish = Dish::create($form_data);
         
-        return to_route('admin.dishes.show', $new_dish);
+        return to_route('admin.dishes.index', $new_dish);
     }
 
 
