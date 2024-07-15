@@ -1,18 +1,18 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container py-5">
+<div class="container py-2">
     @if(isset($error))
         <div class="alert alert-danger text-center" style="font-size: 1rem;">
             <h4>{{ $error }}</h4>
         </div>
     @endif
     @if(isset($restaurant))
-        <section class="restaurant mb-5 d-flex align-items-center">
-                <div class="w-25">
+        <section class="restaurant mb-5 d-flex flex-wrap text-center text-md-start align-items-center">
+                <div class="col-12 mb-2 col-md-4">
                     <img class="restaurant-img" src="{{ asset('storage/' . $restaurant->thumb) }}" alt="">
                 </div>
-                <div class="w-75">
+                <div class="col-12 col-md-8">
                     <div class="card restaurant-card p-5">
                         <h3>{{$restaurant->name}}</h3>
                         <h4>{{$restaurant->address}}</h4>
@@ -60,7 +60,7 @@
                     <div>Non hai ancora nessun ordine!</div>
                 @else
                 <div class="table-responsive my-2">
-                    <table class="table orders-table ">
+                    <table class="table orders-table">
                         <thead>
                             <tr>
                                 <th>Nome</th>
