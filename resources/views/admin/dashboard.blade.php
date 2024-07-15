@@ -62,7 +62,7 @@
                                 <th>Nome</th>
                                 <th>Prezzo Totale</th>
                                 <th>Indirizzo</th>
-                                <th>Piatti</th>
+                                <th>Piatti/Quantità</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -73,7 +73,7 @@
                                 <td>{{$order->address}}</td>
                                 <td>
                                         @foreach($order->dishes as $dish)
-                                        <i class="bi bi-caret-right"></i> {{$dish->name}} {{$dish->pivot->qty}} € <br>
+                                        <i class="bi bi-caret-right"></i> {{$dish->name}} x {{$dish->pivot->qty}}<br>
                                         @endforeach
                                     </ul>
 
