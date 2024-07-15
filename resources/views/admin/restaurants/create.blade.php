@@ -5,7 +5,7 @@
     <div class="container">
         <h1 class="text-center py-5 text-success">Crea il tuo ristorante</h1>
 
-        <form id="restaurant-form" action="{{route('admin.restaurants.store')}}" method="POST">
+        <form id="restaurant-form" action="{{route('admin.restaurants.store')}}" method="POST" enctype="multipart/form-data">
             @csrf
             <!-- user_id value-->
             <input type="hidden" name="user_id" value="{{ $user->id }}">
@@ -48,9 +48,13 @@
                 <div class="invalid-feedback">{{ $message }}</div>
                 @enderror
             </div>
-            {{-- <div class="input-group mb-3">
-                <input type="file" class="form-control" id="thumb" name="thumb" value="{{ old('thumb') }}">
-            </div> --}}
+            <div class="input-group mb-3">
+                <label for="thumb" class="form-label"><strong>Immagine</strong></label>
+                <input type="file" class="form-control" id="thumb" name="thumb">
+                @error('thumb')
+                    <span class="text-danger">{{ $message }}</span>
+                @enderror
+            </div>
 
             <button type="submit" id="submit-btn" class="btn btn-success btn-sm mt-4">Registra la tua attività</button>
         </form>

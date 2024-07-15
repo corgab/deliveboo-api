@@ -98,6 +98,22 @@ class RestaurantController extends Controller
             }
         } while ($find !== null);
         $form_data['slug'] = $slug;
+
+         // Se c'è un'immagine caricata
+         if ($request->hasFile('thumb')) {
+            $image = $request->file('thumb');
+
+            // Recupero estensione
+            $extension = $image->extension();
+
+            // Genero nome file + estensione
+            $image_name = $slug . '.' . $extension;
+
+            // Salvo immagine nello storage
+            $image_path = $image->storeAs('images/restaurants', $image_name, 'public');
+            $form_data['thumb'] = $image_path; // Salvo nel db il Path
+        }
+
         // Creazione nuovo ristorante
         $new_restaurant = Restaurant::create($form_data);
         $new_restaurant->types()->sync($form_data['type_id']);

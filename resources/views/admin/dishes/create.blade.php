@@ -43,10 +43,9 @@
                 <div class="my-4">
                     <label for="thumb" class="form-label"><strong>Immagine</strong></label>
                     <input type="file" class="form-control" name="thumb" id="thumb">
-                {{-- <input type="file" class="my-4 form-control" id="thumb" name="thumb"> --}}
-                @error('thumb')
-                    <span class="text-danger">{{ $message }}</span>
-                @enderror
+                    @error('thumb')
+                        <span class="text-danger">{{ $message }}</span>
+                    @enderror
                 </div>
                 <div class="my-4">
                     <div class="form-check form-switch">
@@ -65,15 +64,6 @@
             </div>
         </form>
 
-        @if ($errors->any())
-    <div class="alert alert-danger">
-        <ul>
-            @foreach ($errors->all() as $error)
-                <li>{{ $error }}</li>
-            @endforeach
-        </ul>
-    </div>
-@endif
         <div class="text-center mt-2">
             <h5 class="pb-5">I campi contrassegnati con * sono obbligatori.</h5>
         </div>
