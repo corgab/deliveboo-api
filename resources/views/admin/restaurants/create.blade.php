@@ -50,7 +50,7 @@
             </div>
             <div class="input-group mb-3">
                 <label for="thumb" class="form-label"><strong>Immagine</strong></label>
-                <input type="file" class="form-control" id="thumb" name="thumb">
+                <input type="file" class="form-control mx-3" id="thumb" name="thumb">
                 @error('thumb')
                     <span class="text-danger">{{ $message }}</span>
                 @enderror
