@@ -41,7 +41,7 @@
                     @enderror
                 </div>
                 <div class="my-4">
-                    <label for="thumb" class="form-label"><strong>Immagine *</strong></label>
+                    <label for="thumb" class="form-label"><strong>Immagine</strong></label>
                     <input type="file" class="form-control" name="thumb" id="thumb">
                 {{-- <input type="file" class="my-4 form-control" id="thumb" name="thumb"> --}}
                 @error('thumb')
