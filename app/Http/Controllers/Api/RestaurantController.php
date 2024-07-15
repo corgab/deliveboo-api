@@ -7,25 +7,16 @@ use App\Models\Type;
 use Illuminate\Http\Request;
 class RestaurantController extends Controller
 {
+
     public function index(Request $request)
     {
         // Estrae il parametro 'types' dalla query string
         $types = $request->query('types');
-
+    
         // Inizializza la query base
         $query = Restaurant::query();
-
-        // *** FILTRO SINGOLA TIPOLOGIA***
-        // if ($types) {
-        //     $typesArray = explode(',', $types); //fai l'array dei tipi di ristorante
-
-        //     $query->whereHas('types', function ($q) use ($typesArray) {
-        //         $q->whereIn('name', $typesArray);
-        //     });
-        // }
-
-
-        // *** FILTRO PIU TIPOLOGIE***
+    
+        // *** FILTRO PIU TIPOLOGIE ***
         if ($types) {
             $typesArray = explode(',', $types);
             foreach ($typesArray as $typeName) {
@@ -37,9 +28,18 @@ class RestaurantController extends Controller
                 }
             }
         }
-        // Esegui la query e ottieni i risultati
+    
+        // Esegui la query e ottieni i risultati paginati con tutte le relazioni
         $restaurants = $query->with('types')->paginate(6);
-
+    
+        // Aggiungi l'URL completo dell'immagine per ogni ristorante
+        $restaurants->getCollection()->transform(function ($restaurant) {
+            if ($restaurant->thumb) {
+                $restaurant->thumb_url = url('storage/' . $restaurant->thumb);
+            }
+            return $restaurant;
+        });
+    
         // Restituisci la lista dei ristoranti come risposta JSON
         return response()->json($restaurants);
     }
@@ -49,7 +49,7 @@ class RestaurantController extends Controller
         // Ottieni i piatti del ristorante con paginazione
         $dishes = $restaurant->dishes()->paginate(4); // Imposta il numero di piatti per pagina
     
-        // Aggiungi l'URL completo dell'immagine per ogni piatto e assicurati che tutte le proprietà necessarie siano incluse
+        // Aggiungi l'URL completo dell'immagine per ogni piatto
         $dishes->getCollection()->transform(function ($dish) {
             if ($dish->thumb) {
                 $dish->thumb_url = url('storage/' . $dish->thumb);
@@ -57,7 +57,7 @@ class RestaurantController extends Controller
             return $dish;
         });
     
-        // Manualmente aggiungi i piatti paginati al modello restaurant per mantenerli nella stessa struttura
+        // Aggiungi i piatti paginati
         $restaurant->setRelation('dishes', $dishes);
     
         return response()->json($restaurant);
