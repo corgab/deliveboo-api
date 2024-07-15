@@ -20,7 +20,7 @@ class RestaurantController extends Controller
         if($restaurant){
             $dishes = $restaurant->dishes;
             // $orders = $restaurant->orders()->with('dishes')->paginate(2);
-            $orders = $restaurant->orders()->with(['dishes' => function ($query) {
+            $orders = $restaurant->orders()->orderBy('created_at', 'desc')->with(['dishes' => function ($query) {
                 $query->withPivot('qty');
             }])->paginate(4);
             // dd($orders);
