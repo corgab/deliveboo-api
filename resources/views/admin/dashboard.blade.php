@@ -8,19 +8,23 @@
         </div>
     @endif
     @if(isset($restaurant))
-        <section class="restaurant mb-5">
-            <h1 class="restaurant-titles text-center text-md-start">IL TUO RISTORANTE</h1>
-            <div class="card restaurant-card p-5">
-
-                <h3>{{$restaurant->name}}</h3>
-                <h4>{{$restaurant->address}}</h4>
-                {{-- <p>P.IVA: {{$restaurant->vat}}</p> --}}
-                <ul class="p-0 my-3">
-                <h5>Tipologie:</h5>
-                    @foreach($restaurant->types as $type)
-                        <li class="badge p-2 me-2">{{$type->name}}</li>
-                    @endforeach
-                </ul>
+        <section class="restaurant mb-5 d-flex align-items-center">
+                <div class="w-25">
+                    <img class="restaurant-img" src="{{ asset('storage/' . $restaurant->thumb) }}" alt="">
+                </div>
+                <div class="w-75">
+                    <div class="card restaurant-card p-5">
+                        <h3>{{$restaurant->name}}</h3>
+                        <h4>{{$restaurant->address}}</h4>
+                        {{-- <p>P.IVA: {{$restaurant->vat}}</p> --}}
+                        <ul class="p-0 my-3">
+                            <h5>Tipologie:</h5>
+                            @foreach($restaurant->types as $type)
+                                <li class="badge p-2 me-2">{{$type->name}}</li>
+                            @endforeach
+                        </ul>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -72,11 +76,9 @@
                                 <td>{{$order->total_price}} €</td>
                                 <td>{{$order->address}}</td>
                                 <td>
-                                        @foreach($order->dishes as $dish)
-                                        <i class="bi bi-caret-right"></i> {{$dish->name}} {{$dish->pivot->qty}} € <br>
-                                        @endforeach
-                                    </ul>
-
+                                    @foreach($order->dishes as $dish)
+                                    <i class="bi bi-caret-right"></i> {{$dish->name}} {{$dish->pivot->qty}} € <br>
+                                    @endforeach
                                 </td>
                             </tr>
                             @endforeach
@@ -109,26 +111,6 @@
                         @endif
                     </ul>
                 </nav>
-                @endif
-            </div>
-        </section>
-
-        <section class="orders mb-5">
-            <h1 class="restaurant-titles text-center text-md-start">
-                <a href="{{ route('admin.orders.index') }}">STATISTICHE ORDINI</a>
-            </h1>
-            <div class="card restaurant-card p-5">
-                @if($orders->isEmpty())
-                    <div>Le statistiche non sono disponibili. Non ci sono ordini.</div>
-                @else
-                    @foreach($orders as $order)
-                        <ul>
-                            <li class="d-flex justify-content-between">
-                                <p>{{$order->name}}</p>
-                                <p>{{$order->total_price}} €</p>
-                            </li>
-                        </ul>
-                    @endforeach
                 @endif
             </div>
         </section>

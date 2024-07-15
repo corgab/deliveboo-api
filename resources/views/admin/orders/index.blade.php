@@ -7,14 +7,31 @@
                 <h1 class="text-center mb-5 text-success">Non hai ancora nessun ordine!</h1>
             @else
             <h1 class="text-center mb-5 text-success">I tuoi ordini</h1>
-                @foreach($orders as $order)
-                    <div class="col-12">
-                        {{$order->name}}
-                    </div>
-                @endforeach
-                <div class="mt-5">
-                    <a href="{{ route('admin.orders.statistics')}}" class="btn btn-warning">STATISTICHE ORDINI</a>
-                </div>
+            <div class="table-responsive my-2">
+                <table class="table orders-table">
+                    <thead>
+                        <tr>
+                            <th>Nome</th>
+                            <th>Prezzo Totale</th>
+                            <th>Indirizzo</th>
+                            <th>Piatti</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach($orders as $order)
+                        <tr>
+                            <th scope="row">{{$order->name}}</td>
+                            <td>{{$order->total_price}} €</td>
+                            <td>{{$order->address}}</td>
+                            <td>
+                                @foreach($order->dishes as $dish)
+                                <i class="bi bi-caret-right"></i> {{$dish->name}} {{$dish->pivot->qty}} € <br>
+                                @endforeach
+                            </td>
+                        </tr>
+                        @endforeach
+                    </tbody>
+                </table>
             @endif
         </div>
     @else
