@@ -19,18 +19,18 @@ class OrderController extends Controller
         // Importo totale
         $amount = $request->input('total_price');
         $nonce = $request->input('paymentMethodNonce');
-
+    
         // Transazione di vendita 
         $result = $gateway->transaction()->sale([
             'amount' => $amount,
             'paymentMethodNonce' => $nonce,
             'options' => [
-                'submitForSettlement' => True
+                'submitForSettlement' => true
             ]
         ]);
-
+    
         // Traduzione errori in italiano (opzionale)
-
+    
         if ($result->success) {
             // Salvo nel db i dati
             $order = Order::create([
@@ -40,22 +40,30 @@ class OrderController extends Controller
                 'address' => $request->input('address'),
                 'total_price' => $amount,
                 'restaurant_id' => $request->input('restaurant_id'),
-
             ]);
-            
+    
             // Logica piatti
             $dishes = $request->input('dishes');
-
-            foreach($dishes as $dish) {
+    
+            // Assicuriamoci che 'dishes' sia un array
+            if (!is_array($dishes)) {
+                return response()->json(['success' => false, 'error' => 'Dati dei piatti non validi.']);
+            }
+    
+            foreach ($dishes as $dish) {
+                // Verifica se il piatto esiste nel database
                 $dishId = $dish['id'];
                 $qty = $dish['qty'];
-
-                $order->dishes()->attach($dish, ['qty' => $qty]);
+    
+                $existingDish = Dish::find($dishId);
+                if ($existingDish) {
+                    $order->dishes()->attach($existingDish, ['qty' => $qty]);
+                }
             }
-
+    
             Mail::to($order->email)->send(new CustomerOrderShipped($order));
-
-            return response()->json(['success' => true, 'order' => $order]); // Da verificare 'transaction' => $result->transaction
+    
+            return response()->json(['success' => true, 'order' => $order]);
         } else {
             return response()->json(['success' => false, 'error' => $result->message]);
         }
