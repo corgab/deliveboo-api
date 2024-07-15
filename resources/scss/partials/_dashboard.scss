@@ -5,7 +5,8 @@
 }
 
 .restaurant_img{
-    width: 280px;
+    // width: 280px;
+    object-fit: contain;
     aspect-ratio: 1/1;
 }
 .restaurant-card {
