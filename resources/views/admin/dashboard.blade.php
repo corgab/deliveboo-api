@@ -1,26 +1,30 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container py-5">
+<div class="container py-2">
     @if(isset($error))
         <div class="alert alert-danger text-center" style="font-size: 1rem;">
             <h4>{{ $error }}</h4>
         </div>
     @endif
     @if(isset($restaurant))
-        <section class="restaurant mb-5">
-            <h1 class="restaurant-titles text-center text-md-start">IL TUO RISTORANTE</h1>
-            <div class="card restaurant-card p-5">
-
-                <h3>{{$restaurant->name}}</h3>
-                <h4>{{$restaurant->address}}</h4>
-                {{-- <p>P.IVA: {{$restaurant->vat}}</p> --}}
-                <ul class="p-0 my-3">
-                <h5>Tipologie:</h5>
-                    @foreach($restaurant->types as $type)
-                        <li class="badge p-2 me-2">{{$type->name}}</li>
-                    @endforeach
-                </ul>
+        <section class="restaurant mb-5 d-flex flex-wrap text-center text-md-start align-items-center">
+                <div class="col-12 mb-2 col-md-4">
+                    <img class="restaurant-img" src="{{ asset('storage/' . $restaurant->thumb) }}" alt="">
+                </div>
+                <div class="col-12 col-md-8">
+                    <div class="card restaurant-card p-5">
+                        <h3>{{$restaurant->name}}</h3>
+                        <h4>{{$restaurant->address}}</h4>
+                        {{-- <p>P.IVA: {{$restaurant->vat}}</p> --}}
+                        <ul class="p-0 my-3">
+                            <h5>Tipologie:</h5>
+                            @foreach($restaurant->types as $type)
+                                <li class="badge p-2 me-2">{{$type->name}}</li>
+                            @endforeach
+                        </ul>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -56,7 +60,7 @@
                     <div>Non hai ancora nessun ordine!</div>
                 @else
                 <div class="table-responsive my-2">
-                    <table class="table orders-table ">
+                    <table class="table orders-table">
                         <thead>
                             <tr>
                                 <th>Nome</th>
@@ -109,26 +113,6 @@
                         @endif
                     </ul>
                 </nav>
-                @endif
-            </div>
-        </section>
-
-        <section class="orders mb-5">
-            <h1 class="restaurant-titles text-center text-md-start">
-                <a href="{{ route('admin.orders.index') }}">STATISTICHE ORDINI</a>
-            </h1>
-            <div class="card restaurant-card p-5">
-                @if($orders->isEmpty())
-                    <div>Le statistiche non sono disponibili. Non ci sono ordini.</div>
-                @else
-                    @foreach($orders as $order)
-                        <ul>
-                            <li class="d-flex justify-content-between">
-                                <p>{{$order->name}}</p>
-                                <p>{{$order->total_price}} €</p>
-                            </li>
-                        </ul>
-                    @endforeach
                 @endif
             </div>
         </section>
