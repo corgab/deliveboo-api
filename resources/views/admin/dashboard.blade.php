@@ -1,33 +1,31 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container py-2">
+<div class="container p-0">
     @if(isset($error))
     <div class="alert alert-danger text-center" style="font-size: 1rem;">
         <h4>{{ $error }}</h4>
     </div>
     @endif
     @if(isset($restaurant))
-    <section class="restaurant mb-5 d-flex flex-wrap text-center text-md-start align-items-center">
-        <div class="col-12 col-md-8">
-            <div class="card restaurant-card p-5">
-                <h3>{{$restaurant->name}}</h3>
-                <div class="col-12 mb-2 col-md-4">
-                    @if($restaurant->thumb)
-                    <img class="w-50" src="{{ asset('storage/' . $restaurant->thumb) }}" alt="">
-                    @else
-                    <img v-else class="w-50 mt-3" src="{{ asset('storage/images/logo.png') }}" alt="Foto Ristorante">
-                    @endif
-                </div>
-                <h5>{{$restaurant->address}}</h5>
-                {{-- <p>P.IVA: {{$restaurant->vat}}</p> --}}
-                <ul class="p-0 my-3">
-                    <h5>Tipologie:</h5>
-                    @foreach($restaurant->types as $type)
-                    <li class="badge p-2 me-2">{{$type->name}}</li>
-                    @endforeach
-                </ul>
+    <section class="restaurant card restaurant-card mb-5 text-center text-md-start">
+        <div class="col-12 col-md-8 p-5">
+            <h3>{{$restaurant->name}}</h3>
+            <div class="col-12 mb-2 col-md-4">
+                @if($restaurant->thumb)
+                <img class="restaurant_img" src="{{ asset('storage/' . $restaurant->thumb) }}" alt="">
+                @else
+                <img v-else class="restaurant_img mt-3" src="{{ asset('storage/images/logo.png') }}" alt="Foto Ristorante">
+                @endif
             </div>
+            <h5>{{$restaurant->address}}</h5>
+            <!-- {{-- <p>P.IVA: {{$restaurant->vat}}</p> --}} -->
+            <ul class="p-0 my-3">
+                <h5>Tipologie:</h5>
+                @foreach($restaurant->types as $type)
+                <li class="badge p-2 me-2">{{$type->name}}</li>
+                @endforeach
+            </ul>
         </div>
 </div>
 </section>
