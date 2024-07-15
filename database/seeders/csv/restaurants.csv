@@ -1,31 +1,31 @@
-name,address,vat,
-Pergolina,"Via della Pergola, 12, Roma",62744115408,
-Cactus Pub,"Via Stella, 22, Roma",91022685842,
-Da Vittoria,"Via Cavour, 21, Roma",11403369422,
-Sashimi,"Via Ghibellina, 87, Roma",47313496604,
-Le Calandre,"Via Liguria, 1, Roma",77686351336,
-Piazza Dolce,"Piazza Risorgimento, 4, Roma",46151810627,
-Crocco,"Corso Venezia, 18, Roma",86570605243,
-Almo e Nadia,"Via Montecuccoli, 6, Roma",54155145485,
-Reale,"Località Casadonna, Roma",38521086480,
-Ulisse,"Banchina di Levante, Roma",20763550425,
-Dal Pescatore,"Via Runate, 15, Roma",45930780271,
-La Maria,"Corso Filippo Re Capriata, Roma",28724216848,
-Osteria Cerva,"Via Marghera, 24, Roma",57933176183,
-Hubertus Pub,"Strada Micurá de Rü, 20, Roma",30957728500,
-Kimono,"Corso Sant'Agata, 11, Roma",81710738758,
-La Pera,"Via Alberto Giovannelli, 2, Roma",97926597371,
-La Trota,"Via S. Rocco, 8, Roma",90677298684,
-Al Sorriso,"Via Roma, 18, Roma",77052451096,
-Boolean,"Via Tortona, 1, Roma",75533118316,
-Il Pasticcio,"Via dei Banchi Vecchi, 129, Roma",39144691448,
-L'Olivo,"Località Cala di Volpe, Roma",41243811204,
-Villa Crepés,"Via Fava, 18, Roma",64894760192,
-Il Desco,"Via Dietro San Sebastiano, 7, Roma",31601010261,
-Duomo Pub,"Via Capitano Bocchieri, 31, Roma",64976349935,
-La Torre,"Via della Torre, 1, Roma",23888821713,
-Coniglio,"Via Chiesa, 4, Roma",44406482873,
-Da Guido,"Località San Maurizio, Roma",30649670985,
-Carlos,"Via della Chiesa, 3, Roma",39393006719,
-Pizzeria Albi,"Piazza Carignano, 2, Roma",27412631551,
-Haru,"Via Montecuccoli, 6, Roma",48034825665,
+name,address,vat,thumb
+Pergolina,"Via della Pergola, 12, Roma",62744115408,images/restaurants/la-pergola.png
+Cactus Pub,"Via Stella, 22, Roma",91022685842,images/restaurants/osteria-francescana.png
+Da Vittorio,"Via Cavour, 21, Roma",11403369422,images/restaurants/da-vittorio.jpeg
+Sashimi,"Via Ghibellina, 87, Roma",47313496604,images/restaurants/sashimi.jpeg
+Le Calandre,"Via Liguria, 1, Roma",77686351336,images/restaurants/le-calandre.jpeg
+Dolce Vita,"Piazza Risorgimento, 4, Roma",46151810627,images/restaurants/dolce-vita.jpeg
+Cracco,"Corso Venezia, 18, Roma",86570605243,images/restaurants/cracco.png
+Almo e Nadia,"Via Montecuccoli, 6, Roma",54155145485,images/restaurants/almo-e-nadia.png
+Reale,"Località Casadonna, Roma",38521086480,images/restaurants/reale.jpeg
+Ulisse,"Banchina di Levante, Roma",20763550425,images/restaurants/ulisse.jpeg
+Dal Pescatore,"Via Runate, 15, Roma",45930780271,images/restaurants/dal-pescatore.jpeg
+La Marea,"Corso Filippo Re Capriata, Roma",28724216848,images/restaurants/la-marea.png
+Trattoria del Cervo,"Via Marghera, 24, Roma",57933176183,images/restaurants/trattoria-del-cervo.jpg
+Hubertus Pub,"Strada Micurá de Rü, 20, Roma",30957728500,images/restaurants/hubertus.jpg
+Kimono,"Corso Sant'Agata, 11, Roma",81710738758,images/restaurants/kimono.jpeg
+La Perla,"Via Alberto Giovannelli, 2, Roma",97926597371,images/restaurants/la-perla.jpeg
+La Trota,"Via S. Rocco, 8, Roma",90677298684,images/restaurants/la-trota.jpeg
+Al Sorriso,"Via Roma, 18, Roma",77052451096,images/restaurants/al-sorriso.png
+Bell & Buon,"Via Tortona, 1, Roma",75533118316,images/restaurants/bell.jpeg
+Il Pasticcio,"Via dei Banchi Vecchi, 129, Roma",39144691448,images/restaurants/il-pasticcio.jpeg
+L'Olivo,"Località Cala di Volpe, Roma",41243811204,images/restaurants/olivo.jpeg
+Villa Crespi,"Via Fava, 18, Roma",64894760192,images/restaurants/villa-crespi.jpeg
+Il Desco,"Via Dietro San Sebastiano, 7, Roma",31601010261,images/restaurants/il-desco.png
+Duomo,"Via Capitano Bocchieri, 31, Roma",64976349935,images/restaurants/duomo.jpeg
+La Torre,"Via della Torre, 1, Roma",23888821713,images/restaurants/la-torre.jpeg
+Coniglio,"Via Chiesa, 4, Roma",44406482873,images/restaurants/coniglio.jpeg
+Da Guido,"Località San Maurizio, Roma",30649670985,images/restaurants/da-guido.jpeg
+Carlos,"Via della Chiesa, 3, Roma",39393006719,images/restaurants/carlos.jpeg
+Pizzeria Albino,"Piazza Carignano, 2, Roma",27412631551,images/restaurants/albino.jpeg
+Haru,"Via Montecuccoli, 6, Roma",48034825665,images/restaurants/haru.png
