@@ -2,20 +2,20 @@ name,description_ingredients,price,visible,thumb
 Spaghetti alla Carbonara,Spaghetti Guanciale Uova Pecorino Romano,10,1,images/dishes/spaghetti-carbonara.jpeg
 Pizza Margherita,Farina di grano Mozzarella Pomodoro Foglie di basilico,8,1,images/dishes/margherita-pizza.jpeg
 Insalata Caprese,Pomodoro Mozzarella di bufala Origano Foglie di basilico Olio extravergine d'oliva,7,1,images/dishes/caprese.jpeg
-Risotto ai Funghi,Arborio Risotto funghi porcini Cipolla Rosmarino,9,1,images/dishes/risotto-funghi.jpg
+Risotto ai Funghi,Riso Arborio funghi porcini Cipolla Rosmarino,9,1,images/dishes/risotto-funghi.jpg
 Pollo alla Cacciatora,Pollo Olive Noci Pepe Rosmarino,12,1,images/dishes/pollo-alla-cacciatora.jpeg
 Tagliatelle al Ragu,Tagliatelle Ragu di carne Grana Padano Pomodoro,11,1,images/dishes/tagliatelle-ragu.jpeg
 Lasagna alla Bolognese,Lasagna Ragu di carne Besciamella Grana Padano Pomodoro,13,1,images/dishes/lasagna.jpeg
 Cotoletta alla Milanese,Cotoletta di vitello Pan grattato Uova Limone Patate fritte,15,1,images/dishes/cotoletta-milanese.jpeg
 Gnocchi al Pesto,Gnocchi Pesto genovese Pinoli Pecorino Foglie di basilico,10,1,images/dishes/gnocchi-pesto.jpeg
 Tiramisù,Savoiardi Mascarpone Uova Zucchero Caffè cotto,8,1,images/dishes/tiramisu.jpeg
-Risotto al Salto,Arborio Risotto Formaggio grattugiato Burro Pepe,10,1,images/dishes/risotto-al-salto.jpg
+Risotto al Salto,Riso Arborio Formaggio grattugiato Burro Pepe,10,1,images/dishes/risotto-al-salto.jpg
 Polpettone,Pan grattato Carne macinata Uova Parmigiano Pane,11,1,images/dishes/polpettone.jpeg
 Zuppa di Verdure,Zucchine Patate Pomodoro Carote Prezzemolo,7,1,images/dishes/zuppa-verdure.jpeg
-Frittata di Patate,Uova Patate Cipolla Formaggio grattugiato Prezzemolo,9,1,images/dishes/frittura-patate.jpeg
+Frittata di Patate,Uova Patate Cipolla Formaggio grattugiato Prezzemolo,9,1,images/dishes/frittata-patate.webp
 Arrosto di Maiale,Carne di maiale Patate Aglio Rosmarino Alloro,14,1,images/dishes/arrosto-maiale.jpeg
-Insalata di Mare,Gamberetti Calamari Cozze Vongole Pomodorini,12,1,images/dishes/insalata-mare.jpeg
-Risotto alla Milanese,Arborio Risotto Zafferano Brodo di carne Formaggio grattugiato,12,1,images/dishes/risotto-milanese.jpeg
+Insalata di Mare,Gamberetti Calamari Cozze Vongole Polpo Moscardini Limone Olio extravergine d'oliva,12,1,images/dishes/insalata-mare.jpeg
+Risotto alla Milanese,Riso Arborio Zafferano Brodo di carne Formaggio grattugiato,12,1,images/dishes/risotto-milanese.jpeg
 Fettuccine Alfredo,Fettuccine Panna Formaggio Parmigiano Rosmarino,10,1,images/dishes/alfredo.jpeg
 Spaghetti Aglio e Olio,Spaghetti Aglio Peperoncino Prezzemolo Olio extravergine d'oliva,9,1,images/dishes/spaghetti-aop.jpeg
 Bistecca alla Fiorentina,Bistecca di manzo Patate arrosto Rosmarino Pepe,16,1,images/dishes/fiorentina.jpeg
@@ -25,7 +25,7 @@ Pasta alla Norma,Pasta Melanzane Pomodoro Ricotta salata Basilico,11,1,images/di
 Cannelloni Ricotta e Spinaci,Cannelloni Ricotta Spinaci Passata di pomodoro Formaggio grattugiato,12,1,images/dishes/cannelloni-spinaci.jpeg
 Ratatouille,Zucchine Melanzane Peperoni Pomodoro Cipolla,8,1,images/dishes/ratatouille.jpeg
 Calamari Fritti,Calamari Prezzemolo Aglio Limone Pepe,13,1,images/dishes/calamari-fritti.jpeg
-Risotto al Nero di Seppia,Arborio Risotto Nero di seppia Gamberi Cipolla,15,1,images/dishes/risotto-seppia.jpeg
+Risotto al Nero di Seppia,Riso Arborio Nero di seppia Gamberi Cipolla,15,1,images/dishes/risotto-seppia.jpeg
 Gnocchi alla Sorrentina,Gnocchi Pomodoro Fiordilatte Basilico Olio extravergine d'oliva,10,1,images/dishes/gnocchi-sorrentina.jpeg
 Spaghetti alle Vongole,Spaghetti Vongole Aglio Prezzemolo Peperoncino,12,1,images/dishes/spaghetti-vongole.jpeg
 Branzino al Cartoccio,Branzino Pomodorini Patate Origano Prezzemolo,18,1,images/dishes/branzino.jpeg
@@ -39,8 +39,8 @@ Crostata di Frutta,Farina Zucchero Burro Marmellata di frutta Frutta fresca,10,1
 Gelato alla Crema,Panna Latte Uova Zucchero Vaniglia,6,1,images/dishes/gelato-crema.jpeg
 Vitello Tonnato,Vitello Acciughe Salsa tonnata Capperi Limone,14,1,images/dishes/vitello-tonnato.jpeg
 Coda alla Vaccinara,Coda di manzo Passata di pomodoro Cipolla Carote Prezzemolo,15,1,images/dishes/coda.jpeg
-Risotto alla Zucca,Arborio Risotto Zucca Gorgonzola Noci,11,1,images/dishes/risotto-zucca.jpeg
-Pappardelle al Cinghiale,Pappardelle Cinghiale Rosmarino Cipolla Carote,16,1,images/dishes/pappardelle.jpeg
+Risotto alla Zucca,Riso Arborio Zucca Gorgonzola Noci,11,1,images/dishes/risotto-zucca.jpeg
+Pappardelle al Cinghiale,Pappardelle Cinghiale Prezzemolo Cipolla Carote,16,1,images/dishes/pappardelle.jpeg
 Torta di Mele,Farina Zucchero Burro Mele Cannella,9,1,images/dishes/torta-mele.jpeg
 Pizza Quattro Stagioni,Farina di grano Mozzarella Prosciutto cotto Funghi Pomodoro,14,1,images/dishes/pizza-4-stagioni.jpeg
 Baccalà alla Livornese,Baccalà Pomodoro Cipolla Olive nere Prezzemolo,13,1,images/dishes/baccala.jpeg
@@ -69,14 +69,14 @@ Costolette di Agnello,Costolette di agnello Rosmarino Aglio Limone Patate arrost
 Insalata di Pollo,Pollo misto Insalata-Cetrioli Ravanelli Pomodorini Formaggio grattugiato,11,1,images/dishes/Insalata-di-pollo.webp
 Ravioli di Zucca,Tortelli Zucca Amaretti Grana Padano Salvia,13,1,images/dishes/Ravioli_di_zucca.webp
 Cotoletta alla Bolognese,Cotoletta di vitello Pan grattato Uova Limone Pomodoro,16,1,images/dishes/Cotoletta-alla-bolognese.avif
-Risotto alle Cozze,Arborio Risotto Cozze Pomodoro Aglio Vino bianco,14,1,images/dishes/Risotto-cozze.webp
+Risotto alle Cozze,Riso Arborio Cozze Pomodoro Aglio Vino bianco,14,1,images/dishes/Risotto-cozze.webp
 Tartufo Nero,Tagliolini Tartufo nero Burro Parmigiano Prezzemolo,20,1,images/dishes/Tagliolini-tartufo.webp
 Carpaccio di Bresaola,Bresaola Rucola Scaglie di Parmigiano Aceto balsamico,12,1,images/dishes/Carpaccio-bresaola.jpg
 Fettine Panate,Fettine di carne Pan grattato Uova Limone Patate novelle,15,1,images/dishes/Fettine-panate.webp
 Mezze Maniche alla Gricia,Mezze maniche Guanciale Pecorino Romano Peperoncino,11,1,images/dishes/mezze-maniche-alla-gricia.jpeg
 Pesce Spada alla Siciliana,Pesce spada Pomodorini Olive nere Capperi Aglio,17,1,images/dishes/Pesce-spada-alla-siciliana.jpg
 Strudel di Mele,Farina Zucchero Burro Mele Cannella,10,1,images/dishes/Strudel-di-mele.avif
-Cacciatora di Pollo,Pollo Pomodoro Cipolla Peperoncino Oliva nera,13,1,images/dishes/Pollo_alla_cacciatora.jpg
+Cacciatora di Pollo,Pollo Pomodoro Cipolla Peperoncino Olive nere,13,1,images/dishes/Pollo_alla_cacciatora.jpg
 Lasagna ai Frutti di Mare,Lasagna Frutti di mare Ricotta Pomodoro Prezzemolo,18,1,images/dishes/lasagna-di-mare.jpg
 Pasta al Pesto Rosso,Pasta Pesto rosso Pomodorini secchi Rucola Parmigiano,12,1,images/dishes/Farfalle-pesto-rosso.jpg
 Involtini Primavera,Involtini di carne Verdure miste Prosciutto crudo Formaggio,14,1,images/dishes/Involtini-primavera.webp
@@ -86,12 +86,12 @@ Fagioli all'Uccelletto,Fagioli Pomodoro Aglio Salvia Olio extravergine d'oliva,8
 Crostini Toscani,Pane toscano Olio extravergine d'oliva Aglio-Salame Tomino,10,1,images/dishes/Crostini-toscani.jpg
 Torta di Ricotta e Limone,Farina di grano Zucchero Burro Ricotta Limone,10,1,images/dishes/Torta-ricotta-limone.webp
 Patate al Forno,Patate-Rosmarino Aglio Olio extravergine d'oliva,7,1,images/dishes/Patate-al-forno.webp
-Risotto alla Pescatora,Arborio Risotto Pesce misto Pomodoro Aglio Vino bianco,16,1,images/dishes/Risotto-pescatora.jpg
+Risotto alla Pescatora,Riso Arborio Pesce misto Pomodoro Aglio Vino bianco,16,1,images/dishes/Risotto-pescatora.jpg
 Insalata di Quinoa,Quinoa Pomodorini Cetrioli Avocado Mais,9,1,images/dishes/Insalata-quinoa.jpg
 Gnocchi al Radicchio,Gnocchi Radicchio Scalogno Parmigiano,12,1,images/dishes/gnocchi-radicchio.webp
 Carpaccio di Polpo,Polpo-Olive Patate Capperi Aceto balsamico,13,1,images/dishes/Carpaccio-polpo.jpg
 Budino di Pane,Pane-Zucchero Burro Uova Latte,8,1,images/dishes/Budino-pane.jpg
-Risotto al Prosecco,Arborio Risotto Prosecco Asparagi Parmigiano,14,1,images/dishes/risotto-agli-asparagi.webp
+Risotto al Prosecco,Riso Arborio Prosecco Asparagi Parmigiano,14,1,images/dishes/risotto-agli-asparagi.webp
 Salmone Grigliato,Salmone Limone Olio extravergine d'oliva Aglio Rosmarino,17,1,images/dishes/Salmone-griglia.jpeg
 Insalata Greca,Pomodorini Cetrioli Olive nere Cipolla Feta,10,1,images/dishes/Insalata-greca.jpg
 Bucatini all'Amatriciana,Bucatini Guanciale Pomodoro Pecorino Peperoncino,11,1,images/dishes/Bucatini-amatriciana.jpg
@@ -104,7 +104,7 @@ Patate Hasselback,Patate Burro Aglio Rosmarino Formaggio grattugiato,9,1,images/
 Pasta al Limone,Pasta Limone Panna Formaggio Parmigiano,10,1,images/dishes/pasta-limone.jpeg
 Vitello alla Pizzaiola,Vitello Pomodoro Capperi Olive nere Aglio,18,1,images/dishes/vitello-pizzaiola.jpeg
 Frittata di Zucchine,Uova Zucchine Formaggio grattugiato Menta Prezzemolo,7,1,images/dishes/frittata-zucchine.jpeg
-Risotto alle Barbabietole,Arborio Risotto Barbabietole Gorgonzola Noci,13,1,images/dishes/risotto-barbabietola.jpeg
+Risotto alle Barbabietole,Riso Arborio Barbabietole Gorgonzola Noci,13,1,images/dishes/risotto-barbabietola.jpeg
 Filetto di Branzino,Filetto di branzino Limone Patate Aglio Rosmarino,19,1,images/dishes/filetto-branzino.jpeg
 Crespelle ai Porcini,Crespelle Funghi porcini Besciamella Formaggio grattugiato Burro,14,1,images/dishes/crespelle-porcini.jpeg
 Focaccia al Pomodoro,Farina di grano Olio extravergine d'oliva Rosmarino Sale grosso Pomodorini,9,1,images/dishes/focaccia-pomodoro.jpeg
@@ -113,7 +113,7 @@ Cernia al Cartoccio,Cernia Pomodorini Patate Origano Prezzemolo,17,1,images/dish
 Tortelloni alla Zucca,Tortelloni Zucca Amaretti Grana Padano Salvia,15,1,images/dishes/tortelloni-zucca.jpeg
 Sushi Vegano,Quinoa Avocado Cetriolo Peperone Tofu,11,1,images/dishes/sushi-vegano.jpeg
 Frittelle di Mele,Farina Zucchero Burro Mele Cannella,8,1,images/dishes/frittelle-di-mele.jpg
-Caponata di Melanzane,Melanzane Pomodoro Cipolla Capperi Oliva,10,1,images/dishes/caponata-melanzane.jpeg
+Caponata di Melanzane,Melanzane Pomodoro Cipolla Capperi Olive,10,1,images/dishes/caponata-melanzane.jpeg
 Torta Salata di Patate e Pancetta,Farina-Zucchine-Patate Pancetta Formaggio grattugiato,11,1,images/dishes/torta-salata.png
 Salmone Marinato,Salmone Limone Avocado Cetrioli Peperoncino,16,1,images/dishes/salmone-marinato.jpeg
 Risotto al Curry,Arborio Riso Curry Carote Cipolla,14,1,images/dishes/risotto-curry.jpeg
@@ -121,16 +121,16 @@ Pasta con Crema di Peperoni,Pasta Peperoni Panna Formaggio grattugiato Aglio,12,
 Involtini di Melanzane,Melanzane Prosciutto cotto Formaggio grattugiato Pomodoro Basilico,9,1,images/dishes/involtini-melanzane.jpeg
 Melanzane alla Parmigiana,Melanzane Pomodoro Mozzarella Parmigiano Basilico,13,1,images/dishes/parmigiana.jpeg
 Cous Cous di Pesce,Cous cous Pesce misto Salmone Gamberi Calamari Zucchine Cipolla,17,1,images/dishes/couscous-pesce.jpeg
-Spaghetti alla Puttanesca,Spaghetti Pomodoro Acciacchi Riccioli di Capperi Oliva nera,12,1,images/dishes/spaghetti-puttanesca.jpeg
-Insalata di Riso,Riso Pomodorini Oliva nera Mais Cetriolo,9,1,images/dishes/insalata-riso.jpeg
+Spaghetti alla Puttanesca,Spaghetti Pomodoro Acciacchi Riccioli di Capperi Olive nere,12,1,images/dishes/spaghetti-puttanesca.jpeg
+Insalata di Riso,Riso Pomodorini Olive nere Mais Cetriolo,9,1,images/dishes/insalata-riso.jpeg
 Gnocchi al Gorgonzola,Gnocchi Gorgonzola Noci Panna Parmigiano,11,1,images/dishes/gnocchi-gorgonzola.jpeg
 Frittata di Asparagi,Uova Asparagi Formaggio grattugiato Aglio Prezzemolo,8,1,images/dishes/frittata-di-asparagi.jpg
 Bistecca alla Griglia,Bistecca Patate arrosto Rosmarino Aglio Peperoncino,18,1,images/dishes/bistecca-griglia.jpeg
-Insalata di Farro,Farro Pomodorini Cetrioli Oliva nera Rucola,10,1,images/dishes/insalata-farro.jpeg
+Insalata di Farro,Farro Pomodorini Cetrioli Olive nere Rucola,10,1,images/dishes/insalata-farro.jpeg
 Crespelle al Radicchio,Crespelle Radicchio Speck Besciamella Formaggio grattugiato,13,1,images/dishes/crespelle-radicchio.jpeg
 Tagliatelle al Tartufo,Tagliatelle Tartufo Burro Parmigiano Peperoncino,20,1,images/dishes/tagliatelle-tartufo.jpeg
 Pasta al Tonno,Pasta Tonno Pomodorini Capperi Prezzemolo,14,1,images/dishes/pasta-tonno.jpeg
-Caponata Siciliana,Melanzane Pomodoro Cipolla Capperi Oliva,11,1,images/dishes/caponata.jpeg
+Caponata Siciliana,Melanzane Pomodoro Cipolla Capperi Olive,11,1,images/dishes/caponata.jpeg
 Risotto ai Frutti di Mare,Arborio Riso Frutti di mare Pomodoro Aglio Vino bianco,17,1,images/dishes/risotto-mare.jpeg
 Penne alla Boscaiola,Penne Funghi Pancetta Pomodoro Parmigiano,12,1,images/dishes/pennette-boscaiola.jpeg
 Lasagna Vegetariana,Lasagna Melanzane Zucchine Pomodoro Ricotta,14,1,images/dishes/lasagne.jpg
@@ -138,7 +138,7 @@ Pollo alla Diavola,Pollo Peperoncino Aglio Limone Rosmarino,15,1,images/dishes/p
 Risotto ai Porcini,Arborio Riso Funghi porcini Burro Parmigiano,15,1,images/dishes/risotto-porcini.jpg
 Pizza Quattro Formaggi,Farina di grano Mozzarella Gorgonzola Fontina Parmigiano,13,1,images/dishes/pizza-4-formaggi.jpeg
 Calamari Ripieni,Calamari Ricotta Pangrattato Parmigiano Limone,16,1,images/dishes/calamari.jpg
-Risotto al Salmone,Arborio Risotto Salmone Pomodorini Aglio Vino bianco,18,1,images/dishes/risotto-salmone.jpeg
+Risotto al Salmone,Riso Arborio Salmone Pomodorini Aglio Vino bianco,18,1,images/dishes/risotto-salmone.jpeg
 Salsiccia con Patate,Salsiccia Patate Rosmarino Aglio Pepe,11,1,images/dishes/salsiccia.jpg
 Insalata Waldorf,Mele Cetrioli Noci Pollo Ricotta,9,1,images/dishes/insalata-waldorf.jpeg
 Involtini di Pollo,Pollo Prosciutto crudo Formaggio Parmigiano,12,1,images/dishes/involtini-pollo.jpeg
