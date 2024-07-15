@@ -56,7 +56,12 @@ class RestaurantController extends Controller
             }
             return $dish;
         });
-    
+
+         // Aggiungi l'URL completo dell'immagine miniatura del ristorante
+        if ($restaurant->thumb) {
+            $restaurant->thumb_url = url('storage/' . $restaurant->thumb);
+        }
+
         // Aggiungi i piatti paginati
         $restaurant->setRelation('dishes', $dishes);
     
