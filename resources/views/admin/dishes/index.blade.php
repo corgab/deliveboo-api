@@ -31,87 +31,86 @@
                         @if($dish->thumb)
                         <img class="img-dish" src="{{ asset('storage/' . $dish->thumb) }}" alt="piatto {{ $dish->name }}">
                         @else
-                        <img v-else class="img-dish mt-3" src="{{ asset('storage/images/logo.png') }}" alt="Foto Piatto">
+                        <img v-else class="img-dish" src="{{ asset('storage/images/logo.png') }}" alt="Foto Piatto">
                         @endif
+                    </figure>
+                    <div class="d-flex flex-column flex-sm-row gap-2 mt-3">
+                        <a href="{{ route('admin.dishes.show', $dish) }}" class="btn btn-outline-success btn-sm  mb-2 mb-sm-0">
+                            <i class="bi bi-binoculars me-1"></i>
+                            Visualizza
+                        </a>
+                        <a href="{{ route('admin.dishes.edit', $dish) }}" class="btn btn-outline-success btn-sm  mb-2 mb-sm-0">
+                            <i class="bi bi-pen-fill"></i>
+                            Modifica
+                        </a>
+                        <button type="button" class="btn btn-outline-danger btn-sm  mb-2 mb-sm-0" data-bs-toggle="modal" data-bs-target="#exampleModal{{ $dish->id }}">
+                            <i class="bi bi-trash"></i>
+                            Elimina
+                        </button>
+                    </div>
                 </div>
-                </figure>
-                <div class="d-flex flex-column flex-sm-row gap-2 mt-3">
-                    <a href="{{ route('admin.dishes.show', $dish) }}" class="btn btn-outline-success btn-sm  mb-2 mb-sm-0">
-                        <i class="bi bi-binoculars me-1"></i>
-                        Visualizza
-                    </a>
-                    <a href="{{ route('admin.dishes.edit', $dish) }}" class="btn btn-outline-success btn-sm  mb-2 mb-sm-0">
-                        <i class="bi bi-pen-fill"></i>
-                        Modifica
-                    </a>
-                    <button type="button" class="btn btn-outline-danger btn-sm  mb-2 mb-sm-0" data-bs-toggle="modal" data-bs-target="#exampleModal{{ $dish->id }}">
-                        <i class="bi bi-trash"></i>
-                        Elimina
-                    </button>
-                </div>
-            </div>
-            <!-- Modal -->
-            <div class="modal fade" id="exampleModal{{ $dish->id }}" tabindex="-1" aria-labelledby="exampleModalLabel{{ $dish->id }}" aria-hidden="true">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h1 class="modal-title fs-5" id="exampleModalLabel{{ $dish->id }}">Eliminazione Piatto</h1>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body">
-                            <!-- Optional: Add any additional information here -->
-                            Sicuro di voler eliminare il piatto ("{{ $dish->name }}")?
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annulla</button>
-                            <form action="{{ route('admin.dishes.destroy', $dish) }}" method="POST">
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModal{{ $dish->id }}" tabindex="-1" aria-labelledby="exampleModalLabel{{ $dish->id }}" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h1 class="modal-title fs-5" id="exampleModalLabel{{ $dish->id }}">Eliminazione Piatto</h1>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <!-- Optional: Add any additional information here -->
+                                Sicuro di voler eliminare il piatto ("{{ $dish->name }}")?
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annulla</button>
+                                <form action="{{ route('admin.dishes.destroy', $dish) }}" method="POST">
+                                    @csrf
+                                    @method('DELETE')
+                                    <button type="submit" class="btn btn-danger">Elimina</button>
+                                </form>
+                                {{-- <form action="{{ route('admin.dishes.permanentDelete', $dish->id) }}" method="POST" style="display:inline-block;">
                                 @csrf
                                 @method('DELETE')
-                                <button type="submit" class="btn btn-danger">Elimina</button>
-                            </form>
-                            {{-- <form action="{{ route('admin.dishes.permanentDelete', $dish->id) }}" method="POST" style="display:inline-block;">
-                            @csrf
-                            @method('DELETE')
-                            <button type="submit" class="btn btn-danger">Elimina definitivamente</button>
-                            </form> --}}
+                                <button type="submit" class="btn btn-danger">Elimina definitivamente</button>
+                                </form> --}}
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
+            @endforeach
+            <!-- Link di paginazione -->
+            <nav aria-label="Page navigation">
+                <ul class="pagination justify-content-center">
+                    @if ($dishes->onFirstPage())
+                    <li class="page-item disabled">
+                        <span class="page-link">&laquo;</span>
+                    </li>
+                    @else
+                    <li class="page-item">
+                        <a class="page-link" href="{{ $dishes->previousPageUrl() }}" aria-label="Previous">&laquo;</a>
+                    </li>
+                    @endif
+
+                    @if ($dishes->hasMorePages())
+                    <li class="page-item">
+                        <a class="page-link" href="{{ $dishes->nextPageUrl() }}" aria-label="Next">&raquo;</a>
+                    </li>
+                    @else
+                    <li class="page-item disabled">
+                        <span class="page-link">&raquo;</span>
+                    </li>
+                    @endif
+                </ul>
+            </nav>
+
         </div>
-        @endforeach
-        <!-- Link di paginazione -->
-        <nav aria-label="Page navigation">
-            <ul class="pagination justify-content-center">
-                @if ($dishes->onFirstPage())
-                <li class="page-item disabled">
-                    <span class="page-link">&laquo;</span>
-                </li>
-                @else
-                <li class="page-item">
-                    <a class="page-link" href="{{ $dishes->previousPageUrl() }}" aria-label="Previous">&laquo;</a>
-                </li>
-                @endif
-
-                @if ($dishes->hasMorePages())
-                <li class="page-item">
-                    <a class="page-link" href="{{ $dishes->nextPageUrl() }}" aria-label="Next">&raquo;</a>
-                </li>
-                @else
-                <li class="page-item disabled">
-                    <span class="page-link">&raquo;</span>
-                </li>
-                @endif
-            </ul>
-        </nav>
-
-    </div>
-    {{-- end row --}}
-    <a href="{{ route('admin.dishes.create', $dish) }}" class="btn btn-outline-success btn-sm"><i class="bi bi-plus-square"></i>
-        Aggiungi Piatto
-    </a>
-    {{-- <a href="{{route('admin.dishes.deletelist')}}">cestino</a> --}}
-    @endif
+        {{-- end row --}}
+        <a href="{{ route('admin.dishes.create', $dish) }}" class="btn btn-outline-success btn-sm"><i class="bi bi-plus-square"></i>
+            Aggiungi Piatto
+        </a>
+        {{-- <a href="{{route('admin.dishes.deletelist')}}">cestino</a> --}}
+        @endif
 </section>
 @else
 <div class="row">
